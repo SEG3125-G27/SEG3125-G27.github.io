@@ -1,0 +1,83 @@
+html{
+    background-color: antiquewhite;
+}
+
+.background{
+    background-color: tomato;
+}
+
+h1{
+    text-align: center;
+    color: green;
+    font-size: 250%;
+}
+
+.under {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+  
+  .over {
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    z-index: -1;
+}
+
+a:link, a:visited{    
+    color: darkcyan;
+}
+
+a:hover{
+    color: green;
+}
+
+a:active{
+    color: darkred;
+}
+
+h2{
+    text-decoration: underline;
+    padding-bottom: -15px !important;
+}
+
+div{
+    width: auto;
+    border: 10px solid red;
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: tomato;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 154);
+    font-size: 150%;
+    margin: 30px;
+}
+
+input{
+    font-size: 60%;
+    margin: auto;
+    overflow: auto;
+    width: auto;
+}
+
+label{
+    text-transform: capitalize;
+}
+
+select{
+    font-size: 100%;
+}
+
+textarea{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20pt;
+}
+
+button {
+    
+    display: inline;
+    font-size: larger;
+    width: 10%;    
+}
