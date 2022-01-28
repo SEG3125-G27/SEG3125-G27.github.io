@@ -4,22 +4,64 @@
 
 var products = [
 	{
-		name: "brocoli",
+		name: "200g brocoli ($1.99)",
 		vegetarian: true,
 		glutenFree: true,
 		price: 1.99
 	},
 	{
-		name: "bread",
+		name: "A loaf of bread ($2.35)",
 		vegetarian: true,
 		glutenFree: false,
 		price: 2.35
 	},
 	{
-		name: "salmon",
+		name: "100g salmon ($10.00)",
 		vegetarian: false,
 		glutenFree: true,
 		price: 10.00
+	},
+	{
+		name: "50g chicken pizza ($8.00)",
+		vegetarian: false,
+		glutenFree: false,
+		price: 8.00
+	}, 
+	{
+		name: "50g cheese pizza ($6.50)",
+		vegetarian: true,
+		glutenFree: false,
+		price: 6.50
+	}, 
+	{
+		name: "Box of strawberries ($5.00)",
+		vegetarian: true,
+		glutenFree: true,
+		price: 5.00
+	},
+	{
+		name: "Box of rasberries ($5.50)",
+		vegetarian: true,
+		glutenFree: true,
+		price: 5.50
+	},
+	{
+		name: "Box of cookies ($2.99)",
+		vegetarian: true,
+		glutenFree: false,
+		price: 2.99
+	},
+	{
+		name: "50g chicken wings ($5.00)",
+		vegetarian: false,
+		glutenFree: true,
+		price: 5.00
+	},
+	{
+		name: "2L of milk ($1.50)",
+		vegetarian: true,
+		glutenFree: true,
+		price: 1.50
 	}
 ];
 	
