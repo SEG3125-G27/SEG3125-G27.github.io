@@ -5,8 +5,8 @@ body {font-family: Arial;}
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  border: 2px solid #945af0;
+  background-color: #945af0;
 }
 
 /* Style the buttons inside the tab */
