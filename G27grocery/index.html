@@ -54,9 +54,9 @@
 
   <p>Do you want to include organic fruits within the list? (more expensive)</p>
 
-  <input type="radio" id="yes" name="orgo" value="yes" onclick="populateListProductChoices('yes', 'displayProduct')" checked>
+  <input type="radio" id="yes" name="orgo" value="yes" onclick="populateListProductChoices(dietSelect.id, 'displayProduct', 'yes')" checked>
     <label for="yes">yes</label>
-  <input type="radio" id="no" name="orgo" value="no" onclick="populateListProductChoices('no', 'displayProduct')">
+  <input type="radio" id="no" name="orgo" value="no" onclick="populateListProductChoices(dietSelect.id, 'displayProduct', 'no')">
     <label for="no">no</label><br>
   
     
