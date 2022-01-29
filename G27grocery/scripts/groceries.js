@@ -80,7 +80,7 @@ var products = [
 		name: "Strawberries - Organic ($7.00)",
 		vegetarian: true,
 		glutenFree: true,
-		organic: false,
+		organic: true,
 		price: 7.00,
 		image: "images/strawberries-organic.jpg"
 	}
