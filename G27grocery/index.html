@@ -43,7 +43,7 @@
 <!-- Tab content -->
 <div id="Client" class="tabcontent">
   <h3>Client Information</h3>
-  <p>Tell us a bit about you.</p>
+  <p>Tell us a bit about yourself.</p>
 
 
   <label for="fname">First name:</label>
@@ -52,21 +52,21 @@
 
   <p id="hi"></p>
 
-	Choose a Category:
+	Dietary restriction:
 	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices1(dietSelect.id, 'displayProduct'); resetRadio();">
 	<option value=""></option>
 	<option value="Vegetarian">Vegetarian</option>
     <option value="GlutenFree">GlutenFree</option>
     <option value="Both">Both</option>
-    <option value="None">None</option>
+    <option value="None" selected="selected">None</option>
 	</select>
 
-  <p>Do you want to include organic fruits within the list? (more expensive)</p>
+  <p>Include <b> <i>organic</i></b> food? (more expensive)</p>
 
   <input type="radio" id="yes" name="orgo" value="yes" onclick="populateListProductChoices2(dietSelect.id, 'displayProduct', 'yes');" checked>
-    <label for="yes">yes</label>
+    <label for="yes">Yes</label>
   <input type="radio" id="no" name="orgo" value="no" onclick="populateListProductChoices2(dietSelect.id, 'displayProduct', 'no')">
-    <label for="no">no</label><br>
+    <label for="no">No</label><br>
   
     
    
@@ -80,7 +80,7 @@
 	 Choose items to buy:
 	 <div id="displayProduct"></div>
 	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
-		Add selected items to cart.
+		Add to Cart
 	</button>
 </div>
 
@@ -93,8 +93,8 @@
 <script src="scripts/groceries.js"></script>
 <script src="scripts/main.js"></script>
 
-<p>
-  <signature>Made by SEG3125 Group 27</signature>
+<p >
+  <signature>Made by SEG3125 Group 27</signature><br>
 </p>
 
 </body>
