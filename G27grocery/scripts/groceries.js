@@ -4,64 +4,75 @@
 
 var products = [
 	{
-		name: "200g brocoli ($1.99)",
-		vegetarian: true,
-		glutenFree: true,
-		price: 1.99
-	},
-	{
-		name: "A loaf of bread ($2.35)",
+		name: "Bread ($2.35)",
 		vegetarian: true,
 		glutenFree: false,
+		organic: false,
 		price: 2.35
 	},
 	{
-		name: "100g salmon ($10.00)",
-		vegetarian: false,
-		glutenFree: true,
-		price: 10.00
-	},
-	{
-		name: "50g chicken pizza ($8.00)",
-		vegetarian: false,
-		glutenFree: false,
-		price: 8.00
-	}, 
-	{
-		name: "50g cheese pizza ($6.50)",
-		vegetarian: true,
-		glutenFree: false,
-		price: 6.50
-	}, 
-	{
-		name: "Box of strawberries ($5.00)",
+		name: "Brocoli - Inorganic ($1.99)",
 		vegetarian: true,
 		glutenFree: true,
-		price: 5.00
-	},
-	{
-		name: "Box of rasberries ($5.50)",
-		vegetarian: true,
-		glutenFree: true,
-		price: 5.50
-	},
-	{
-		name: "Box of cookies ($2.99)",
-		vegetarian: true,
-		glutenFree: false,
+		organic: false,
 		price: 2.99
 	},
 	{
-		name: "50g chicken wings ($5.00)",
+		name: "Brocoli - Organic ($2.99)",
+		vegetarian: true,
+		glutenFree: true,
+		organic: true,
+		price: 2.99
+	},
+
+	{
+		name: "Chicken wings ($5.00)",
 		vegetarian: false,
 		glutenFree: true,
+		organic: false,
 		price: 5.00
 	},
 	{
-		name: "2L of milk ($1.50)",
+		name: "Milk ($1.50)",
 		vegetarian: true,
 		glutenFree: true,
+		organic: false,
 		price: 1.50
+	},
+	{
+		name: "Rasberries - Organic ($7.50)",
+		vegetarian: true,
+		glutenFree: true,
+		organic: true,
+		price: 7.50
+	},
+	{
+		name: "Rasberries - Inorganic ($5.50)",
+		vegetarian: true,
+		glutenFree: true,
+		organic: false,
+		price: 5.50
+	},
+	{
+		name: "Salmon ($10.00)",
+		vegetarian: false,
+		glutenFree: true,
+		organic: false,
+		price: 10.00
+	},
+	{
+		name: "Strawberries - Inorganic ($5.00)",
+		vegetarian: true,
+		glutenFree: true,
+		organic: false,
+		price: 5.00
+	},
+	{
+		name: "Strawberries - Organic ($7.00)",
+		vegetarian: true,
+		glutenFree: true,
+		organic: false,
+		price: 7.00
 	}
 ];
 	
@@ -70,20 +81,71 @@ var products = [
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts(prods, restriction) {
+function restrictListProducts1(prods, restriction) {
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
+
+		// if(restriction == "no"){
+		// 	product_names.push(prods[i].name);
+		// }
+
+		if( (restriction == "Both") && (prods[i].vegetarian == true) && (prods[i].glutenFree == true) ){
 			product_names.push(prods[i].name);
 		}
-		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
+
+		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true) ){
 			product_names.push(prods[i].name);
 		}
-		else if (restriction == "None"){
+		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true) ){
 			product_names.push(prods[i].name);
 		}
+		else if (restriction == "None") {
+			product_names.push(prods[i].name);
+		}
+		
 	}
 	return product_names;
+}
+
+function restrictListProducts2(prods, restriction1, restriction2) {
+	let product_names = [];
+	for (let i=0; i<prods.length; i+=1) {
+
+		if( (restriction2 == "no") && (prods[i].organic == true) ){
+		 	continue;
+		}
+
+		if( (restriction1 == "Both") && (prods[i].vegetarian == true) && (prods[i].glutenFree == true) ){
+			product_names.push(prods[i].name);
+		}
+
+		if ((restriction1 == "Vegetarian") && (prods[i].vegetarian == true) ){
+			product_names.push(prods[i].name);
+		}
+		else if ((restriction1 == "GlutenFree") && (prods[i].glutenFree == true) ){
+			product_names.push(prods[i].name);
+		}
+		else if (restriction1 == "None") {
+			product_names.push(prods[i].name);
+		}
+		
+	}
+	return product_names;
+}
+
+function resetRadio(){
+	document.getElementById("no").checked = false;
+	document.getElementById("yes").checked = true;
+}
+
+function lucie(){
+	var body = document.getElementsByTagName('body')[0];
+	var name = document.getElementById('fname').value;
+	if(name == "Lucie"){
+		body.style.fontSize = "150%";
+	}
+	document.getElementById('hi').innerHTML="Hi " + name + "!";
+	
 }
 
 // Calculate the total price of items, with received parameter being a list of products
