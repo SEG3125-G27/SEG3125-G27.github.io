@@ -101,6 +101,13 @@ function populateListProductChoices2(slct1, slct2, slct3) {
 	// <label for="Bread">Bread/label><br>
 		
 	for (i = 0; i < optionArray.length; i++) {
+		
+		var img = document.createElement('img');
+		img.src = optionArray[i].image;
+		img.alt = productName;
+		img.height = 200;
+		img.width = 200;
+		s2.appendChild(img);
 			
 		var productName = optionArray[i].name;
 		// create the checkbox and add in HTML DOM

@@ -12,7 +12,7 @@ var products = [
 		image: "images/bread.jpg"
 	},
 	{
-		name: "Brocoli - Inorganic ($1.99)",
+		name: "Broccoli - Inorganic ($1.99)",
 		vegetarian: true,
 		glutenFree: true,
 		organic: false,
@@ -20,7 +20,7 @@ var products = [
 		image: "images/broccoli-inorganic.jpg"
 	},
 	{
-		name: "Brocoli - Organic ($2.99)",
+		name: "Broccoli - Organic ($2.99)",
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
@@ -103,7 +103,7 @@ function restrictListProducts1(prods, restriction) {
 			products.push(prods[i]);
 		}
 
-		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)) {
+		else if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)) {
 			products.push(prods[i]);
 		}
 		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)) {
@@ -121,20 +121,28 @@ function restrictListProducts2(prods, restriction1, restriction2) {
 	var products = [];
 
 	for (let i = 0; i < prods.length; i += 1) {
-		if ((restriction2 == "no") && (prods[i].organic == true)) {
-			continue;
+
+
+		// if the user chose no for organic and the product from the list is organic, do nothing
+		if ((restriction2 == "no") && (prods[i].organic == true)){
+			continue
 		}
-		if ((restriction1 == "Both") && (prods[i].vegetarian == true) && (prods[i].glutenFree == true)) {
-			products.push(prods[i]);
-		}
-		if ((restriction1 == "Vegetarian") && (prods[i].vegetarian == true)) {
-			products.push(prods[i]);
-		}
-		else if ((restriction1 == "GlutenFree") && (prods[i].glutenFree == true)) {
-			products.push(prods[i]);
-		}
-		else if (restriction1 == "None") {
-			products.push(prods[i]);
+		else{
+				
+
+			if ((restriction1 == "Both") && (prods[i].vegetarian == true) && (prods[i].glutenFree == true)) {
+				products.push(prods[i]);
+			}
+			else if ((restriction1 == "Vegetarian") && (prods[i].vegetarian == true)) {
+				products.push(prods[i]);
+			}
+			else if ((restriction1 == "GlutenFree") && (prods[i].glutenFree == true)) {
+				products.push(prods[i]);
+			}
+			else if (restriction1 == "None") {
+				products.push(prods[i]);
+			}
+
 		}
 	}
 	return products;
