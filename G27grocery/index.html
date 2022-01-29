@@ -44,6 +44,14 @@
 <div id="Client" class="tabcontent">
   <h3>Client Information</h3>
   <p>Tell us a bit about you.</p>
+
+
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="Submit" onclick="lucie()"> <br><br>
+
+  <p id="hi"></p>
+
 	Choose a Category:
 	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices1(dietSelect.id, 'displayProduct'); resetRadio();">
 	<option value=""></option>
