@@ -16,7 +16,7 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		organic: false,
-		price: 2.99,
+		price: 1.99,
 		image: "images/broccoli-inorganic.jpg"
 	},
 	{
@@ -45,7 +45,7 @@ var products = [
 		image: "images/milk.jpg"
 	},
 	{
-		name: "Rasberries - Organic ($7.50)",
+		name: "Raspberries - Organic ($7.50)",
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
@@ -53,7 +53,7 @@ var products = [
 		image: "images/raspberries-organic.jpg"
 	},
 	{
-		name: "Rasberries - Inorganic ($5.50)",
+		name: "Raspberries - Inorganic ($5.50)",
 		vegetarian: true,
 		glutenFree: true,
 		organic: false,
