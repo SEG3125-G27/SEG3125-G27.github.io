@@ -7,7 +7,7 @@ var products = [
 		name: "A loaf of bread ($2.35)",
 		vegetarian: true,
 		glutenFree: false,
-		organic: true,
+		organic: false,
 		price: 2.35
 	},
 	{
@@ -28,14 +28,14 @@ var products = [
 		name: "50g chicken wings ($5.00)",
 		vegetarian: false,
 		glutenFree: true,
-		organic: true,
+		organic: false,
 		price: 5.00
 	},
 	{
 		name: "2L of milk ($1.50)",
 		vegetarian: true,
 		glutenFree: true,
-		organic: true,
+		organic: false,
 		price: 1.50
 	},
 	{
@@ -56,7 +56,7 @@ var products = [
 		name: "100g salmon ($10.00)",
 		vegetarian: false,
 		glutenFree: true,
-		organic: true,
+		organic: false,
 		price: 10.00
 	},
 	{
@@ -80,7 +80,7 @@ var products = [
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts(prods, restriction) {
+function restrictListProducts1(prods, restriction) {
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
 
@@ -102,11 +102,11 @@ function restrictListProducts(prods, restriction) {
 	return product_names;
 }
 
-function restrictListProducts(prods, restriction1, restriction2) {
+function restrictListProducts2(prods, restriction1, restriction2) {
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
 
-		if( (restriction2 == "no") && (prods[i].organic == false) ){
+		if( (restriction2 == "no") && (prods[i].organic == true) ){
 		 	continue;
 		}
 

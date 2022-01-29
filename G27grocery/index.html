@@ -45,7 +45,7 @@
   <h3>Client Information</h3>
   <p>Tell us a bit about you.</p>
 	Choose a Category:
-	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(dietSelect.id, 'displayProduct')">
+	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices1(dietSelect.id, 'displayProduct')">
 	<option value=""></option>
 	<option value="Vegetarian">Vegetarian</option>
     <option value="GlutenFree">GlutenFree</option>
@@ -54,9 +54,9 @@
 
   <p>Do you want to include organic fruits within the list? (more expensive)</p>
 
-  <input type="radio" id="yes" name="orgo" value="yes" onclick="populateListProductChoices(dietSelect.id, 'displayProduct', 'yes')" checked>
+  <input type="radio" id="yes" name="orgo" value="yes" onclick="populateListProductChoices2(dietSelect.id, 'displayProduct', 'yes')" checked>
     <label for="yes">yes</label>
-  <input type="radio" id="no" name="orgo" value="no" onclick="populateListProductChoices(dietSelect.id, 'displayProduct', 'no')">
+  <input type="radio" id="no" name="orgo" value="no" onclick="populateListProductChoices2(dietSelect.id, 'displayProduct', 'no')">
     <label for="no">no</label><br>
   
     
