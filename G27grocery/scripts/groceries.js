@@ -124,6 +124,11 @@ function restrictListProducts2(prods, restriction1, restriction2) {
 	return product_names;
 }
 
+function resetRadio(){
+	document.getElementById("no").checked = false;
+	document.getElementById("yes").checked = true;
+}
+
 // Calculate the total price of items, with received parameter being a list of products
 function getTotalPrice(chosenProducts) {
 	totalPrice = 0;
