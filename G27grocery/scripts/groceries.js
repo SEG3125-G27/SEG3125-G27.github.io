@@ -88,6 +88,10 @@ function restrictListProducts1(prods, restriction) {
 		// 	product_names.push(prods[i].name);
 		// }
 
+		if( (restriction == "Both") && (prods[i].vegetarian == true) && (prods[i].glutenFree == true) ){
+			product_names.push(prods[i].name);
+		}
+
 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true) ){
 			product_names.push(prods[i].name);
 		}
@@ -108,6 +112,10 @@ function restrictListProducts2(prods, restriction1, restriction2) {
 
 		if( (restriction2 == "no") && (prods[i].organic == true) ){
 		 	continue;
+		}
+
+		if( (restriction1 == "Both") && (prods[i].vegetarian == true) && (prods[i].glutenFree == true) ){
+			product_names.push(prods[i].name);
 		}
 
 		if ((restriction1 == "Vegetarian") && (prods[i].vegetarian == true) ){
