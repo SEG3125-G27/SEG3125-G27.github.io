@@ -4,64 +4,74 @@
 
 var products = [
 	{
-		name: "200g brocoli ($1.99)",
-		vegetarian: true,
-		glutenFree: true,
-		price: 1.99
-	},
-	{
 		name: "A loaf of bread ($2.35)",
 		vegetarian: true,
 		glutenFree: false,
+		organic: true,
 		price: 2.35
 	},
 	{
-		name: "100g salmon ($10.00)",
-		vegetarian: false,
-		glutenFree: true,
-		price: 10.00
-	},
-	{
-		name: "50g chicken pizza ($8.00)",
-		vegetarian: false,
-		glutenFree: false,
-		price: 8.00
-	}, 
-	{
-		name: "50g cheese pizza ($6.50)",
-		vegetarian: true,
-		glutenFree: false,
-		price: 6.50
-	}, 
-	{
-		name: "Box of strawberries ($5.00)",
+		name: "200g organic brocoli ($2.99)",
 		vegetarian: true,
 		glutenFree: true,
-		price: 5.00
+		organic: true,
+		price: 2.99
 	},
 	{
-		name: "Box of rasberries ($5.50)",
+		name: "200g inorganic brocoli ($1.99)",
 		vegetarian: true,
 		glutenFree: true,
-		price: 5.50
-	},
-	{
-		name: "Box of cookies ($2.99)",
-		vegetarian: true,
-		glutenFree: false,
+		organic: false,
 		price: 2.99
 	},
 	{
 		name: "50g chicken wings ($5.00)",
 		vegetarian: false,
 		glutenFree: true,
+		organic: true,
 		price: 5.00
 	},
 	{
 		name: "2L of milk ($1.50)",
 		vegetarian: true,
 		glutenFree: true,
+		organic: true,
 		price: 1.50
+	},
+	{
+		name: "Box of organic rasberries ($7.50)",
+		vegetarian: true,
+		glutenFree: true,
+		organic: true,
+		price: 7.50
+	},
+	{
+		name: "Box of inorganic rasberries ($5.50)",
+		vegetarian: true,
+		glutenFree: true,
+		organic: false,
+		price: 5.50
+	},
+	{
+		name: "100g salmon ($10.00)",
+		vegetarian: false,
+		glutenFree: true,
+		organic: true,
+		price: 10.00
+	},
+	{
+		name: "Box of organic strawberries ($7.00)",
+		vegetarian: true,
+		glutenFree: true,
+		organic: true,
+		price: 7.00
+	},
+	{
+		name: "Box of inorganic strawberries ($5.00)",
+		vegetarian: true,
+		glutenFree: true,
+		organic: false,
+		price: 5.00
 	}
 ];
 	
@@ -73,15 +83,21 @@ var products = [
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
+
+		// if(restriction == "no"){
+		// 	product_names.push(prods[i].name);
+		// }
+
+		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true) ){
 			product_names.push(prods[i].name);
 		}
-		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
+		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true) ){
 			product_names.push(prods[i].name);
 		}
-		else if (restriction == "None"){
+		else if (restriction == "None") {
 			product_names.push(prods[i].name);
 		}
+		
 	}
 	return product_names;
 }
