@@ -53,11 +53,12 @@ function populateListProductChoices1(slct1, slct2) {
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
-	// <label for="Bread">Bread/label><br>
+	// <img src="images/bread.jpg" alt="bread"/>
+	// <label for="Bread">Bread</label><br>
 		
 	for (i = 0; i < optionArray.length; i++) {
 			
-		var productName = optionArray[i];
+		var productName = optionArray[i].name;
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
@@ -70,6 +71,14 @@ function populateListProductChoices1(slct1, slct2) {
 		label.htmlFor = productName;
 		label.appendChild(document.createTextNode(productName));
 		s2.appendChild(label);
+
+		// Get and display the image
+		var img = document.createElement('img');
+		img.src = optionArray[i].image;
+		img.alt = productName;
+		img.height = 200;
+		img.width = 200;
+		s2.appendChild(img);
 		
 		// create a breakline node and add in HTML DOM
 		s2.appendChild(document.createElement("br"));    
@@ -93,7 +102,7 @@ function populateListProductChoices2(slct1, slct2, slct3) {
 		
 	for (i = 0; i < optionArray.length; i++) {
 			
-		var productName = optionArray[i];
+		var productName = optionArray[i].name;
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
