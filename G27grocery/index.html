@@ -56,25 +56,22 @@
 
   Dietary restriction: <br><br>
 
-  <div id="forL" style="display: none;">
+  <div id="forLucie" style="display: none;">
     <select id="dietSelect1" name="dietSelect" onchange="populateListProductChoices1(dietSelect1.id, 'displayProduct'); resetRadio();">
-      <option value="" selected="selected"></option>
+      <option value="" selected="selected">Choose Diet</option>
       <option value="Vegetarian">Vegetarian</option>
-        <option hidden value="GlutenFree">GlutenFree</option>
-        <option hidden value="Both">Vegetarian & GlutenFree</option>
-        <option hidden value="Diabetic">SugarFree Products</option>
-        <option hidden value="None" >None</option>
       </select>
   </div>
 
-  <div id="notL" style="display: none;">
+  <div id="forEveryone" style="display: none;">
     <select id="dietSelect2" name="dietSelect" onchange="populateListProductChoices1(dietSelect2.id, 'displayProduct'); resetRadio();">
-      <option value="" selected="selected"></option>
+      <option value="" selected="selected">Choose Diet</option>
       <option value="Vegetarian">Vegetarian</option>
         <option value="GlutenFree">GlutenFree</option>
         <option value="Both">Vegetarian & GlutenFree</option>
         <option value="Diabetic">SugarFree Products</option>
-        <option value="None" >None</option>
+        <option value="lactoseIntol">Lactose Intolerant</option>
+        <option value="None">None</option>
       </select>
   </div>
 
@@ -83,9 +80,9 @@
 
   <p>Include <b> <i>organic</i></b> food? (more expensive)</p>
 
-  <input type="radio" id="yes" name="orgo" value="yes" onclick="populateListProductChoices2(dietSelect.id, 'displayProduct', 'yes');" checked>
+  <input type="radio" id="yes" name="orgo" value="yes" onclick="organicSelector()" checked>
     <label for="yes">Yes</label>
-  <input type="radio" id="no" name="orgo" value="no" onclick="populateListProductChoices2(dietSelect.id, 'displayProduct', 'no')">
+  <input type="radio" id="no" name="orgo" value="no" onclick="organicSelector()">
     <label for="no">No</label><br>
   
    
