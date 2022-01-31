@@ -150,6 +150,10 @@ var products = [
 	}
 ];
 
+//this function sort items by their price
+function sortBy(prods){
+	prods.sort(function (a,b){return a.price - b.price});
+}
 
 
 // given restrictions provided, make a reduced list of products
@@ -181,6 +185,7 @@ function restrictListProducts1(prods, restriction) {
 		}
 
 	}
+	sortBy(products);
 	return products;
 }
 
@@ -215,6 +220,7 @@ function restrictListProducts2(prods, restriction1, restriction2) {
 
 		}
 	}
+	sortBy(products);
 	return products;
 }
 
