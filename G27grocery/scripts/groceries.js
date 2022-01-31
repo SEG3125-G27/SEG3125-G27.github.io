@@ -155,20 +155,27 @@ function resetRadio() {
 
 function lucie() {
 	var body = document.getElementsByTagName('body')[0];
+	var cartButton = document.getElementById("addCart");
 	var name = document.getElementById('fname').value;
-	if (name == "Lucie") {
+	if (name.toLowerCase() == "lucie") {
 		body.style.fontSize = "150%";
+		cartButton.style.fontSize = "100%";  //edited to make buttons also bigger
 	}
 	document.getElementById('hi').innerHTML = "Hi " + name + "!";
 
 }
 
 // Calculate the total price of items, with received parameter being a list of products
-function getTotalPrice(chosenProducts) {
+function getTotalPrice(chosenProducts, productQuantity) {
 	totalPrice = 0;
+	var counter = 0;
+	//console.log(chosenProducts);
 	for (let i=0; i<products.length; i+=1) {
+		
 		if (chosenProducts.indexOf(products[i].name) > -1){
-			totalPrice += products[i].price;
+			var value = (products[i].price * parseInt(productQuantity[counter]));
+			totalPrice += value;
+			counter++;
 		}
 	}
 	return totalPrice;
