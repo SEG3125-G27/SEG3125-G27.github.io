@@ -178,5 +178,5 @@ function getTotalPrice(chosenProducts, productQuantity) {
 			counter++;
 		}
 	}
-	return totalPrice;
+	return Number(totalPrice.toFixed(2));
 }
