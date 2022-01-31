@@ -4,10 +4,20 @@
 
 var products = [
 	{
+		name: "Biscuit - ($9.99)",
+		vegetarian: true,
+		glutenFree: false,
+		organic: false,
+		sugarFree: true,
+		price: 9.99,
+		image: "images/biscuit.jpg"
+	},
+	{
 		name: "Bread ($2.35)",
 		vegetarian: true,
 		glutenFree: false,
 		organic: false,
+		sugarFree: false,
 		price: 2.35,
 		image: "images/bread.jpg"
 	},
@@ -16,6 +26,7 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		organic: false,
+		sugarFree: true,
 		price: 1.99,
 		image: "images/broccoli-inorganic.jpg"
 	},
@@ -24,6 +35,7 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
+		sugarFree: true,
 		price: 2.99,
 		image: "images/broccoli-organic.jpg"
 	},
@@ -33,22 +45,43 @@ var products = [
 		vegetarian: false,
 		glutenFree: true,
 		organic: false,
+		sugarFree: true,
 		price: 5.00,
 		image: "images/chicken-wings.jpg"
+	},
+	{
+		name: "Garlic - ($4.99)",
+		vegetarian: true,
+		glutenFree: true,
+		organic: false,
+		sugarFree: true,
+		price: 4.99,
+		image: "images/garlic.jpg"
 	},
 	{
 		name: "Milk ($1.50)",
 		vegetarian: true,
 		glutenFree: true,
 		organic: false,
+		sugarFree: true,
 		price: 1.50,
 		image: "images/milk.jpg"
 	},
+	{
+		name: "Raw Turmeric Organic - ($15.50)",
+		vegetarian: true,
+		glutenFree: true,
+		organic: true,
+		sugarFree: true,
+		price: 15.50,
+		image: "images/turmeric.jpg"
+	},	
 	{
 		name: "Raspberries - Organic ($7.50)",
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
+		sugarFree: true,
 		price: 7.50,
 		image: "images/raspberries-organic.jpg"
 	},
@@ -57,14 +90,25 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		organic: false,
+		sugarFree: false,
 		price: 5.50,
 		image: "images/raspberries-inorganic.jpg"
+	},
+	{
+		name: "Red Bull [6 Pack] - ($14.99)",
+		vegetarian: true,
+		glutenFree: true,
+		organic: false,
+		sugarFree: true,
+		price: 14.99,
+		image: "images/redBull.jpg"
 	},
 	{
 		name: "Salmon ($10.00)",
 		vegetarian: false,
 		glutenFree: true,
 		organic: false,
+		sugarFree: true,
 		price: 10.00,
 		image: "images/salmon.jpg"
 	},
@@ -73,6 +117,7 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		organic: false,
+		sugarFree: false,
 		price: 5.00,
 		image: "images/strawberries-inorganic.jpg"
 	},
@@ -81,8 +126,27 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
+		sugarFree: false,
 		price: 7.00,
 		image: "images/strawberries-organic.jpg"
+	},
+	{
+		name: "Sugar-Free Sugar - ($2.50)",
+		vegetarian: true,
+		glutenFree: true,
+		organic: false,
+		sugarFree: true,
+		price: 2.50,
+		image: "images/sugarFree.jpg"
+	},
+	{
+		name: "Whole Grain Bread - ($7.99)",
+		vegetarian: true,
+		glutenFree: true,
+		organic: false,
+		sugarFree: true,
+		price: 7.99,
+		image: "images/wholeGrainBread.jpg"
 	}
 ];
 
@@ -107,6 +171,9 @@ function restrictListProducts1(prods, restriction) {
 			products.push(prods[i]);
 		}
 		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)) {
+			products.push(prods[i]);
+		}
+		else if ((restriction == "Diabetic") && (prods[i].sugarFree == true)) {
 			products.push(prods[i]);
 		}
 		else if (restriction == "None") {
@@ -137,6 +204,9 @@ function restrictListProducts2(prods, restriction1, restriction2) {
 				products.push(prods[i]);
 			}
 			else if ((restriction1 == "GlutenFree") && (prods[i].glutenFree == true)) {
+				products.push(prods[i]);
+			}
+			else if ((restriction1 == "Diabetic") && (prods[i].sugarFree == true)) {
 				products.push(prods[i]);
 			}
 			else if (restriction1 == "None") {
