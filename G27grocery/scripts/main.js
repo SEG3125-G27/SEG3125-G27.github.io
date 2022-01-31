@@ -66,13 +66,13 @@ function populateListProductChoices1(slct1, slct2) {
 		img.width = 200;
 		s2.appendChild(img);
 
+		s2.appendChild(document.createElement("br")); 
+		s2.appendChild(document.createElement("br")); 
+
 		var productName = optionArray[i].name;
-		// create the checkbox and add in HTML DOM
-		var checkbox = document.createElement("input");
-		checkbox.type = "checkbox";
-		checkbox.name = "product";
-		checkbox.value = productName;
-		s2.appendChild(checkbox);
+		
+		s2.appendChild(document.createElement("br"));
+		s2.appendChild(document.createElement("br"));
 
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
@@ -80,8 +80,50 @@ function populateListProductChoices1(slct1, slct2) {
 		label.appendChild(document.createTextNode(productName));
 		s2.appendChild(label);
 
+		s2.appendChild(document.createElement("br"));
+		s2.appendChild(document.createElement("br"));
+
+		// create the Selection and add in HTML DOM
+		var selecter = document.createElement("select");
+		selecter.id = "quantity";
+		selecter.name = productName;
+		selecter.title = "products";
+		var option1 = document.createElement("option");
+		var option2 = document.createElement("option");
+		var option3 = document.createElement("option");
+		var option4 = document.createElement("option");
+		var option5 = document.createElement("option");
+		var option6 = document.createElement("option");
+
+		option1.setAttribute("value", "quantity");
+		option1.appendChild(document.createTextNode("Quantity"));
+		selecter.appendChild(option1);	
+
+		option2.setAttribute("value", 1);
+		option2.appendChild(document.createTextNode("1"));
+		selecter.appendChild(option2);
+
+		option3.setAttribute("value", 2);
+		option3.appendChild(document.createTextNode("2"));
+		selecter.appendChild(option3);	
+
+		option4.setAttribute("value", 3);
+		option4.appendChild(document.createTextNode("3"));
+		selecter.appendChild(option4);
+		
+		option5.setAttribute("value", 4);
+		option5.appendChild(document.createTextNode("4"));
+		selecter.appendChild(option5);
+
+		option6.setAttribute("value", 5);
+		option6.appendChild(document.createTextNode("5"));
+		selecter.appendChild(option6);
+
+		s2.appendChild(selecter);
+
 		// create a breakline node and add in HTML DOM
-		s2.appendChild(document.createElement("br"));    
+		s2.appendChild(document.createElement("br"));     
+		s2.appendChild(document.createElement("br"));     
 	}
 }
 
@@ -110,18 +152,60 @@ function populateListProductChoices2(slct1, slct2, slct3) {
 		s2.appendChild(img);
 			
 		var productName = optionArray[i].name;
-		// create the checkbox and add in HTML DOM
-		var checkbox = document.createElement("input");
-		checkbox.type = "checkbox";
-		checkbox.name = "product";
-		checkbox.value = productName;
-		s2.appendChild(checkbox);
+		
+		s2.appendChild(document.createElement("br"));
+		s2.appendChild(document.createElement("br"));
 		
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
 		label.htmlFor = productName;
 		label.appendChild(document.createTextNode(productName));
 		s2.appendChild(label);
+
+		s2.appendChild(document.createElement("br"));
+		s2.appendChild(document.createElement("br"));
+
+		// create the Selection and add in HTML DOM
+		var selecter = document.createElement("select");
+		selecter.id = "quantity";
+		selecter.name = productName;
+		selecter.title = "products";
+		var option1 = document.createElement("option");
+		var option2 = document.createElement("option");
+		var option3 = document.createElement("option");
+		var option4 = document.createElement("option");
+		var option5 = document.createElement("option");
+		var option6 = document.createElement("option");
+
+		option1.setAttribute("value", "quantity");
+		option1.appendChild(document.createTextNode("Quantity"));
+		selecter.appendChild(option1);	
+
+		option2.setAttribute("value", 1);
+		option2.appendChild(document.createTextNode("1"));
+		selecter.appendChild(option2);
+
+		option3.setAttribute("value", 2);
+		option3.appendChild(document.createTextNode("2"));
+		selecter.appendChild(option3);	
+
+		option4.setAttribute("value", 3);
+		option4.appendChild(document.createTextNode("3"));
+		selecter.appendChild(option4);
+				
+		option5.setAttribute("value", 4);
+		option5.appendChild(document.createTextNode("4"));
+		selecter.appendChild(option5);
+
+		option6.setAttribute("value", 5);
+		option6.appendChild(document.createTextNode("5"));
+		selecter.appendChild(option6);
+
+		s2.appendChild(selecter);
+
+		// create a breakline node and add in HTML DOM
+		s2.appendChild(document.createElement("br"));     
+		s2.appendChild(document.createElement("br")); 
 		
 		// create a breakline node and add in HTML DOM
 		s2.appendChild(document.createElement("br"));    
@@ -134,27 +218,31 @@ function populateListProductChoices2(slct1, slct2, slct3) {
 
 function selectedItems(){
 	
-	var ele = document.getElementsByName("product");
+	var ele = document.querySelectorAll('select#quantity');
 	var chosenProducts = [];
-	
+	var productQuantity = [];
+
 	var c = document.getElementById('displayCart');
 	c.innerHTML = "";
-	
+
 	// build list of selected item
 	var para = document.createElement("P");
 	para.innerHTML = "You selected : ";
 	para.appendChild(document.createElement("br"));
 	for (i = 0; i < ele.length; i++) { 
-		if (ele[i].checked) {
-			para.appendChild(document.createTextNode(ele[i].value));
+
+		if (ele[i].value > 0) {
+			para.appendChild(document.createTextNode(ele[i].name));
 			para.appendChild(document.createElement("br"));
-			chosenProducts.push(ele[i].value);
+			chosenProducts.push(ele[i].name);
+			productQuantity.push(ele[i].value);
 		}
-	}
-		
+	}	
+	console.log(chosenProducts);
+	console.log(productQuantity);
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts)));
+	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts, productQuantity)));
 		
 }
 
