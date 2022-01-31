@@ -38,8 +38,8 @@ function openInfo(evt, tabName) {
 
 
 	
-// generate a checkbox list from a list of products
-// it makes each product name as the label for the checkbos
+// generate a dropdown list from a list of products
+// it makes each product name as the label for the dropdown list.
 
 function populateListProductChoices1(slct1, slct2) {
     var s1 = document.getElementById(slct1);
@@ -232,14 +232,14 @@ function selectedItems(){
 	for (i = 0; i < ele.length; i++) { 
 
 		if (ele[i].value > 0) {
+			para.appendChild(document.createTextNode(ele[i].value + "x ")); 
 			para.appendChild(document.createTextNode(ele[i].name));
 			para.appendChild(document.createElement("br"));
 			chosenProducts.push(ele[i].name);
 			productQuantity.push(ele[i].value);
 		}
 	}	
-	console.log(chosenProducts);
-	console.log(productQuantity);
+
 	// add paragraph and total price
 	c.appendChild(para);
 	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts, productQuantity)));
