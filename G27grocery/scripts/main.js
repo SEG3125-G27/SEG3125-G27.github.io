@@ -245,4 +245,3 @@ function selectedItems(){
 	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts, productQuantity)));
 		
 }
-
