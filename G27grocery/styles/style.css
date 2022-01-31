@@ -185,3 +185,7 @@ div{
 .brand h1 span{
   color:crimson;
 }
+
+select, input{
+  font-size: 100%;
+}
