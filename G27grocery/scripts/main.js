@@ -42,12 +42,15 @@ function openInfo(evt, tabName) {
 // it makes each product name as the label for the dropdown list.
 
 function populateListProductChoices1(slct1, slct2) {
+
     var s1 = document.getElementById(slct1);
     var s2 = document.getElementById(slct2);
+	//console.log(ifLucie);
+	//document.getElementById("forL").innerHTML = setAttribute('style', 'display: block');
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
-		
+	
 	// obtain a reduced list of products based on restrictions
     var optionArray = restrictListProducts1(products, s1.value);
 

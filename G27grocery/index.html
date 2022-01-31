@@ -48,26 +48,38 @@
 
   <label for="fname">First name:</label>
   <input type="text" id="fname" name="fname"><br><br>
-  <input type="submit" value="Submit" onclick="lucie()"> <br><br>
+  <!-- <input type="submit" name="Submit" onclick="lucie()"> -->
+  <button type="submit" value="Submit" onclick="lucie()">Submit</button>
+  <br><br>
 
   <p id="hi"></p>
 
-<<<<<<< HEAD
-	Dietary restriction:
-	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices1(dietSelect.id, 'displayProduct'); resetRadio();">
-	<option value="" selected="selected"></option>
-	<option value="Vegetarian">Vegetarian</option>
-=======
-  Dietary restriction:
-  <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices1(dietSelect.id, 'displayProduct'); resetRadio();">
-  <option value="" selected="selected"></option>
-  <option value="Vegetarian">Vegetarian</option>
->>>>>>> f00380c9678ac752a05cd66d5410a95f99c8bd76
-    <option value="GlutenFree">GlutenFree</option>
-    <option value="Both">Vegetarian & GlutenFree</option>
-    <option value="Diabetic">SugarFree Products</option>
-    <option value="None" >None</option>
-  </select>
+  Dietary restriction: <br><br>
+
+  <div id="forL" style="display: none;">
+    <select id="dietSelect1" name="dietSelect" onchange="populateListProductChoices1(dietSelect1.id, 'displayProduct'); resetRadio();">
+      <option value="" selected="selected"></option>
+      <option value="Vegetarian">Vegetarian</option>
+        <option hidden value="GlutenFree">GlutenFree</option>
+        <option hidden value="Both">Vegetarian & GlutenFree</option>
+        <option hidden value="Diabetic">SugarFree Products</option>
+        <option hidden value="None" >None</option>
+      </select>
+  </div>
+
+  <div id="notL" style="display: none;">
+    <select id="dietSelect2" name="dietSelect" onchange="populateListProductChoices1(dietSelect2.id, 'displayProduct'); resetRadio();">
+      <option value="" selected="selected"></option>
+      <option value="Vegetarian">Vegetarian</option>
+        <option value="GlutenFree">GlutenFree</option>
+        <option value="Both">Vegetarian & GlutenFree</option>
+        <option value="Diabetic">SugarFree Products</option>
+        <option value="None" >None</option>
+      </select>
+  </div>
+
+
+
 
   <p>Include <b> <i>organic</i></b> food? (more expensive)</p>
 

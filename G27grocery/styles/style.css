@@ -186,6 +186,6 @@ div{
   color:crimson;
 }
 
-select, input{
+select, input, button{
   font-size: 100%;
 }

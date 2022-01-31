@@ -233,11 +233,21 @@ function lucie() {
 	var body = document.getElementsByTagName('body')[0];
 	var cartButton = document.getElementById("addCart");
 	var name = document.getElementById('fname').value;
+	var choice1 = document.getElementById('forL');
+	var choice2 = document.getElementById('notL');
 	if (name.toLowerCase() == "lucie") {
 		body.style.fontSize = "150%";
 		cartButton.style.fontSize = "100%";  //edited to make buttons also bigger
+		document.getElementById('hi').innerHTML = "Hi " + name + "!";
+		choice1.style.display = 'block';
+		choice2.style.display = 'none';
 	}
-	document.getElementById('hi').innerHTML = "Hi " + name + "!";
+	else{
+		document.getElementById('hi').innerHTML = "Hi " + name + "!";
+		choice1.style.display = 'none';
+		choice2.style.display = 'block'
+	}
+	
 
 }
 
