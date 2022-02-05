@@ -57,15 +57,15 @@
   Dietary restriction: <br><br>
 
   <div id="forLucie" style="display: none;">
-    <select id="dietSelect1" name="dietSelect" onchange="populateListProductChoices1(dietSelect1.id, 'displayProduct'); resetRadio();">
+     <select id="dietSelect1" name="dietSelect" selected onchange="categorySelector1(dietSelect1.id, 'displayProduct'); resetRadio();" >
       <option value="" selected="selected">Choose Diet</option>
       <option value="Vegetarian">Vegetarian</option>
       </select>
   </div>
 
   <div id="forEveryone" style="display: none;">
-    <select id="dietSelect2" name="dietSelect" onchange="populateListProductChoices1(dietSelect2.id, 'displayProduct'); resetRadio();">
-      <option value="" selected="selected">Choose Diet</option>
+    <select id="dietSelect2" name="dietSelect" selected onchange="categorySelector1(dietSelect2.id, 'displayProduct'); resetRadio();">
+      <option value="" disabled selected="selected">Choose Diet</option>
       <option value="Vegetarian">Vegetarian</option>
         <option value="GlutenFree">GlutenFree</option>
         <option value="Both">Vegetarian & GlutenFree</option>
@@ -93,7 +93,18 @@
 <div id="Products" class="tabcontent">
   <h3>Your targeted products</h3>
   <p>We preselected products based on your restrictions.</p>
-   Choose items to buy:
+   Choose items to buy: <br><br>
+   <div id="forCategory" style="display: none;">
+    <select id="category" name="category" onchange="categorySelector2(category.value);">
+      <option value="" disabled selected name="categories">Menu</option>
+      <option value="vegetable">Vegetables</option>
+        <option value="fruit">Fruits</option>
+        <option value="dairy">Dairy</option>
+        <option value="meat">Meat</option>
+        <option value="snack">Snacks</option>
+      </select>
+   </div>
+   <br>
    <div id="displayProduct"></div>
    <button id="addCart" type="button" class="block" onclick="selectedItems()">
     Add to Cart
