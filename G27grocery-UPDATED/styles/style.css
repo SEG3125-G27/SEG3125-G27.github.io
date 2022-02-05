@@ -2,12 +2,7 @@
 
 body {font-family: Arial;}
 
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #945af0;
-  background-color: #945af0;
-}
+
 
 h3{
   font-size: 22px;
@@ -21,8 +16,11 @@ h3{
 /*style the signature at the bottom*/
 signature {
   position: relative;
-  bottom: 1%;
-  text-align: center;
+  left: 40%;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  margin: auto;
   font-family: "Lucida Console","Courier New",monospace;
   font-size: 80%;
   opacity: 60%;
@@ -33,6 +31,22 @@ div{
 
 }
 
+
+
+/*vertical navigation bar inspired by https:www.w3schools.com/Css/css_navbar_vertical.asp*/
+
+
+/* Style the tab */
+.tab {
+  position: fixed;
+  height: 900px;
+  top: 1px;
+  left: 1px;
+  overflow: hidden;
+  width: 100px;
+  border: 1px solid #945af0;
+  background-color: #945af0;
+}
 /* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
@@ -42,28 +56,34 @@ div{
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
+  padding: 12px 30px;
   transition: 0.3s;
-  font-size: 17px;
+  font-size: 15px;
+  text-align: center;
+  /*height: 90%;*/
 
 }
 
-/* Change background color of buttons on hover */
+/* Change  color of buttons on hover */
 .tab button:hover {
-  background-color: #5602DC;
-  border-radius: 7px;
+  color: black;
+  border-radius: 2px;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #5602DC;
-  border-radius: 7px;
+  background-color: #77bd08;
+  border-radius: 2px;
 }
 
 /* Style the tab content */
 .tabcontent {
+  position: relative;
+
+  margin-left:106px;
   display: none;
-  padding: 6px 12px;
+  top: 0px;
+  padding: 3px 12px;
   border: 1px solid #5602DC;
   border-top: none;
 }
@@ -83,6 +103,7 @@ div{
 .demo-bg {
   opacity: 0.5;
   position: absolute;
+  margin-left: 106px;
   left: 0;
   top: 0;
   width: 100%;
@@ -175,6 +196,8 @@ div{
 /* End Footer */
 
 .brand h1{
+  position: relative;
+  margin-left: 106px;
   font-size: 5rem;
   text-transform: uppercase;
   color:rgb(127, 41, 145);
