@@ -10,6 +10,7 @@ var products = [
 		organic: false,
 		sugarFree: true,
 		lactoseFree: false,
+		category: "snack",
 		price: 9.99,
 		image: "images/biscuit.jpg"
 	},
@@ -20,6 +21,7 @@ var products = [
 		organic: false,
 		sugarFree: false,
 		lactoseFree: false,
+		category: "dairy",
 		price: 2.35,
 		image: "images/bread.jpg"
 	},
@@ -30,6 +32,7 @@ var products = [
 		organic: false,
 		sugarFree: true,
 		lactoseFree: true,
+		category: "vegetable",
 		price: 1.99,
 		image: "images/broccoli-inorganic.jpg"
 	},
@@ -40,6 +43,7 @@ var products = [
 		organic: true,
 		sugarFree: true,
 		lactoseFree: true,
+		category: "vegetable",
 		price: 2.99,
 		image: "images/broccoli-organic.jpg"
 	},
@@ -51,6 +55,7 @@ var products = [
 		organic: false,
 		sugarFree: true,
 		lactoseFree: true,
+		category: "snack",
 		price: 5.00,
 		image: "images/chicken-wings.jpg"
 	},
@@ -61,6 +66,7 @@ var products = [
 		organic: false,
 		sugarFree: true,
 		lactoseFree: true,
+		category: "vegetable",
 		price: 4.99,
 		image: "images/garlic.jpg"
 	},
@@ -71,6 +77,7 @@ var products = [
 		organic: false,
 		sugarFree: true,
 		lactoseFree: false,
+		category: "dairy",
 		price: 1.50,
 		image: "images/milk.jpg"
 	},
@@ -81,6 +88,7 @@ var products = [
 		organic: true,
 		sugarFree: true,
 		lactoseFree: true,
+		category: "vegetable",
 		price: 15.50,
 		image: "images/turmeric.jpg"
 	},	
@@ -91,6 +99,7 @@ var products = [
 		organic: true,
 		sugarFree: true,
 		lactoseFree: true,
+		category: "fruit",
 		price: 7.50,
 		image: "images/raspberries-organic.jpg"
 	},
@@ -101,6 +110,7 @@ var products = [
 		organic: false,
 		sugarFree: false,
 		lactoseFree: true,
+		category: "fruit",
 		price: 5.50,
 		image: "images/raspberries-inorganic.jpg"
 	},
@@ -111,6 +121,7 @@ var products = [
 		organic: false,
 		sugarFree: true,
 		lactoseFree: true,
+		category: "snack",
 		price: 14.99,
 		image: "images/redBull.jpg"
 	},
@@ -121,6 +132,7 @@ var products = [
 		organic: false,
 		sugarFree: true,
 		lactoseFree: true,
+		category: "meat",
 		price: 10.00,
 		image: "images/salmon.jpg"
 	},
@@ -131,6 +143,7 @@ var products = [
 		organic: false,
 		sugarFree: false,
 		lactoseFree: true,
+		category: "fruit",
 		price: 5.00,
 		image: "images/strawberries-inorganic.jpg"
 	},
@@ -141,6 +154,7 @@ var products = [
 		organic: true,
 		sugarFree: false,
 		lactoseFree: true,
+		category: "fruit",
 		price: 7.00,
 		image: "images/strawberries-organic.jpg"
 	},
@@ -151,6 +165,7 @@ var products = [
 		organic: false,
 		sugarFree: true,
 		lactoseFree: true,
+		category: "dairy",
 		price: 2.50,
 		image: "images/sugarFree.jpg"
 	},
@@ -161,6 +176,7 @@ var products = [
 		organic: false,
 		sugarFree: true,
 		lactoseFree: true,
+		category: "dairy",
 		price: 7.99,
 		image: "images/wholeGrainBread.jpg"
 	},
@@ -171,6 +187,7 @@ var products = [
 		organic: false,
 		sugarFree: true,
 		lactoseFree: true,
+		category: "dairy",
 		price: 3.99,
 		image: "images/lactoseButter.jpg"
 	},
@@ -181,6 +198,7 @@ var products = [
 		organic: false,
 		sugarFree: true,
 		lactoseFree: true,
+		category: "dairy",
 		price: 11.99,
 		image: "images/lactoseFreeMilk.jpg"
 	},
@@ -191,6 +209,7 @@ var products = [
 		organic: false,
 		sugarFree: true,
 		lactoseFree: true,
+		category: "dairy",
 		price: 6.00,
 		image: "images/lactoseIceCream.png"
 	}
@@ -205,40 +224,53 @@ function sortBy(prods){
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts1(prods, restriction) {
+function restrictListProducts1(prods, restriction, categoryProd) {
 	var products = [];
-	for (let i = 0; i < prods.length; i += 1) {
-
 		// if(restriction == "no"){
 		// 	product_names.push(prods[i].name);
 		// }
 
+	for (var i = 0; i < prods.length; i++){
+
 		if ((restriction == "Both") && (prods[i].vegetarian == true) && (prods[i].glutenFree == true)) {
-			products.push(prods[i]);
+			if (prods[i].category == categoryProd){
+				products.push(prods[i]);
+			}
 		}
 
 		else if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)) {
-			products.push(prods[i]);
+			if (prods[i].category == categoryProd){		
+				products.push(prods[i]);
+			}		
 		}
 		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)) {
-			products.push(prods[i]);
+			if (prods[i].category == categoryProd){
+				products.push(prods[i]);
+			}
 		}
 		else if ((restriction == "Diabetic") && (prods[i].sugarFree == true)) {
-			products.push(prods[i]);
+			if (prods[i].category == categoryProd){
+				products.push(prods[i]);
+			}
 		}
 		else if ((restriction == "lactoseIntol") && (prods[i].lactoseFree == true)) {
-			products.push(prods[i]);
+			if (prods[i].category == categoryProd){
+				products.push(prods[i]);
+			}
 		}
 		else if (restriction == "None") {
-			products.push(prods[i]);
+			if (prods[i].category == categoryProd){
+				products.push(prods[i]);
+			}
 		}
-
+		
 	}
+
 	sortBy(products);
 	return products;
 }
 
-function restrictListProducts2(prods, restriction1, restriction2) {
+function restrictListProducts2(prods, restriction1, restriction2, categoryProd) {
 	var products = [];
 
 	for (let i = 0; i < prods.length; i += 1) {
@@ -248,30 +280,42 @@ function restrictListProducts2(prods, restriction1, restriction2) {
 		if ((restriction2 == "no") && (prods[i].organic == true)){
 			continue
 		}
-		else{
-				
+		else{				
 
 			if ((restriction1 == "Both") && (prods[i].vegetarian == true) && (prods[i].glutenFree == true)) {
-				products.push(prods[i]);
+				if (prods[i].category == categoryProd){
+					products.push(prods[i]);
+				}
 			}
+	
 			else if ((restriction1 == "Vegetarian") && (prods[i].vegetarian == true)) {
-				products.push(prods[i]);
+				if (prods[i].category == categoryProd){		
+					products.push(prods[i]);
+				}		
 			}
 			else if ((restriction1 == "GlutenFree") && (prods[i].glutenFree == true)) {
-				products.push(prods[i]);
+				if (prods[i].category == categoryProd){
+					products.push(prods[i]);
+				}
 			}
 			else if ((restriction1 == "Diabetic") && (prods[i].sugarFree == true)) {
-				products.push(prods[i]);
+				if (prods[i].category == categoryProd){
+					products.push(prods[i]);
+				}
 			}
 			else if ((restriction1 == "lactoseIntol") && (prods[i].lactoseFree == true)) {
-				products.push(prods[i]);
+				if (prods[i].category == categoryProd){
+					products.push(prods[i]);
+				}
 			}
 			else if (restriction1 == "None") {
-				products.push(prods[i]);
+				if (prods[i].category == categoryProd){
+					products.push(prods[i]);
+				}
 			}
-
 		}
 	}
+
 	sortBy(products);
 	return products;
 }
@@ -304,29 +348,38 @@ function lucie() {
 	}
 }
 
-function organicSelector() {
-	var organicYes = document.getElementById('yes').checked;
-	var organicNo = document.getElementById('no').checked;
+var organicYes = true;
+var organicNo = false;
 
+function organicSelector() {
+	organicYes = document.getElementById('yes').checked;
+	organicNo = document.getElementById('no').checked;
+}
+
+function organicOption(){
+	return [organicYes, organicNo];
+}
+
+function organicSelector2(chosenCategory){
 	if (lucieVerify == true) {
 
 		if (organicYes == true){
-			populateListProductChoices2(dietSelect1.id, 'displayProduct', 'yes');
+			populateListProductChoices2(dietSelect1.id, 'displayProduct', 'yes', chosenCategory);
 		}
 	
 		else if (organicNo == true){
-			populateListProductChoices2(dietSelect1.id, 'displayProduct', 'no');
+			populateListProductChoices2(dietSelect1.id, 'displayProduct', 'no', chosenCategory);
 		}
 	}
 	
 	else if (lucieVerify == false) {
 		
 		if (organicYes == true){
-			populateListProductChoices2(dietSelect2.id, 'displayProduct', 'yes');
+			populateListProductChoices2(dietSelect2.id, 'displayProduct', 'yes', chosenCategory);
 		}
 	
 		else if (organicNo == true){
-			populateListProductChoices2(dietSelect2.id, 'displayProduct', 'no');
+			populateListProductChoices2(dietSelect2.id, 'displayProduct', 'no', chosenCategory);
 		}
 	}
 }
