@@ -366,3 +366,7 @@ function getTotalPrice(chosenProducts, productQuantity) {
 	}
 	return Number(totalPrice.toFixed(2));
 }
+
+function selectMenu() {
+	document.getElementById("category").value = "";
+  }
