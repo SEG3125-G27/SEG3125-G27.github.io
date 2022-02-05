@@ -17,9 +17,9 @@ function openInfo(evt, tabName) {
 	}
 
 	// Show the current tab, and add an "active" class to the button that opened the tab
-	document.getElementById(tabName).style.display = "block";
-	evt.currentTarget.className += " active";
 
+	document.getElementById(tabName).style.display = "block";
+	evt.currentTarget.className += "active";
 }
 
 // function openInfo(evt, tabName) {
@@ -41,8 +41,83 @@ function openInfo(evt, tabName) {
 // generate a dropdown list from a list of products
 // it makes each product name as the label for the dropdown list.
 
-function populateListProductChoices1(slct1, slct2) {
+var dietPlan;
+var dietShow;
+function categorySelector1(dietID, dietDisplay) {
+	dietPlan = dietID;
+	dietShow = dietDisplay;
+	document.getElementById("forCategory").style.display = "block";
+}
 
+var chosenCategory;
+function categorySelector2(categoryValue) {
+	chosenCategory = categoryValue;
+	var choice = organicOption();
+	console.log(choice)
+	if (choice[0] == true) {
+		populateListProductChoices1(dietPlan, dietShow, chosenCategory);
+	}
+	else if (choice[1] == true) {
+		organicSelector2(chosenCategory);
+	}
+}
+
+
+// function categorySelector1(val1, val2) {
+// 	val2.appendChild(document.createElement("br")); 
+// 	// create the Selection and add in HTML DOM
+// 	var category = document.createElement("select");
+// 	category.id = "category";
+// 	//category.name = productName;
+// 	category.title = "category";
+	
+// 	var option1 = document.createElement("option");
+// 	var option2 = document.createElement("option");
+// 	var option3 = document.createElement("option");
+// 	var option4 = document.createElement("option");
+// 	var option5 = document.createElement("option");
+// 	var option6 = document.createElement("option");
+
+// 	option1.setAttribute("value", "categories");
+// 	option1.appendChild(document.createTextNode("Menu"));
+// 	category.appendChild(option1);	
+
+// 	option2.setAttribute("value", "vegetable");
+// 	option2.appendChild(document.createTextNode("Vegetables"));
+// 	category.appendChild(option2);
+
+// 	option3.setAttribute("value", "fruit");
+// 	option3.appendChild(document.createTextNode("Fruits"));
+// 	category.appendChild(option3);	
+
+// 	option4.setAttribute("value", "dairy");
+// 	option4.appendChild(document.createTextNode("Dairy"));
+// 	category.appendChild(option4);
+	
+// 	option5.setAttribute("value", "meat");
+// 	option5.appendChild(document.createTextNode("Meat"));
+// 	category.appendChild(option5);
+
+// 	option6.setAttribute("value", "snack");
+// 	option6.appendChild(document.createTextNode("Snacks"));
+// 	category.appendChild(option6);
+
+// 	val2.appendChild(category);
+// 	val2.appendChild(document.createElement("br")); 
+// 	val2.appendChild(document.createElement("br")); 
+
+	
+// 	//console.log(category.value());
+	
+// 	category.onchange = restrictListProducts1(products, val1.value, category.value);
+	
+// 	//return cat.value;
+
+	
+// }
+
+function populateListProductChoices1(slct1, slct2, valueCategory) {
+	//console.log(slct1)
     var s1 = document.getElementById(slct1);
     var s2 = document.getElementById(slct2);
 	//console.log(ifLucie);
@@ -50,15 +125,23 @@ function populateListProductChoices1(slct1, slct2) {
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
-	
+
+	//var categoryProd = categorySelector(s1, s2);
+	//categorySelector(s1, s2);
+
+	//var cat = document.getElementById('category');
+	//var value = cat.options[cat.selectedIndex].value;
+	//console.log(valueCategory);
+
 	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictListProducts1(products, s1.value);
+	//console.log(categoryProd)
+    var optionArray = restrictListProducts1(products, s1.value, valueCategory);
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
 	// <img src="images/bread.jpg" alt="bread"/>
 	// <label for="Bread">Bread</label><br>
-		
+
 	for (i = 0; i < optionArray.length; i++) {
 
 		// Get and display the image
@@ -130,7 +213,7 @@ function populateListProductChoices1(slct1, slct2) {
 	}
 }
 
-function populateListProductChoices2(slct1, slct2, slct3) {
+function populateListProductChoices2(slct1, slct2, slct3, valueCategory) {
     var s1 = document.getElementById(slct1);
     var s2 = document.getElementById(slct2);
 	var s3 = document.getElementById(slct3);
@@ -139,7 +222,7 @@ function populateListProductChoices2(slct1, slct2, slct3) {
     s2.innerHTML = "";
 		
 	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictListProducts2(products, s1.value, s3.value);
+    var optionArray = restrictListProducts2(products, s1.value, s3.value, valueCategory);
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
