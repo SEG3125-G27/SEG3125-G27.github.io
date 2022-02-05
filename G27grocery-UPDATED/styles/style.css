@@ -20,7 +20,7 @@ h3{
 */
 /*style the signature at the bottom*/
 signature {
-  position: fixed;
+  position: relative;
   bottom: 1%;
   text-align: center;
   font-family: "Lucida Console","Courier New",monospace;
