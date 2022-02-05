@@ -224,57 +224,11 @@ function sortBy(prods){
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts1(prods, restriction, categoryProd) {
-	var products = [];
-		// if(restriction == "no"){
-		// 	product_names.push(prods[i].name);
-		// }
+function restrictedArray(prods, restriction1, restriction2, categoryProd) {
 
-	for (var i = 0; i < prods.length; i++){
-
-		if ((restriction == "Both") && (prods[i].vegetarian == true) && (prods[i].glutenFree == true)) {
-			if (prods[i].category == categoryProd){
-				products.push(prods[i]);
-			}
-		}
-
-		else if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)) {
-			if (prods[i].category == categoryProd){		
-				products.push(prods[i]);
-			}		
-		}
-		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)) {
-			if (prods[i].category == categoryProd){
-				products.push(prods[i]);
-			}
-		}
-		else if ((restriction == "Diabetic") && (prods[i].sugarFree == true)) {
-			if (prods[i].category == categoryProd){
-				products.push(prods[i]);
-			}
-		}
-		else if ((restriction == "lactoseIntol") && (prods[i].lactoseFree == true)) {
-			if (prods[i].category == categoryProd){
-				products.push(prods[i]);
-			}
-		}
-		else if (restriction == "None") {
-			if (prods[i].category == categoryProd){
-				products.push(prods[i]);
-			}
-		}
-		
-	}
-
-	sortBy(products);
-	return products;
-}
-
-function restrictListProducts2(prods, restriction1, restriction2, categoryProd) {
 	var products = [];
 
 	for (let i = 0; i < prods.length; i += 1) {
-
 
 		// if the user chose no for organic and the product from the list is organic, do nothing
 		if ((restriction2 == "no") && (prods[i].organic == true)){
@@ -316,6 +270,19 @@ function restrictListProducts2(prods, restriction1, restriction2, categoryProd) 
 		}
 	}
 
+	return products;
+}
+
+function restrictListProducts1(prods, restriction, categoryProd) {
+	
+	var products = restrictedArray(prods, restriction, "", categoryProd);
+	sortBy(products);
+	return products;
+}
+
+function restrictListProducts2(prods, restriction1, restriction2, categoryProd) {
+
+	var products = restrictedArray(prods, restriction1, restriction2, categoryProd);
 	sortBy(products);
 	return products;
 }

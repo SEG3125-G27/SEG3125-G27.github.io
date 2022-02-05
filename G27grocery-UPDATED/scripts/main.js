@@ -63,78 +63,14 @@ function categorySelector2(categoryValue) {
 }
 
 
-// function categorySelector1(val1, val2) {
-// 	val2.appendChild(document.createElement("br")); 
-// 	// create the Selection and add in HTML DOM
-// 	var category = document.createElement("select");
-// 	category.id = "category";
-// 	//category.name = productName;
-// 	category.title = "category";
-	
-// 	var option1 = document.createElement("option");
-// 	var option2 = document.createElement("option");
-// 	var option3 = document.createElement("option");
-// 	var option4 = document.createElement("option");
-// 	var option5 = document.createElement("option");
-// 	var option6 = document.createElement("option");
-
-// 	option1.setAttribute("value", "categories");
-// 	option1.appendChild(document.createTextNode("Menu"));
-// 	category.appendChild(option1);	
-
-// 	option2.setAttribute("value", "vegetable");
-// 	option2.appendChild(document.createTextNode("Vegetables"));
-// 	category.appendChild(option2);
-
-// 	option3.setAttribute("value", "fruit");
-// 	option3.appendChild(document.createTextNode("Fruits"));
-// 	category.appendChild(option3);	
-
-// 	option4.setAttribute("value", "dairy");
-// 	option4.appendChild(document.createTextNode("Dairy"));
-// 	category.appendChild(option4);
-	
-// 	option5.setAttribute("value", "meat");
-// 	option5.appendChild(document.createTextNode("Meat"));
-// 	category.appendChild(option5);
-
-// 	option6.setAttribute("value", "snack");
-// 	option6.appendChild(document.createTextNode("Snacks"));
-// 	category.appendChild(option6);
-
-// 	val2.appendChild(category);
-// 	val2.appendChild(document.createElement("br")); 
-// 	val2.appendChild(document.createElement("br")); 
-
-	
-// 	//console.log(category.value());
-	
-// 	category.onchange = restrictListProducts1(products, val1.value, category.value);
-	
-// 	//return cat.value;
-
-	
-// }
-
 function populateListProductChoices1(slct1, slct2, valueCategory) {
-	//console.log(slct1)
+
     var s1 = document.getElementById(slct1);
     var s2 = document.getElementById(slct2);
-	//console.log(ifLucie);
-	//document.getElementById("forL").innerHTML = setAttribute('style', 'display: block');
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
 
-	//var categoryProd = categorySelector(s1, s2);
-	//categorySelector(s1, s2);
-
-	//var cat = document.getElementById('category');
-	//var value = cat.options[cat.selectedIndex].value;
-	//console.log(valueCategory);
-
-	// obtain a reduced list of products based on restrictions
-	//console.log(categoryProd)
     var optionArray = restrictListProducts1(products, s1.value, valueCategory);
 
 	// for each item in the array, create a checkbox element, each containing information such as:
@@ -142,75 +78,7 @@ function populateListProductChoices1(slct1, slct2, valueCategory) {
 	// <img src="images/bread.jpg" alt="bread"/>
 	// <label for="Bread">Bread</label><br>
 
-	for (i = 0; i < optionArray.length; i++) {
-
-		// Get and display the image
-		var img = document.createElement('img');
-		img.src = optionArray[i].image;
-		img.alt = productName;
-		img.height = 200;
-		img.width = 200;
-		s2.appendChild(img);
-
-		s2.appendChild(document.createElement("br")); 
-		s2.appendChild(document.createElement("br")); 
-
-		var productName = optionArray[i].name;
-		
-		s2.appendChild(document.createElement("br"));
-		s2.appendChild(document.createElement("br"));
-
-		// create a label for the checkbox, and also add in HTML DOM
-		var label = document.createElement('label')
-		label.htmlFor = productName;
-		label.appendChild(document.createTextNode(productName));
-		s2.appendChild(label);
-
-		s2.appendChild(document.createElement("br"));
-		s2.appendChild(document.createElement("br"));
-
-		// create the Selection and add in HTML DOM
-		var selecter = document.createElement("select");
-		selecter.id = "quantity";
-		selecter.name = productName;
-		selecter.title = "products";
-		var option1 = document.createElement("option");
-		var option2 = document.createElement("option");
-		var option3 = document.createElement("option");
-		var option4 = document.createElement("option");
-		var option5 = document.createElement("option");
-		var option6 = document.createElement("option");
-
-		option1.setAttribute("value", "quantity");
-		option1.appendChild(document.createTextNode("Quantity"));
-		selecter.appendChild(option1);	
-
-		option2.setAttribute("value", 1);
-		option2.appendChild(document.createTextNode("1"));
-		selecter.appendChild(option2);
-
-		option3.setAttribute("value", 2);
-		option3.appendChild(document.createTextNode("2"));
-		selecter.appendChild(option3);	
-
-		option4.setAttribute("value", 3);
-		option4.appendChild(document.createTextNode("3"));
-		selecter.appendChild(option4);
-		
-		option5.setAttribute("value", 4);
-		option5.appendChild(document.createTextNode("4"));
-		selecter.appendChild(option5);
-
-		option6.setAttribute("value", 5);
-		option6.appendChild(document.createTextNode("5"));
-		selecter.appendChild(option6);
-
-		s2.appendChild(selecter);
-
-		// create a breakline node and add in HTML DOM
-		s2.appendChild(document.createElement("br"));     
-		s2.appendChild(document.createElement("br"));     
-	}
+	selectQuantity(optionArray, s2);
 }
 
 function populateListProductChoices2(slct1, slct2, slct3, valueCategory) {
@@ -224,10 +92,11 @@ function populateListProductChoices2(slct1, slct2, slct3, valueCategory) {
 	// obtain a reduced list of products based on restrictions
     var optionArray = restrictListProducts2(products, s1.value, s3.value, valueCategory);
 
-	// for each item in the array, create a checkbox element, each containing information such as:
-	// <input type="checkbox" name="product" value="Bread">
-	// <label for="Bread">Bread/label><br>
-		
+	selectQuantity(optionArray, s2);
+}
+
+function selectQuantity(optionArray, s2){
+
 	for (i = 0; i < optionArray.length; i++) {
 		
 		var img = document.createElement('img');
