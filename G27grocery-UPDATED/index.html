@@ -58,9 +58,10 @@
 
   <p id="hi"></p>
 
-  Dietary restriction: <br><br>
+  <!-- Dietary restriction: <br><br> -->
 
   <div id="forLucie" style="display: none;">
+    Dietary restriction: <br><br>
      <select id="dietSelect1" name="dietSelect" selected onchange="categorySelector1(dietSelect1.id, 'displayProduct'); resetRadio();" >
       <option value="" selected="selected">Choose Diet</option>
       <option value="Vegetarian">Vegetarian Products</option>
@@ -68,6 +69,7 @@
   </div>
 
   <div id="forEveryone" style="display: none;">
+    Dietary restriction: <br><br>
     <select id="dietSelect2" name="dietSelect" selected onchange="selectMenu(); categorySelector1(dietSelect2.id, 'displayProduct'); resetRadio();">
       <option value="" disabled selected="selected">Choose Diet</option>
       <option value="Vegetarian">Vegetarian Products</option>
@@ -77,15 +79,22 @@
         <option value="lactoseIntol">Lactose Free Products</option>
         <option value="None">None</option>
       </select>
+    
+      <p>Include <b> <i>organic</i></b> food? (more expensive)</p>
+
+      <input type="radio" id="yes" name="orgo" value="yes" onclick="selectMenu(); organicSelector()" checked>
+        <label for="yes">Yes</label>
+      <input type="radio" id="no" name="orgo" value="no" onclick="selectMenu(); organicSelector()" >
+        <label for="no">No</label><br>
   </div>
 
 
-  <p>Include <b> <i>organic</i></b> food? (more expensive)</p>
+  <!-- <p>Include <b> <i>organic</i></b> food? (more expensive)</p>
 
   <input type="radio" id="yes" name="orgo" value="yes" onclick="selectMenu(); organicSelector()" checked>
     <label for="yes">Yes</label>
   <input type="radio" id="no" name="orgo" value="no" onclick="selectMenu(); organicSelector()" >
-    <label for="no">No</label><br>
+    <label for="no">No</label><br> -->
   
    
   <!-- <input type="submit" value="Submit"> -->
@@ -120,11 +129,14 @@
 </div>
 
   <div class="tab">
-    <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+    <button class="tablinks" onclick="openInfo(event, 'Client')" id="defaultOpen">Client</button>
     <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
     <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
   </div>
 
+<script>
+  document.getElementById("defaultOpen").click();
+</script>
 
 <script src="scripts/groceries.js"></script>
 <script src="scripts/main.js"></script>
