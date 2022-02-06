@@ -372,3 +372,7 @@ function selectMenu() {
 	// categorySelector1("", 'displayProduct');
 	document.getElementById("displayProduct").innerHTML = "";
 	}
+
+function openClient(){
+	document.getElementById("defaultOpen").click();
+}
