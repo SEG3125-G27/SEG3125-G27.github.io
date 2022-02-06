@@ -369,4 +369,6 @@ function getTotalPrice(chosenProducts, productQuantity) {
 
 function selectMenu() {
 	document.getElementById("category").value = "";
-  }
+	// categorySelector1("", 'displayProduct');
+	document.getElementById("displayProduct").innerHTML = "";
+	}

@@ -68,7 +68,7 @@
   </div>
 
   <div id="forEveryone" style="display: none;">
-    <select id="dietSelect2" name="dietSelect" selected onchange="categorySelector1(dietSelect2.id, 'displayProduct'); resetRadio(); selectMenu();">
+    <select id="dietSelect2" name="dietSelect" selected onchange="selectMenu(); categorySelector1(dietSelect2.id, 'displayProduct'); resetRadio();">
       <option value="" disabled selected="selected">Choose Diet</option>
       <option value="Vegetarian">Vegetarian Products</option>
         <option value="GlutenFree">Gluten Free Products</option>
@@ -82,9 +82,9 @@
 
   <p>Include <b> <i>organic</i></b> food? (more expensive)</p>
 
-  <input type="radio" id="yes" name="orgo" value="yes" onclick="organicSelector(); selectMenu();" checked>
+  <input type="radio" id="yes" name="orgo" value="yes" onclick="selectMenu(); organicSelector()" checked>
     <label for="yes">Yes</label>
-  <input type="radio" id="no" name="orgo" value="no" onclick="organicSelector(); selectMenu();">
+  <input type="radio" id="no" name="orgo" value="no" onclick="selectMenu(); organicSelector()" >
     <label for="no">No</label><br>
   
    
