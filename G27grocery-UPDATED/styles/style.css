@@ -110,13 +110,6 @@ div{
   height: auto;
 }
 
-#footer{
-  /* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); */
-  /* background-image: linear-gradient(60deg, #29323c 0%, #248f24 100%); */
-  /* background-image: url(../images/shelves.png); */
-  /* opacity: 0.2;  */
-}
-
 #footer .footerc{
   min-height: 100px;
   flex-direction: column;
