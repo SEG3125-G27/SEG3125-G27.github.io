@@ -212,3 +212,9 @@ div{
 select, input, button{
   font-size: 100%;
 }
+
+/* Div containing the group signature */
+.page-footer {
+  border: 0;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
