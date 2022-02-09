@@ -200,3 +200,34 @@ function selectedItems(){
 	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts, productQuantity)));
 		
 }
+
+// Buttons to adjust the font size
+
+var currentFontSize = 100;
+var fontIncrement = 25;
+var fontSizeMin = 50;
+var fontSizeMax = 200;
+
+function increaseFontSize() {
+	var body = document.getElementsByTagName('body')[0];
+	var cartButton = document.getElementById('addCart');
+
+	if (currentFontSize < fontSizeMax) {
+		currentFontSize += fontIncrement;
+		var newSize = String(currentFontSize) + '%';
+		body.style.fontSize = newSize;
+		cartButton.style.fontSize = newSize;
+	}
+}
+
+function decreaseFontSize() {
+	var body = document.getElementsByTagName('body')[0];
+	var cartButton = document.getElementById('addCart');
+
+	if (currentFontSize > fontSizeMin) {
+		currentFontSize -= fontIncrement;
+		var newSize = String(currentFontSize) + '%';
+		body.style.fontSize = newSize;
+		cartButton.style.fontSize = newSize;
+	}
+}
