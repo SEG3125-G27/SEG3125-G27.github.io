@@ -6,13 +6,14 @@
 <!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
 <!-- Icons from https://icons8.com/icons/ -->
 <!-- Header image https://people.com/style/how-to-cut-your-own-hair-at-home/ -->
+<!-- Description images https://hairdynamic.ca/services-pricing/ -->
 
 <!DOCTYPE html>
 <html lang="en">
 
 <!-- The head should contain an appropriate title for your site -->
 <head>
-    <title>Module 4 - Labo</title>
+    <title>G27 Hair Salon</title>
     <link rel="icon" type="image/x-icon" href="images/hairdresserIcon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,7 +54,7 @@
 
     <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
     <!-- It can be useful for placement of information -->
-    <div class="row p-3">
+    <div class="row p-3 container-md" style="margin: auto;">
         <div class="col-sm-3 pl-5">Service</div>
         <div class="col-sm-3">Calendar</div>
         <div class="col-sm-3">Payment</div>
@@ -61,14 +62,132 @@
     </div>
 
     <!-- When you have messages to tell, remember that center align is not always the best choice -->
-    <div class="container-md p-3 my-3 border bg-light text-success">
-        <h3>Let us tell you about our expertise</h3>
-        <p>We can <mark>cut hair</mark></p>
-        <p class="text-center" >Align wheels</p>
-        <p class="text-uppercase">Write in uppercase</p>
-        <p class="text-center text-uppercase" >centered and uppercase</p>
-    </div>
+    
 
+    <div class = "container-md p-3 my-3 border bg-light text-success">
+        <h3 id="violet-text">Let us tell you about our expertise</h3>
+        <p id="violet-text">We can <strong>cut hair</strong>, <strong>colour hair</strong>, <strong>highlight hair</strong>, and <strong>style hair</strong> </p>
+        <div class="row" style="color: black;">
+            <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Hair Cut & Style</a>
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">All Over Colouring</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Foil Highlighting</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Hair Styling & Updo's</a>
+            </div>
+            </div>
+            <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                    <div class="float-right" style="margin-left: 15px;">
+                        
+                        <div class="card" style="width:400px">
+                          <img class="card-img-top" src="images/styling.jpg" alt="Card image" style="width:100%">
+                          <div class="card-body">
+                            <p class="card-text">Price: $55</p>
+                            <p class="card-text">Duration: 30 minutes</p>
+                            <!-- <a href="#" class="btn btn-primary">See Profile</a> -->
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- <img src="images/styling.jpg" class="img-thumbnail float-right" alt="styling" style="margin-left: 15px;"> -->
+
+                    <h4 style="text-align: center;">HAIR CUT & STYLE</h4> <hr>
+
+                    <p style="text-align: justify;">A hairstyle's aesthetic considerations may be determined by many factors, such as the subject's physical attributes and desired self-image or the stylist’s artistic instincts.
+
+                        Hair cutting or hair trimming is intended to create or maintain a specific shape and form. Its extent may range from merely trimming the uneven ends of the hair to a uniform length.
+                        
+                        A hairstyle is achieved by arranging hair in a certain way, occasionally using combs, a blow-dryer, gel, or other products.</p>
+                </div>
+
+                <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+
+                    <div class="float-right" style="margin-left: 15px;">
+                        
+                        <div class="card" style="width:400px">
+                          <img class="card-img-top" src="images/haircolor.jpg" alt="Card image" style="width:100%">
+                          <div class="card-body">
+                            <p class="card-text">Price: $100</p>
+                            <p class="card-text">Duration: 1 hour</p>
+                            <!-- <a href="#" class="btn btn-primary">See Profile</a> -->
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- <img src="images/styling.jpg" class="img-thumbnail float-right" alt="styling" style="margin-left: 15px;"> -->
+
+                    <h4 style="text-align: center;">ALL OVER COLOURING</h4> <hr>
+
+                    <p style="text-align: justify;">Hair colouring is the practice of changing the colour of hair.
+
+                        The main reasons for this practice are cosmetic (e.g., to cover gray hair, to change to a colour regarded as more fashionable or desirable, or to restore the original hair colour after it has been discoloured by hairdressing processes or sun bleaching).
+                        
+                        Hair tinting, is an ancient art. Today, hair colouring is immensely popular, with over 75 percent of women colouring their hair.</p>
+
+                </div>
+
+                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+
+                    <div class="float-right" style="margin-left: 15px;">
+                        
+                        <div class="card" style="width:400px">
+                          <img class="card-img-top" src="images/foiling.jpg" alt="Card image" style="width:100%">
+                          <div class="card-body">
+                            <p class="card-text">Price: $120</p>
+                            <p class="card-text">Duration: 2 hours</p>
+                            <!-- <a href="#" class="btn btn-primary">See Profile</a> -->
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- <img src="images/styling.jpg" class="img-thumbnail float-right" alt="styling" style="margin-left: 15px;"> -->
+
+                    <h4 style="text-align: center;">FOIL HIGHLIGHTING</h4> <hr>
+
+                    <p style="text-align: justify;">Foil highlighting is the process of using foil to separate strands of hair which will be lightened from strands of hair which will remain its natural color.
+
+                        The process is done by applying lightener to the hair that has been woven and separated using an applicator brush. The foil is then folded to protect the hair and surrounding area during the “processing” time.
+                        
+                        This is the amount of time required to achieve the desired results. In highlighting hair, hydrogen peroxide mixed with pigment is used to change the color of the strand.
+                        
+                        This process is also used in applying “lowlights” to the hair. In this process, hair dyes are used to create strands of hair that are darker than the natural color.
+                        
+                        This is to achieve multi-colouring.</p>
+
+                </div>
+
+
+                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+
+                    <div class="float-right" style="margin-left: 15px;">
+                        
+                        <div class="card" style="width:400px">
+                          <img class="card-img-top" src="images/updo.jpg" alt="Card image" style="width:100%">
+                          <div class="card-body">
+                            <p class="card-text">Price: $60</p>
+                            <p class="card-text">Duration: 45 minutes</p>
+                            <!-- <a href="#" class="btn btn-primary">See Profile</a> -->
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- <img src="images/styling.jpg" class="img-thumbnail float-right" alt="styling" style="margin-left: 15px;"> -->
+
+                    <h4 style="text-align: center;">HAIR STYLING & UPDO'S</h4> <hr>
+
+                    <p style="text-align: justify;">An updo is a hair style that involves arranging the hair instead of allowing it to fall freely. 
+                        It can be as simple as a ponytail, but is more commonly associated with more elaborate styles intended for special occasions 
+                        such as a prom or wedding.
+
+                    </p>
+
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
     <!-- Might be (or not) useful to show some information to the user -->
