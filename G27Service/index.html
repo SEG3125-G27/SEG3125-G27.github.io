@@ -63,16 +63,17 @@
 
     <ul id="tab2" class="container-md">
         <li id="tab2 tab"><a href="#services">Services</a></li>
+        <li id="tab2 tab"><a href="#hairdressers">Hairdressers</a></li>
         <li id="tab2 tab"><a href="#services">Services</a></li>
-        <li id="tab2 tab"><a href="#services">Services</a></li>
+        <li style="float: right;"><img src="images/hairdresserIcon.png" alt="hairdresser icon" style="width: fit-content; height: 50px"></li>
     </ul>
 
     
 
     <!-- When you have messages to tell, remember that center align is not always the best choice -->
     
-
-    <div class = "container-md p-3 my-3 border bg-light text-success" id="services">
+    <div id="services"></div> <br>
+    <div class = "container-md p-3 my-3 border bg-light text-success">
         <h3 id="violet-text">Let us tell you about our services</h3>
         <p id="violet-text">We can <strong>cut hair</strong>, <strong>colour hair</strong>, <strong>highlight hair</strong>, and <strong>style hair</strong> </p>
         <div class="row" style="color: black;">
@@ -292,27 +293,34 @@
     <!-- Card columns allows multiple cards next to each other -->
     <!-- The first card's button doesn't go anywhere, it could be a modal --> 
     <!-- My second card limits the information seen and uses collapsible to show more -->
+    <div id="hairdressers"></div> <br>
     <div class="container p-3">
         <h2>Meet our hairdressers</h2>
         <div class="card-columns">
-            <div class="card bg-warning" style="width:200px">
-                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
+            <div class="card bg-warning" style="width:250px">
+                <img class="card-img-top" src="images/karen.jpg" alt="Card image" style="width:100%; height: 250px;">
                 <div class="card-body">
-                    <h4 class="card-title">Jules</h4>
-                    <p class="card-text">Jules has been cutting hair for 10 years.</p>
-                    <a href="#" class="btn btn-primary">See Profile</a>
+                    <h4 class="card-title">Karen</h4>
+                    <p class="card-text">Karen has been cutting hair for 10 years. She specialises in hair colouring and highlighting.</p>
+                    <a href="https://www.pinterest.ca/coco_and_eve/" target="_blank" class="btn btn-primary">See Pinterest</a>
                 </div>
             </div>
-            <div class="card bg-danger" style="width:200px">
-                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
+            <div class="card bg-danger" style="width:250px">
+                <img class="card-img-top" src="images/lateesha.jpg" alt="Card image" style="width:100%; height: 250px">
                 <div class="card-body">
-                    <h4 class="card-title">Jules</h4>
-                    <p class="card-text">The curly hair specialist</p>
+                    <h4 class="card-title">Lateesha</h4>
+                    <p class="card-text">Lateesha has been cutting hair for 15 years. She specialises in hair styling and updo's.</p>
                     <!-- collapsible part -->
-                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Profile</a>
-                    <div id="profile" class="collapse p-3">
-                        <p>Jules has been cutting hair for 10 years ... </p>
-                    </div>
+                    <a href="https://www.pinterest.ca/thosewordswereyourown/" target="_blank" class="btn btn-primary">See Pinterest</a>
+                </div>
+            </div>
+            <div class="card bg-success" style="width:250px">
+                <img class="card-img-top" src="images/adriana.jpg" alt="Card image" style="width:100%; height: 250px">
+                <div class="card-body">
+                    <h4 class="card-title">Adriana</h4>
+                    <p class="card-text">Adriana has been cutting hair for 20 years. She specialises in hair cutting, highlighting and styling.</p>
+                    <!-- collapsible part -->
+                    <a href="https://www.pinterest.ca/zoevanoorschot/" target="_blank" class="btn btn-primary">See Pinterest</a>
                 </div>
             </div>
         </div>
