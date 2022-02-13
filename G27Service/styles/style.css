@@ -3,10 +3,50 @@
    color picker www.w3schools.com/colors/colors_picker.asp
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
 /* Bootstrap default font-family is Helvetica Neue */
 h1 {
   font-family: "Times New Roman", Times, serif;
   text-shadow: 3px 3px 1px black;
   
 }
+
+/*Footer*/
+
+.demo-bg {
+  opacity: 0.4;
+  position: absolute;
+  /* margin-left: 106px; */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
+#footer .footerc{
+  min-height: 100px;
+  flex-direction: column;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+#footer h2{
+  /* color: rgb(114, 46, 153); */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 2.2rem;
+  letter-spacing: .1rem;
+  margin-top: 1px;
+  margin-bottom: 10px;
+  /* margin-left: 100px; */
+}
+
+#footer p{
+  color: white;
+  font-size: 1.3rem;;
+}
+
+
+/* End Footer */
 
