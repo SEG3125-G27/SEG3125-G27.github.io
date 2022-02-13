@@ -53,19 +53,27 @@
     </section>
 
     <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
-    <!-- It can be useful for placement of information -->
-    <div class="row p-3 container-md" style="margin: auto;">
-        <div class="col-sm-3 pl-5">Service</div>
-        <div class="col-sm-3">Calendar</div>
-        <div class="col-sm-3">Payment</div>
-        <div class="col-sm-3">Where to find us</div>
-    </div>
+    <!-- It can be useful for placement of information style="margin: auto; -->
+    <!-- <div class="row p-3 container-md">
+        <div class="col-sm-3 pl-5" id="tab"> <a href="#services">Services</a> </div>
+        <div class="col-sm-3" id="tab"><a href="#services">Services</a></div>
+        <div class="col-sm-3" id="tab"><a href="#services">Services</a></div>
+        <div class="col-sm-3" id="tab"><a href="#services">Services</a></div>
+    </div> -->
+
+    <ul id="tab2" class="container-md">
+        <li id="tab2 tab"><a href="#services">Services</a></li>
+        <li id="tab2 tab"><a href="#services">Services</a></li>
+        <li id="tab2 tab"><a href="#services">Services</a></li>
+    </ul>
+
+    
 
     <!-- When you have messages to tell, remember that center align is not always the best choice -->
     
 
-    <div class = "container-md p-3 my-3 border bg-light text-success">
-        <h3 id="violet-text">Let us tell you about our expertise</h3>
+    <div class = "container-md p-3 my-3 border bg-light text-success" id="services">
+        <h3 id="violet-text">Let us tell you about our services</h3>
         <p id="violet-text">We can <strong>cut hair</strong>, <strong>colour hair</strong>, <strong>highlight hair</strong>, and <strong>style hair</strong> </p>
         <div class="row" style="color: black;">
             <div class="col-4">

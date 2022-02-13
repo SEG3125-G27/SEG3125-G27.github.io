@@ -5,6 +5,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Bootstrap default font-family is Helvetica Neue */
 h1 {
   font-family: "Times New Roman", Times, serif;
@@ -53,3 +57,47 @@ h1 {
 #violet-text{
   color: #9e50e2;
 }
+
+#tab a:link, #tab a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#tab a:hover, #tab a:active {
+  background-color: red;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+  color: white;
+  text-decoration: none;
+}
+
