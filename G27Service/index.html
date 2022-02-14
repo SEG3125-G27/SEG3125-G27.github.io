@@ -23,6 +23,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css'>   
 
     <!-- Your own additional style sheet -->
     <link href="styles/style.css" rel="stylesheet" type="text/css">
@@ -63,6 +64,7 @@
 
     <ul id="tab2" class="container-md">
         <li id="tab2 tab"><a href="#services">Services</a></li>
+        <li id="tab2 tab"><a href="#appointment">Appointments</a></li>
         <li id="tab2 tab"><a href="#hairdressers">Hairdressers</a></li>
         <li id="tab2 tab"><a href="#locations">Locations</a></li>
         <li style="float: right;"><img src="images/hairdresserIcon.png" alt="hairdresser icon" style="width: fit-content; height: 50px"></li>
@@ -198,6 +200,145 @@
         </div>
     </div>
 
+    <div id="appointment"><br>
+        <div class = "container-md p-3 my-3 border bg-light">
+            <h3 id="violet-text">
+                Book an appointment with us today!
+            </h3>
+            <br>
+            <div class="row">
+                <div class="col-sm-4">
+                    <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#service">
+                        Choose a Service
+                    </button>
+
+                    <div class="modal fade" id="service">
+                        <div class="modal-dialog modal-dialog-centered modal-md">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div id="violet-text" class="modal-header text-center">
+                                    <h4 class="modal-title w-100">
+                                        Please Choose a Service
+                                    </h4>                            
+                                </div>
+
+                                <!-- Modal Body -->
+                                <div id="violet-text" class="modal-body">
+                                    <button value="Hair Cut & Style" class="btn btn-primary btn-lg btn-block">
+                                        Hair Cut & Style
+                                    </button><br>
+                                    <button value="All Over Colouring" class="btn btn-primary btn-lg btn-block">
+                                        All Over Colouring
+                                    </button><br>
+                                    <button value="Foil Highlighting" class="btn btn-primary btn-lg btn-block">
+                                        Foil Highlighting
+                                    </button><br>
+                                    <button value="Hair Styling & Updo's" class="btn btn-primary btn-lg btn-block">
+                                        Hair Styling & Updo's
+                                    </button>
+                                </div>
+
+                                <!-- Modal Footer -->
+                                <div class="modal-footer">
+                                    <button class="btn btn-outline-success" onclick="document.getElementById('saved').innerHTML = 'Your information has been successfully saved.'">
+                                        Save
+                                    </button>
+                                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">
+                                        Close
+                                    </button>&emsp;
+                                    <p id="saved"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#date">
+                        Choose a Date
+                    </button>
+
+                    <div class="modal fade" id="date">
+                        <div class="modal-dialog modal-dialog-centered modal-md">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div id="violet-text" class="modal-header text-center">
+                                    <h4 class="modal-title w-100">
+                                        Please Choose a Date
+                                    </h4>                                    
+                                </div>
+
+                                <!-- Modal Body -->
+                                <div class="modal-body">
+                                    <div class="col-12">
+                                        <input class="form-control" type="datetime-local" id="dateTimeInput" format="dd-mm-yyyy">
+                                    </div>
+                                </div>
+
+                                <!-- Modal Footer -->
+                                <div class="modal-footer">
+                                    <button class="btn btn-outline-success" onclick="document.getElementById('saved2').innerHTML = 'Your information has been successfully saved.'">
+                                        Save
+                                    </button>
+                                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">
+                                        Close
+                                    </button>&emsp;
+                                    <p id="saved2"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#info">
+                        Enter your Details
+                    </button>
+                </div>
+
+                <div class="modal fade" id="info">
+                    <div class="modal-dialog modal-centered modal-md">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div id="violet-text" class="modal-header text-center">
+                                <h4 class="modal-title w-100">
+                                    Enter Your Details
+                                </h4>
+                            </div>
+
+                            <!-- Modal Body -->
+                            <div id="violet-text" class="modal-body">
+                                <label for="fname">First Name:</label>
+                                <input type="text" class="form-control" placeholder="Enter First Name">
+                                <br>
+                                <label for="lname">Last Name:</label>
+                                <input type="text" class="form-control" placeholder="Enter Last Name">
+                                <br>
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" placeholder="Enter email">
+                                <br>
+                                <label for="phone">Phone Number:</label>
+                                <input type="phone" class="form-control" placeholder="Enter Phone No.">
+                            </div>
+
+                            <!-- Modal Footer -->
+                            <div class="modal-footer">
+                                <button class="btn btn-outline-success" onclick="document.getElementById('saved3').innerHTML = 'Your information has been successfully saved.'">
+                                    Save
+                                </button>
+                                <button class="btn btn-outline-danger" data-dismiss="modal">
+                                    Close
+                                </button>&emsp;
+                                <p id="saved3"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
     <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
     <!-- Might be (or not) useful to show some information to the user -->
     <div class="container">
@@ -343,61 +484,9 @@
             </div>
         </div>
     </div>
-
-    <!-- Collapsible with multiple items - accordion -->
-    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
-    <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
-    <!-- could work well.  You can use other patterns too.  This is just an example. -->
-    <div class="container">
-        <div class="container-md p-3 my-3 border bg-warning text-white">
-            <h1>Erwind's and friends bike shop</h1>
-            <p>Bike fixing is our business</p>
-        </div>
-        <div id="accordion">
-            <div class="card">
-                <div class="card-header">
-                    <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
-                </div>
-                <div id="collapseService" class="collapse show" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>Here is our list of services</p>
-                    </div>
-                </div>
-            <div class="card">
-                <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
-                </div>
-                <div id="collapseDate" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>What date?</p>
-                        <!-- Bootstrap has various input components. Some examples are given here: -->
-                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
-                        <div class="form-group row">
-                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
-                            <div class="col-10">
-                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
-                </div>
-                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>Your information so we can contact you</p>
-                        <p>Form to enter name, email, phone</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
      
     <div id="locations"></div> <br>
-   <div class = "container-md p-3 my-3 border bg-dark text-success">
+    <div class = "container-md p-3 my-3 border bg-dark text-success">
     <h3 style="color: white;">Available locations</h3>
         <!--Grid row-->
     <div class="row">
