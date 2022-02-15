@@ -154,3 +154,14 @@ li a:hover {
   .card_body{
     display: block;
   }
+
+
+  .service_detail h4{
+    font-size: 30px;
+    /*clear: right;*/
+    /*float: left;*/
+    /*margin: 10px;*/
+  }
+  .service_detail p{
+    font-size: 20px;
+  }
