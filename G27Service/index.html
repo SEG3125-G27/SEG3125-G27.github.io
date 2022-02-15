@@ -402,6 +402,8 @@
 
     <!-- Bootstrap has components for alerts: https://www.w3schools.com/bootstrap4/bootstrap_alerts.asp  -->
     <!-- These can be useful for making sure someone reads something before continuing -->
+
+    <!--
     <div class="container">
         <h2 id="violet-text">Alert</h2>
         <p>We have something important to say</p>
@@ -410,11 +412,9 @@
             <strong>Please read! </strong>You must read.
         </div>
     </div>
+    -->
 
-    <!-- You'll certainly need buttons at some point in your site -->
-    <!-- https://www.w3schools.com/bootstrap4/bootstrap_buttons.asp -->
-    <!-- Remember how we talked about choosing a hue and changing the saturation for active/inactive -->
-    <!-- This idea is already part of the components in Bootstrap -->
+    <!--
     <div class="container">
         <h2 id="violet-text">Button States</h2>
         <button type="button" class="btn btn-warning">Primary Button</button>
@@ -422,14 +422,18 @@
         <button type="button" class="btn btn-warning" disabled>Disabled Primary</button>
     </div>
 
+    -->
+
 
     <!-- Including a modal https://www.w3schools.com/bootstrap4/bootstrap_modal.asp -->
     <!-- Modals are useful for additional information or questions -->
     <!-- Here the modal is used for a little survey -->
     <div class="container">
-        <h2 id="violet-text">Modal Example</h2>
+        <h2 id="violet-text">Do you have a minute to answer a quick survey?</h2>
         <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurvey">Open Survey</button>
+        <div class="container col text-center">
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurvey">Open Survey</button>
+        </div>
           
         <!-- Modal -->
         <div class="modal fade" id="mySurvey" role="dialog">
@@ -442,15 +446,33 @@
                 <div class="modal-body">
                     <div class="container">
                         <h2 id="violet-text">How did you hear about us?</h2>
-                        <p>Tell us:</p>
                         <form>
                           <div class="checkbox">
-                            <label><input type="checkbox" value="">Option 1</label>
+                            <label><input type="checkbox" value="">Google</label>
                           </div>
                           <div class="checkbox">
-                            <label><input type="checkbox" value="">Option 2</label>
+                            <label><input type="checkbox" value="">Yahoo</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">DuckDuckGo</label>
+                          </div>
+                          
+                        </form>
+                        <h2 id="violet-text">What service would you like us to add in the future?</h2>
+                        <form>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Men's haircuts</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Children's haircuts</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Brow waxing</label>
                           </div>
                         </form>
+                        <div class="container col text-center">
+                            <label><input type="submit"></label>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -499,9 +521,7 @@
     </div>
 
 
-    <!-- A different approach would be to make the whole staff information collapsible -->
-    <!-- Here a block button (taking the full width) opens/closes the collapsible -->
-    <!-- Here a single card is used, but card columns could be used -->
+    <!-- 
     <div class="container">
         <h2 id="violet-text">More information</h2>
         <a href="#mechanics" class="btn btn-primary btn-block" data-toggle="collapse">Meet our mechanics</a>
@@ -515,6 +535,8 @@
             </div>
         </div>
     </div>
+
+    -->
      
     <div id="locations"></div> <br>
     <div class = "container-md p-3 my-3 border bg-dark text-success">
