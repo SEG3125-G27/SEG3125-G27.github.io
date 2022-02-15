@@ -112,7 +112,9 @@ li a:hover {
 
     }
 }
-
+.col-md-6.mb-4{
+  display: flex;
+}
 
 .map-container{
   overflow:hidden;
