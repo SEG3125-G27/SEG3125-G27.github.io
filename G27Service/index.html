@@ -371,6 +371,8 @@
     <br><br><br><br>
     <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
     <!-- Might be (or not) useful to show some information to the user -->
+
+    <!--
     <div class="container">
         <h2 id="violet-text">Service description</h2>
         <p>Here is a list of services offered</p>            
@@ -385,7 +387,6 @@
             <tr>
                 <td>Haircut</td>
                 <td>Recommending hairstyles and haircuts according to customers' face shapes and tastes</td>
-                <!-- <td></td> -->
             </tr>
             <tr>
                 <td>Drying</td>
@@ -398,6 +399,8 @@
             </tbody>
         </table>
     </div>
+
+    -->
 
 
     <!-- Bootstrap has components for alerts: https://www.w3schools.com/bootstrap4/bootstrap_alerts.asp  -->
@@ -471,8 +474,13 @@
                           </div>
                         </form>
                         <div class="container col text-center">
-                            <label><input type="submit"></label>
+                            <button type="button" onclick="alertOnFinishSurvey()" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurvey">Submit</button>
                         </div>
+                        <script type="text/javascript">
+                        function alertOnFinishSurvey() {
+                            alert("Thank you for completing our survey!");
+                        }
+                        </script>
                     </div>
                 </div>
                 <div class="modal-footer">
