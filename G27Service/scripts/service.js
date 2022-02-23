@@ -95,3 +95,43 @@ $(document).ready(function(){
 
 
 });
+
+// https://www.youtube.com/watch?app=desktop&v=r5IbUHETupk
+function validatePhone2(phone)
+    {
+        phone = phone.replace(/[^0-9]/g,'');
+        $("#phonefield").val(phone);
+        if(phone == ' ' || !phone.match(/^[0-9]{10}$/))
+        {
+            $("#phonefield").css({'background' : '#FFEDEF', 'border' : 'solid 1px red'});
+            return false;
+        }
+        else
+        {
+            $("#phonefield").css({'background' : '#99FF99', 'border' : 'solid 1px #99FF99'});
+            return true
+        }
+    }
+
+
+function validateCard(card)
+    {
+        function format(card) {
+            card = card.replace(/[^0-9]/g,'');
+            return card.toString().replace(/\d{4}(?=.)/g, '$& ');
+        }
+
+        card = card.replace(/[^0-9]/g,'');
+        $("#cardfield").val(format(card)); // 1234567890123456
+        if(card == ' ' || !card.match(/^[0-9]{16}$/))
+        {
+            $("#cardfield").css({'background' : '#FFEDEF', 'border' : 'solid 1px red'});
+            return false;
+        }
+        else
+        {
+            $("#cardfield").css({'background' : '#99FF99', 'border' : 'solid 1px #99FF99'});
+            return true
+        }
+    
+    }
