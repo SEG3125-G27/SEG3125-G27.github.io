@@ -76,11 +76,22 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  /*background-color: #333;*/
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
   z-index: 5;
+}
+#tab2 {
+  background-color:#333;
+}
+#timeinput ul{
+  background-color: white;
+}
+.ui-timepicker-container{
+      /*background-color:white;*/
+     z-index:1151 !important; 
+     overflow: auto;
 }
 
 li {

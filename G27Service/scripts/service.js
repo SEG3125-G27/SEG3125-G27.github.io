@@ -19,6 +19,8 @@ function validatePhone(txtPhone) {
 }
 
 
+
+
 // Using date restrictions on datepicker
 // Document of datepicker is here: https://api.jqueryui.com/datepicker/ 
 // The following code shows how to set specific dates to exclude, as well as Sundays (Day 0)
@@ -33,7 +35,16 @@ function disableDates(date) {
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
     return [ unavailableDates.indexOf(string) == -1 ]
 }
-
+// $(function() {
+//      $("#dateTimeInput").datepicker({
+//          changeYear: true,
+//          changeMonth:true,
+//          dateFormat: 'mm/dd/yy',
+//          timeFormat: 'hh:mm',
+//          minDate: 0,
+//          maxDate: '+3M'
+//      });
+// });
 
 // HERE, JQuery "LISTENING" starts
 $(document).ready(function(){
@@ -60,17 +71,33 @@ $(document).ready(function(){
 
     // Also, here is a good tutorial for playing with the datepicker in https://webkul.com/blog/jquery-datepicker/ 
     // Datepicker is also documented as one of the widgets here: https://api.jqueryui.com/category/widgets/ 
-    $( "#dateInput" ).datepicker(
+    $( "#dateTimeInput" ).datepicker(
         {
             dateFormat: setDateFormat,
             // no calendar before June 1rst 2020
-            minDate: new Date('06/01/2020'),  
+            minDate: 0,  
             maxDate: '+4M',
             // used to disable some dates
             beforeShowDay: $.datepicker.noWeekends,
             beforeShowDay: disableDates
         }   
     );
+
+// timepick function 
+
+$(document).ready(function(){
+    $('#timeinput').timepicker({
+    timeFormat: 'h:mm p',
+    interval: 30,
+    minTime: '9:00am',
+    maxTime: '8:00pm',
+    defaultTime: '9',
+    startTime: '9:00',
+    dynamic: false,
+    dropdown: true,
+    scrollbar: true
+    });
+});
 
 
     // Look at the different events on which an action can be performed

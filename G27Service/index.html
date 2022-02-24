@@ -39,6 +39,12 @@
 
     <!-- Your own additional style sheet -->
     <link href="styles/style.css" rel="stylesheet" type="text/css">
+
+
+    <!-- JQuery time picker plugin -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+
+    
 </head>
 
 
@@ -394,8 +400,15 @@
                                 <!-- Modal Body -->
                                 <div class="modal-body">
                                     <div class="col-12">
-                                        <input class="form-control" type="datetime-local" id="dateTimeInput"
-                                            format="dd-mm-yyyy">
+                                        <label for="dateTimeInput">Select a date</label>
+                                        <input class="form-control" type="text" id="dateTimeInput"
+                                            placeholder="mm/dd/yyyy">
+                                    </div>
+                                </div>
+                                    <div class="modal-body">
+                                    <div class="col-12">
+                                        <label for="timeinput">Select a time</label>
+                                        <input class="form-control" type="text" id="timeinput" placeholder="dd-mm-yyyy">
                                     </div>
                                 </div>
 
@@ -608,7 +621,11 @@
         </div>
     </div> <br>
 
-    
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+
 
 </body>
 
