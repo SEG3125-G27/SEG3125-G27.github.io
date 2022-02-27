@@ -18,14 +18,14 @@ function validatePhone(txtPhone) {
     }
 }
 
-
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
 
 // Using date restrictions on datepicker
 // Document of datepicker is here: https://api.jqueryui.com/datepicker/ 
 // The following code shows how to set specific dates to exclude, as well as Sundays (Day 0)
 // Make sure in your version that you associate Days to remove with Experts (e.g. John doesn't work Mondays)
-var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"]
+var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"];
 const setDateFormat = "mm/dd/yy";
 
 function disableDates(date) {
@@ -33,7 +33,7 @@ function disableDates(date) {
     if (date.getDay() == 0)
         return [false];
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ unavailableDates.indexOf(string) == -1 ]
+    return [ unavailableDates.indexOf(string) == -1 ];
 }
 // $(function() {
 //      $("#dateTimeInput").datepicker({
@@ -75,6 +75,8 @@ $(document).ready(function(){
         {
             dateFormat: setDateFormat,
             // no calendar before June 1rst 2020
+
+            //
             minDate: 0,  
             maxDate: '+4M',
             // used to disable some dates
@@ -85,7 +87,7 @@ $(document).ready(function(){
 
 // timepick function 
 
-$(document).ready(function(){
+
     $('#timeinput').timepicker({
     timeFormat: 'h:mm p',
     interval: 30,
@@ -97,7 +99,7 @@ $(document).ready(function(){
     dropdown: true,
     scrollbar: true
     });
-});
+
 
 
     // Look at the different events on which an action can be performed
