@@ -16,6 +16,37 @@ h1 {
   
 }
 
+/* Buttons */
+
+.list-group-item.active {
+  background-color: rgb(147, 88, 218);
+  border-color: rgb(147, 88, 218);
+}
+
+.btn, .btn-lg, .btn-block, .btn-primary {
+  background-color: rgb(147, 88, 218) !important;
+  border-color:rgb(147, 88, 218) !important;
+}
+
+.btn:hover, .btn-lg:hover, .btn-block:hover, .btn-primary:hover {
+  background-color: rgb(173, 120, 238) !important;
+  border-color:rgb(147, 88, 218) !important;
+  box-shadow: none !important;
+}
+
+.btn:active, .btn-lg:active, .btn-block:active, .btn-primary:active {
+  color: rgb(173, 120, 238) !important;
+  background-color: rgb(173, 120, 238) !important;
+  border-color:rgb(147, 88, 218) !important;
+  box-shadow: none !important;
+}
+
+.btn:focus, .btn-lg:focus, .btn-block:focus, .btn-primary:focus {
+  background-color: rgb(173, 120, 238) !important;
+  border-color:rgb(147, 88, 218) !important;
+  box-shadow: none !important;
+}
+
 /*Footer*/
 
 .demo-bg {

@@ -25,15 +25,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
     <!-- which is built on top of JQuery and offers additional possibilities -->
     <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
-    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet"
+        type="text/css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  
+
     <!-- Your own script -->
     <script src="scripts/service.js"></script>
 
@@ -44,7 +45,7 @@
     <!-- JQuery time picker plugin -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
 
-    
+
 </head>
 
 
@@ -83,9 +84,12 @@
 
     <ul id="tab2" class="container-md">
         <li id="tab2 tab"><a href="#services">Services <img src="images/woman-hair-16.png" alt="wmn hair"></a></li>
-        <li id="tab2 tab"><a href="#hairdressers">Hairdressers <img src="images/hairdresser-48.png" width="16px" height="16px" alt=""></a></li>
-        <li id="tab2 tab"><a href="#appointment">Appointments <img src="images/booking-64.png" width="16px" height="16px" alt="bking"></a></li>
-        <li id="tab2 tab"><a href="#locations">Location <img src="images/map-64.png" width="16px" height="16px" alt=""></a></li>
+        <li id="tab2 tab"><a href="#hairdressers">Hairdressers <img src="images/hairdresser-48.png" width="16px"
+                    height="16px" alt=""></a></li>
+        <li id="tab2 tab"><a href="#appointment">Appointments <img src="images/booking-64.png" width="16px"
+                    height="16px" alt="bking"></a></li>
+        <li id="tab2 tab"><a href="#locations">Location <img src="images/map-64.png" width="16px" height="16px"
+                    alt=""></a></li>
         <li style="float: right;"><img src="images/hairdresserIcon.png" alt="hairdresser icon"
                 style="width: fit-content; height: 50px"></li>
     </ul>
@@ -96,7 +100,7 @@
 
     <div id="services"></div> <br>
     <div class="container-md p-3 my-3 border bg-light text-success">
-        <h3 id="violet-text">Let us tell you about our services <img src="images/woman-hair-30.png" alt="wmn hair"></h3> 
+        <h3 id="violet-text">Let us tell you about our services <img src="images/woman-hair-30.png" alt="wmn hair"></h3>
         <p id="violet-text">We can <strong>cut hair</strong>, <strong>colour hair</strong>, <strong>highlight
                 hair</strong>, and <strong>style hair</strong> </p>
         <div class="row" style="color: black;">
@@ -275,10 +279,11 @@
             </div>
         </div>
     </div>
-  
+
     <div id="hairdressers"></div> <br>
     <div class="container p-4 bg-light">
-        <h2 id="violet-text">Meet our hairdressers <img src="images/hairdresser-48.png" width="30px" height="30px" alt=""></h2>
+        <h2 id="violet-text">Meet our hairdressers <img src="images/hairdresser-48.png" width="30px" height="30px"
+                alt=""></h2>
         <div class="card-deck">
             <div class="card bg-warning" style="width:250px">
                 <img class="card-img-top" src="images/karen.jpg" alt="Card image" style="width:100%; height: 250px;">
@@ -325,12 +330,13 @@
             </div>
         </div>
     </div>
-    
+
 
     <div id="appointment"><br>
         <div class="container-md p-3 my-3 border bg-light">
             <h3 id="violet-text">
-                Book an appointment with us today! <img src="images/booking-64.png" width="30px" height="30px" alt="bking">
+                Book an appointment with us today! <img src="images/booking-64.png" width="30px" height="30px"
+                    alt="bking">
             </h3>
             <br>
             <div class="row">
@@ -351,28 +357,48 @@
                                 </div>
 
                                 <!-- Modal Body -->
-                                <div id="violet-text" class="modal-body">
-                                    <button value="Hair Cut & Style" class="btn btn-primary btn-lg btn-block">
-                                        Hair Cut & Style
-                                    </button><br>
-                                    <button value="All Over Colouring" class="btn btn-primary btn-lg btn-block">
-                                        All Over Colouring
-                                    </button><br>
-                                    <button value="Foil Highlighting" class="btn btn-primary btn-lg btn-block">
-                                        Foil Highlighting
-                                    </button><br>
-                                    <button value="Hair Styling & Updo's" class="btn btn-primary btn-lg btn-block">
-                                        Hair Styling & Updo's
-                                    </button>
+                                <!-- Items:
+
+                                Hair Cut & Style
+                                All Over Colouring
+                                Foil Highlighting
+                                Hair Styling & Updo's
+
+                                -->
+                                <div class="modal-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault0">
+                                        <label class="form-check-label" for="flexCheckDefault0">
+                                            Hair Cut & Style
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1">
+                                        <label class="form-check-label" for="flexCheckChecked1">
+                                            All Over Coloring
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+                                        <label class="form-check-label" for="flexCheckChecked2">
+                                            Foil Highlighting
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+                                        <label class="form-check-label" for="flexCheckChecked2">
+                                            Hair Styling & Updo's
+                                        </label>
+                                    </div>
                                 </div>
 
                                 <!-- Modal Footer -->
                                 <div class="modal-footer">
-                                    <button class="btn btn-outline-success"
+                                    <button class="btn btn-primary"
                                         onclick="document.getElementById('saved').innerHTML = 'Your information has been successfully saved.'">
                                         Save
                                     </button>
-                                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">
                                         Close
                                     </button>&emsp;
                                     <p id="saved"></p>
@@ -405,7 +431,7 @@
                                             placeholder="mm/dd/yyyy">
                                     </div>
                                 </div>
-                                    <div class="modal-body">
+                                <div class="modal-body">
                                     <div class="col-12">
                                         <label for="timeinput">Select a time</label>
                                         <input class="form-control" type="text" id="timeinput" placeholder="dd-mm-yyyy">
@@ -414,11 +440,11 @@
 
                                 <!-- Modal Footer -->
                                 <div class="modal-footer">
-                                    <button class="btn btn-outline-success"
+                                    <button class="btn btn-primary"
                                         onclick="document.getElementById('saved2').innerHTML = 'Your information has been successfully saved.'">
                                         Save
                                     </button>
-                                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">
                                         Close
                                     </button>&emsp;
                                     <p id="saved2"></p>
@@ -455,32 +481,36 @@
                                 <label for="email">Email:</label>
                                 <input type="email" class="form-control" placeholder="Enter email">
                                 <br>
-                                
+
                                 <label for="hairdresser">Preferred professional</label>
                                 <select class="form-control" name="hairdresser" id="hairdresser">
                                     <option value="karen">Karen</option>
                                     <option value="lateesha">Lateesha</option>
                                     <option value="adriana">Adriana</option>
                                     <option value="rebecca">Rebecca</option>
-        
+
                                 </select>
                                 <br>
 
                                 <label for="phone"> Phone Number:</label>
-                                <input class="form-control" id="phonefield" type="text" value="" placeholder="ex: 6134083244" name="phone" onkeyup=" return validatePhone2(this.value);" title="10 digits, no spaces"/>
+                                <input class="form-control" id="phonefield" type="text" value=""
+                                    placeholder="ex: 6134083244" name="phone"
+                                    onkeyup=" return validatePhone2(this.value);" title="10 digits, no spaces" />
                                 <br>
                                 <label for="phone"> Credit Card Number:</label>
-                                <input class="form-control" id="cardfield" type="text" value="" placeholder="ex: 1234 5678 9012 3456" name="card" onkeyup=" return validateCard(this.value);" title="16 digits"/>
+                                <input class="form-control" id="cardfield" type="text" value=""
+                                    placeholder="ex: 1234 5678 9012 3456" name="card"
+                                    onkeyup=" return validateCard(this.value);" title="16 digits" />
 
                             </div>
 
                             <!-- Modal Footer -->
                             <div class="modal-footer">
-                                <button class="btn btn-outline-success"
+                                <button class="btn btn-primary"
                                     onclick="document.getElementById('saved3').innerHTML = 'Your information has been successfully saved.'">
                                     Save
                                 </button>
-                                <button class="btn btn-outline-danger" data-dismiss="modal">
+                                <button class="btn btn-primary" data-dismiss="modal">
                                     Close
                                 </button>&emsp;
                                 <p id="saved3"></p>
@@ -496,59 +526,60 @@
 
     <div id="locations"></div> <br>
     <div class="container-md p-3 my-3 border bg-light text-success">
-        <h3 id="violet-text" style="text-align: center;">Our Location <img src="images/map-64.png" width="30x" height="30px" alt=""></h3>
+        <h3 id="violet-text" style="text-align: center;">Our Location <img src="images/map-64.png" width="30x"
+                height="30px" alt=""></h3>
         <!--Grid row-->
         <!-- <div class="row"> -->
 
-            <!--Grid column-->
-           
-
-            <!--Grid column-->
-            <!-- <div class="col-md-6 mb-4"> -->
-
-                <!--Card-->
-                <div class="card card-cascade narrower">
-
-                    <!--Card image-->
-                    <div class="view view-cascade gradient-card-header peach-gradient">
-                        <!-- <h5 id="violet-text" class="mb-0" style="color: black;">Earl Grey Kanata</h5> -->
-                    </div>
-                    <!--/Card image-->
-
-                    <!--Card content-->
-                    <div class="card-body card-body-cascade text-center">
-
-                        <!--Google map-->
-                        <div id="map-container-google-9" class="z-depth-1-half map-container-5" style="height: 300px">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2805.917101030621!2d-75.91459584922623!3d45.310100178996755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd2007474875953%3A0xb8191d5c79390c90!2sFirst%20Choice%20Haircutters!5e0!3m2!1sen!2sca!4v1644790936323!5m2!1sen!2sca"
-                                frameborder="0" style="border:0" allowfullscreen></iframe>
-                        </div>
-
-                        <br>
-                        
-                        <p style="color: black;">10 Earl Grey Dr Unit 2</p>
-                        <p style="color: black;">Kanata, ON K2T 1B8</p>
-                        <p style="color: black;">(613) 592-7083</p>
-
-                        <h3 id="violet-text" style="color: black;"><u>HOURS OF OPERATION</u></h3>
-                        <h4 id="violet-text" style="color: black;">Monday - Friday</h4>
-                        <p style="color: black;">9am - 8pm</p>
-                        <h4 id="violet-text" style="color: black;">Saturday</h4>
-                        <p style="color: black;">9am - 8pm</p>
-                        <h4 id="violet-text" style="color: black;">Sunday</h4>
-                        <p style="color: black;">CLOSED</p>
-                        
+        <!--Grid column-->
 
 
-                    </div>
-                    <!--/.Card content-->
+        <!--Grid column-->
+        <!-- <div class="col-md-6 mb-4"> -->
 
+        <!--Card-->
+        <div class="card card-cascade narrower">
+
+            <!--Card image-->
+            <div class="view view-cascade gradient-card-header peach-gradient">
+                <!-- <h5 id="violet-text" class="mb-0" style="color: black;">Earl Grey Kanata</h5> -->
+            </div>
+            <!--/Card image-->
+
+            <!--Card content-->
+            <div class="card-body card-body-cascade text-center">
+
+                <!--Google map-->
+                <div id="map-container-google-9" class="z-depth-1-half map-container-5" style="height: 300px">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2805.917101030621!2d-75.91459584922623!3d45.310100178996755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd2007474875953%3A0xb8191d5c79390c90!2sFirst%20Choice%20Haircutters!5e0!3m2!1sen!2sca!4v1644790936323!5m2!1sen!2sca"
+                        frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
-                <!--/.Card-->
 
-            <!-- </div> -->
-            <!--Grid column-->
+                <br>
+
+                <p style="color: black;">10 Earl Grey Dr Unit 2</p>
+                <p style="color: black;">Kanata, ON K2T 1B8</p>
+                <p style="color: black;">(613) 592-7083</p>
+
+                <h3 id="violet-text" style="color: black;"><u>HOURS OF OPERATION</u></h3>
+                <h4 id="violet-text" style="color: black;">Monday - Friday</h4>
+                <p style="color: black;">9am - 8pm</p>
+                <h4 id="violet-text" style="color: black;">Saturday</h4>
+                <p style="color: black;">9am - 6pm</p>
+                <h4 id="violet-text" style="color: black;">Sunday</h4>
+                <p style="color: black;">10am - 6pm</p>
+
+
+
+            </div>
+            <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+
+        <!-- </div> -->
+        <!--Grid column-->
 
         <!-- </div> -->
         <!--Grid row-->
@@ -556,16 +587,18 @@
     <!-- <div class="container-md p-3 my-3 border bg-light text-success"> -->
     <div class="container-md bg-light">
         <h2 id="violet-text" style="text-align: center;">Can we ask you something?</h2>
-        <p style="text-align: center; margin-left: 20%; margin-right: 20%;">We were wondering if you could spare a few minutes to let us know how you heard of us and 
+        <p style="text-align: center; margin-left: 20%; margin-right: 20%;">We were wondering if you could spare a few
+            minutes to let us know how you heard of us and
             what services you'd like to see added in the future so that we can improve your experience.
 
         </p>
         <!-- Trigger the modal with a button -->
         <div class="container col text-center">
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurvey" style="width: 500px; margin-bottom: 30px;">Open
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mySurvey"
+                style="width: 500px; margin-bottom: 30px;">Open
                 Survey</button>
         </div>
-        
+
 
         <!-- Modal -->
         <div class="modal fade" id="mySurvey" role="dialog">
@@ -579,42 +612,60 @@
                         <div class="container">
                             <h2 id="violet-text">How did you hear about us?</h2>
                             <form>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="">Google</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" checked>
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Google
+                                    </label>
                                 </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="">Yahoo</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Yahoo
+                                    </label>
                                 </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="">DuckDuckGo</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault3">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        DuckDuckGo
+                                    </label>
                                 </div>
-
                             </form>
                             <h2 id="violet-text">What service would you like us to add in the future?</h2>
                             <form>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="">Men's haircuts</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault0">
+                                    <label class="form-check-label" for="flexCheckDefault0">
+                                        Men's haircuts
+                                    </label>
                                 </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="">Children's haircuts</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1">
+                                    <label class="form-check-label" for="flexCheckChecked1">
+                                        Children's haircuts
+                                    </label>
                                 </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="">Brow waxing</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+                                    <label class="form-check-label" for="flexCheckChecked2">
+                                        Brow waxing
+                                    </label>
                                 </div>
                             </form>
-                            <div class="container col text-center">
-                                <button type="button" onclick="alertOnFinishSurvey()" class="btn btn-info btn-lg"
-                                    data-toggle="modal" data-target="#mySurvey">Submit</button>
-                            </div>
-                            <script type="text/javascript">
-                                function alertOnFinishSurvey() {
-                                    alert("Thank you for completing our survey!");
-                                }
-                            </script>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary btn-block" data-dismiss="modal"
+                            onclick="alertOnFinishSurvey()">Submit</button>
+                        <script type="text/javascript">
+                            function alertOnFinishSurvey() {
+                                alert("Thank you for completing our survey!");
+                            }
+                        </script>
                     </div>
                 </div>
             </div>
