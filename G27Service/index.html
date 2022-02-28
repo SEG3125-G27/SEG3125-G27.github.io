@@ -434,7 +434,7 @@
                                 <div class="modal-body">
                                     <div class="col-12">
                                         <label for="timeinput">Select a time</label>
-                                        <input class="form-control" type="text" id="timeinput" placeholder="dd-mm-yyyy">
+                                        <input class="form-control" type="text" id="timeinput">
                                     </div>
                                 </div>
 
@@ -470,51 +470,66 @@
                                 </h4>
                             </div>
 
-                            <!-- Modal Body -->
-                            <div id="violet-text" class="modal-body">
-                                <label for="fname">First Name:</label>
-                                <input type="text" class="form-control" placeholder="Enter First Name">
-                                <br>
-                                <label for="lname">Last Name:</label>
-                                <input type="text" class="form-control" placeholder="Enter Last Name">
-                                <br>
-                                <label for="email">Email:</label>
-                                <input type="email" class="form-control" placeholder="Enter email">
-                                <br>
+                            <form>
+                                <!-- Modal Body -->
+                                <div id="violet-text" class="modal-body">
+                                    <label for="fname">First Name:</label>
+                                    <input type="text" class="form-control" placeholder="Enter First Name" required>
+                                    <br>
+                                    <label for="lname">Last Name:</label>
+                                    <input type="text" class="form-control" placeholder="Enter Last Name" required>
+                                    <br>
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" placeholder="Enter email" required>
+                                    <br>
 
-                                <label for="hairdresser">Preferred professional</label>
-                                <select class="form-control" name="hairdresser" id="hairdresser">
-                                    <option value="karen">Karen</option>
-                                    <option value="lateesha">Lateesha</option>
-                                    <option value="adriana">Adriana</option>
-                                    <option value="rebecca">Rebecca</option>
+                                    <label for="hairdresser">Preferred professional</label>
+                                    <select class="form-control" name="hairdresser" id="hairdresser">
+                                        <option value="karen">Karen</option>
+                                        <option value="lateesha">Lateesha</option>
+                                        <option value="adriana">Adriana</option>
+                                        <option value="rebecca">Rebecca</option>
 
-                                </select>
-                                <br>
+                                    </select>
+                                    <br>
 
-                                <label for="phone"> Phone Number:</label>
-                                <input class="form-control" id="phonefield" type="text" value=""
-                                    placeholder="ex: 6134083244" name="phone"
-                                    onkeyup=" return validatePhone2(this.value);" title="10 digits, no spaces" />
-                                <br>
-                                <label for="phone"> Credit Card Number:</label>
-                                <input class="form-control" id="cardfield" type="text" value=""
-                                    placeholder="ex: 1234 5678 9012 3456" name="card"
-                                    onkeyup=" return validateCard(this.value);" title="16 digits" />
+                                    <label for="phone"> Phone Number:</label>
+                                    <input class="form-control" id="phonefield" type="text" value=""
+                                        placeholder="ex: 6134083244" name="phone"
+                                        onkeyup=" return validatePhone2(this.value);" title="10 digits, no spaces" required />
+                                    <br>
+                                    <label for="phone"> Credit Card Number:</label>
+                                    <input class="form-control" id="cardfield" type="text" value=""
+                                        placeholder="ex: 1234 5678 9012 3456" name="card"
+                                        onkeyup=" return validateCard(this.value);" title="16 digits" required />
+                                    <br>
+                                    <label for="expiryDate">
+                                        Expiry Date:
+                                    </label>
 
-                            </div>
+                                    <input class="form-control" type="text" id="expiryDate" placeholder="mm/yyyy" required>
+                                    <br>
+                                    <label for="cvv">
+                                        CVV:
+                                    </label>
+                                    <br>
+                                    <input type="number" onkeypress="if(this.value.length == 3) return false" placeholder="Enter CVV" required>
+                                    
 
-                            <!-- Modal Footer -->
-                            <div class="modal-footer">
-                                <button class="btn btn-primary"
-                                    onclick="document.getElementById('saved3').innerHTML = 'Your information has been successfully saved.'">
-                                    Save
-                                </button>
-                                <button class="btn btn-primary" data-dismiss="modal">
-                                    Close
-                                </button>&emsp;
-                                <p id="saved3"></p>
-                            </div>
+                                </div>
+
+                                <!-- Modal Footer -->
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary"
+                                        onclick="document.getElementById('saved3').innerHTML = 'Your information has been successfully saved.'">
+                                        Save
+                                    </button>
+                                    <button class="btn btn-primary" data-dismiss="modal">
+                                        Close
+                                    </button>&emsp;
+                                    <p id="saved3"></p>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

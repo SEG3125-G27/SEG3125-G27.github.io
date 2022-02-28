@@ -81,7 +81,8 @@ $(document).ready(function(){
             maxDate: '+4M',
             // used to disable some dates
             beforeShowDay: $.datepicker.noWeekends,
-            beforeShowDay: disableDates
+            //beforeShowDay: disableDates,
+            changeMonth: true,
         }   
     );
 
@@ -92,13 +93,27 @@ $(document).ready(function(){
     timeFormat: 'h:mm p',
     interval: 30,
     minTime: '9:00am',
-    maxTime: '8:00pm',
+    maxTime: '5:00pm',
     defaultTime: '9',
     startTime: '9:00',
     dynamic: false,
     dropdown: true,
     scrollbar: true
     });
+
+    $('#expiryDate').datepicker({
+        dateFormat: setDateFormat,
+        minDate: "+1D",
+        maxDate: "+5Y +10M +3D",
+        dateFormat: 'MM yy',
+        //following line of code used from https://stackoverflow.com/questions/2208480/jquery-ui-datepicker-to-show-month-year-only
+        onClose: function(dateText, inst) { 
+            $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+        },
+        changeMonth: true,
+        changeYear: true,
+        showButtonPanel: true
+    })
 
 
 
