@@ -28,10 +28,22 @@ const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sa
 var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"];
 const setDateFormat = "mm/dd/yy";
 
-function disableDates(date) {
-    // Sunday is Day 0, disable all Sundays
-    if (date.getDay() == 0)
-        return [false];
+// function disableDatesSunday(date) {
+//     // Sunday is Day 0, disable all Sundays
+//     if (date.getDay() == 0)
+//         //console.log(date.getDay())
+//         return [false];
+//     var string = jQuery.datepicker.formatDate(setDateFormat, date);
+//     return [ unavailableDates.indexOf(string) == -1 ];
+// }
+
+function disableDatesHoliday(date) {
+
+    for (i = 0; i < offDay.length; i++){
+        if (date.getDay() == offDay[i]){
+            return [false];
+        }
+    }
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
     return [ unavailableDates.indexOf(string) == -1 ];
 }
@@ -71,20 +83,18 @@ $(document).ready(function(){
 
     // Also, here is a good tutorial for playing with the datepicker in https://webkul.com/blog/jquery-datepicker/ 
     // Datepicker is also documented as one of the widgets here: https://api.jqueryui.com/category/widgets/ 
-    $( "#dateTimeInput" ).datepicker(
-        {
-            dateFormat: setDateFormat,
-            // no calendar before June 1rst 2020
-
-            //
-            minDate: 0,  
-            maxDate: '+4M',
-            // used to disable some dates
-            beforeShowDay: $.datepicker.noWeekends,
-            //beforeShowDay: disableDates,
-            changeMonth: true,
-        }   
-    );
+    // $( "#dateTimeInput" ).datepicker(
+    //     {
+    //         dateFormat: setDateFormat,
+    //         // no calendar before June 1rst 2020
+    //         minDate: 0,  
+    //         maxDate: '+4M',
+    //         // used to disable some dates
+    //         beforeShowDay: $.datepicker.noWeekends,
+    //         beforeShowDay: disableDatesSunday,
+    //         changeMonth: true,
+    //     }   
+    // );
 
 // timepick function 
 
@@ -139,6 +149,37 @@ $(document).ready(function(){
 
 
 });
+
+//Sunday is holiday for all employees
+var holiday = {
+    "karen" : [0, 3, 5],
+    "lateesha" : [0, 1, 4],
+    "adriana" : [0, 2, 5],
+    "rebecca" : [0, 4, 6]
+}
+var offDay;  
+
+function selectDresser(dresser){
+
+    for(key in holiday) {
+        if (key == dresser){
+            offDay = holiday[key];
+        }
+    }
+    
+    $(document).ready(function(){
+        $( "#dateTimeInput" ).datepicker(
+            {
+                dateFormat: setDateFormat,
+                minDate: 0,  
+                maxDate: '+4M',
+                beforeShowDay: $.datepicker.noWeekends,
+                beforeShowDay: disableDatesHoliday,
+                changeMonth: true,
+            }   
+        );
+    });
+}
 
 // https://www.youtube.com/watch?app=desktop&v=r5IbUHETupk
 function validatePhone2(phone)
