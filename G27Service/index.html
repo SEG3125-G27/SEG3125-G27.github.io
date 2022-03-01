@@ -484,10 +484,10 @@
                                 <!-- Modal Body -->
                                 <div id="violet-text" class="modal-body">
                                     <label for="fname">First Name:</label>
-                                    <input type="text" class="form-control" placeholder="Enter First Name" required>
+                                    <input id="fname" type="text" class="form-control" placeholder="Enter First Name" onkeyup=" return validateName(this.id, this.value);" required>
                                     <br>
                                     <label for="lname">Last Name:</label>
-                                    <input type="text" class="form-control" placeholder="Enter Last Name" required>
+                                    <input id="lname" type="text" class="form-control" placeholder="Enter Last Name" onkeyup=" return validateName(this.id, this.value);" required>
                                     <br>
                                     <label for="email">Email:</label>
                                     <input type="email" class="form-control" placeholder="Enter email" required>

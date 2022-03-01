@@ -196,8 +196,16 @@ function validatePhone2(phone)
             $("#phonefield").css({'background' : '#99FF99', 'border' : 'solid 1px #99FF99'});
             return true
         }
-    }
+}
 
+function validateName(id, name) {
+    name = name.replace(/[^A-Za-z]/g, '');
+    console.log(id)
+    $("#"+id).val(name);
+    $("#"+id).css({'background' : '#99FF99', 'border' : 'solid 1px #99FF99'});
+    return true
+
+}
 
 function validateCard(card)
     {
