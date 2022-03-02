@@ -509,12 +509,14 @@
 
                                     <input class="form-control" type="text" id="expiryDate" placeholder="Month YYYY" required onkeydown="event.preventDefault()">
                                     <br>
-                                    <label for="cvv">
-                                        CVV:
-                                    </label>
+
+
+                                    <label for="cvv"> CVV:</label>
+                                    <input class="form-control" id="cvvfield" type="text" value=""
+                                        placeholder="ex: 123" name="phone"
+                                        onkeyup=" return validateCVV(this.value);" title="3 digits, no spaces" required />
                                     <br>
-                                    <input type="number" onkeypress="if(this.value.length == 3 || this.value < 0) return false" placeholder="Enter CVV" required>
-                                    
+                                                                     
 
                                 </div>
 

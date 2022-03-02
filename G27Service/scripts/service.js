@@ -203,6 +203,22 @@ function validatePhone2(phone)
         }
 }
 
+function validateCVV(cvv)
+    {
+        cvv = cvv.replace(/[^0-9]/g,'');
+        $("#cvvfield").val(cvv);
+        if(cvv == ' ' || !cvv.match(/^[0-9]{3}$/))
+        {
+            $("#cvvfield").css({'background' : '#FFEDEF', 'border' : 'solid 1px red'});
+            return false;
+        }
+        else
+        {
+            $("#cvvfield").css({'background' : '#99FF99', 'border' : 'solid 1px #99FF99'});
+            return true
+        }
+}
+
 function validateName(id, name) {
     name = name.replace(/[^A-Za-z]/g, '');
     $("#"+id).val(name);
