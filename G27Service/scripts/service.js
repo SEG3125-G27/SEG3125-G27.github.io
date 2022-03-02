@@ -161,6 +161,11 @@ var offDay;
 
 function selectDresser(dresser){
 
+    var time = document.getElementById("timeinput");
+    var date = document.getElementById("dateTimeInput");    
+    time.disabled = false;
+    date.onkeyup = null;
+
     for(key in holiday) {
         if (key == dresser){
             offDay = holiday[key];
@@ -204,6 +209,12 @@ function validateName(id, name) {
     $("#"+id).css({'background' : '#99FF99', 'border' : 'solid 1px #99FF99'});
     return true
 
+}
+
+function blockType(dateBox){
+    dateBox = dateBox.replace(/^[\w]*$/, "");
+    $("#dateTimeInput").val(dateBox);
+    return true;
 }
 
 function validateCard(card)
