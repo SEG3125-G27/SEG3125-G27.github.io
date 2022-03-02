@@ -162,9 +162,7 @@ var offDay;
 function selectDresser(dresser){
 
     var time = document.getElementById("timeinput");
-    var date = document.getElementById("dateTimeInput");    
     time.disabled = false;
-    date.onkeyup = null;
 
     for(key in holiday) {
         if (key == dresser){
@@ -211,9 +209,9 @@ function validateName(id, name) {
 
 }
 
-function blockType(dateBox){
-    dateBox = dateBox.replace(/^[\w]*$/, "");
-    $("#dateTimeInput").val(dateBox);
+function blockType(id, box){
+    box = box.replace(/^[\w]*$/, "");
+    $("#" + id).val(box);
     return true;
 }
 

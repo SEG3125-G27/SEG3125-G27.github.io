@@ -440,12 +440,12 @@
                                     <div class="col-12">
                                         <label for="dateTimeInput">Select a date:</label>
                                         <input class="form-control" type="text" id="dateTimeInput"
-                                            placeholder="mm/dd/yyyy" onkeyup="return blockType(this.value)">
+                                            placeholder="mm/dd/yyyy" onkeyup="return blockType(this.id, this.value)">
                                     </div>                                
                                     <br>
                                     <div class="col-12">
                                         <label for="timeinput">Select a time:</label>
-                                        <input class="form-control" type="text" id="timeinput" disabled>
+                                        <input class="form-control" type="text" id="timeinput" disabled onkeyup="return blockType(this.id, this.value)">
                                     </div>
                                 </div>
                                 <!-- Modal Footer -->
