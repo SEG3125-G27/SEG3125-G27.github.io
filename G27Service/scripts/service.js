@@ -209,11 +209,11 @@ function validateName(id, name) {
 
 }
 
-function blockType(id, box){
-    box = box.replace(/^[\w]*$/, "");
-    $("#" + id).val(box);
-    return true;
-}
+// function blockType(id, box){
+//     box = box.replace(/^[\w]*$/, "");
+//     $("#" + id).val(box);
+//     return true;
+// }
 
 function validateCard(card)
     {
