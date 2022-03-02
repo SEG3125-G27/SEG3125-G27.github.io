@@ -162,7 +162,9 @@ var offDay;
 function selectDresser(dresser){
 
     var time = document.getElementById("timeinput");
+    var date = document.getElementById("dateTimeInput");    
     time.disabled = false;
+    date.disabled = false;
 
     for(key in holiday) {
         if (key == dresser){
