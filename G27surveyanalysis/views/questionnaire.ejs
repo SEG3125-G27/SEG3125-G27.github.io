@@ -1,4 +1,4 @@
-<!-- This little bit of code started with https://www.wikihow.com/Create-a-Questionnaire-in-HTML and got modified, 
+<!-- This little bit of code started with https://www.wikihow.com/Create-a-Questionnaire-in-HTML and got modified,
 by then using info from w3schools.com to continue.
 This is an UGLY survey....  PLEASE MODIFY IT!
 Caroline Barrière
@@ -18,9 +18,11 @@ May 2020
     <title>Questionnaire</title>
 	<link rel="shortcut icon" type="image/png" href="assets/images/questionnaire.png"/>
 
+  <!-- jquery script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   </head>
-  
+
   <body>
 
 	<div class="test">
@@ -30,7 +32,7 @@ May 2020
 			<h2><a href="https://www.chapters.indigo.ca/en-ca/books/" target="_blank" style="color: white;">Chapters Website</a> UI Image Gallery</h2>
 			<p style="color: white;">Click on the images below:</p>
 		  </div>
-		  
+
 		  <!-- The four columns -->
 		  <div class="row">
 			<div class="column">
@@ -46,48 +48,48 @@ May 2020
 			  <img src="assets/images/kart.jpg" alt="Shopping Cart Page" style="width:100%" onclick="myFunction(this);">
 			</div>
 		  </div>
-		  
+
 		  <a href="https://www.chapters.indigo.ca/en-ca/books/" target="_blank">
 		  <div class="container" title="Open a new tab to Chapters home page">
-			
+
 			<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-			
-			
+
+
 				<img id="expandedImg" style="width:50%; height: 10%;">
-			
+
 			<div id="imgtext"></div>
 		  </div>
 		  </a>
 
 	</div>
 	</div>
-	
+
 
 	<div class="test">
 
-	
+
 
 	<!-- <br>
 	<br> -->
 
 	</div>
 
-	
+
 	<br>
 	<br>
 
-	<form id="questions" method="POST" action="/questionnaire"> <!--FORM BEGINS******--> 
+	<form id="questions" method="POST" action="/questionnaire"> <!--FORM BEGINS******-->
 		<div class="question">
 
 		<h2 class="bigger"> Personal Information </h2>
 
 		<h2>First Name and Last Name</h2>
-		<p>First name: <input type="text" name="firstname" placeholder="<%= qs.person %>"></p>
-		<p>Last name: <input type="text" name="lastname" placeholder="<%= qs.dept %>"></p>
+		<p>First name: <input type="text" name="firstname" placeholder="<%= qs.person %>" required></p>
+		<p>Last name: <input type="text" name="lastname" placeholder="<%= qs.dept %>" required></p>
 		<br>
 		<br>
-			
-		</div>	
+
+		</div>
 
 		<div class="question">
 
@@ -95,11 +97,11 @@ May 2020
 
 			<h2>When was the last time you read a book?</h2>
 
-			<input type="radio" id="months1" name="lastRead" value="1">
+			<input type="radio" id="months1" name="lastRead" value="1" required>
 			<label for="months1">Less than a month ago</label><br>
 
 			<input type="radio" id="months3" name="lastRead" value="3">
-			<label for="months3">Less than 3 months ago</label><br>  
+			<label for="months3">Less than 3 months ago</label><br>
 
 			<input type="radio" id="months6" name="lastRead" value="6">
 			<label for="months6">Less than a year ago</label><br>
@@ -107,19 +109,19 @@ May 2020
 			<input type="radio" id="months12" name="lastRead" value="12">
 			<label for="months12">More than a year ago</label><br><br>
 
-			
+
 			<br>
 
 			<h2> Have you bought books from Chapters in the recent past? </h2>
-			
-			<input type="radio" id="yes" name="recentPurchase" value="yes">
+
+			<input type="radio" id="yes" name="recentPurchase" value="yes" required>
 			<label for="yes">Yes</label><br>
 
 			<input type="radio" id="no" name="recentPurchase" value="no">
 			<label for="no">No</label><br><br>
-			
+
 		</div>
-			
+
 		<div class="question">
 
 			<h2 class="bigger"> Reading Preferences </h2>
@@ -136,13 +138,13 @@ May 2020
 			<br>
 
 			<h2> What kind of books do you like? </h2>
-			
-			<input type="checkbox" name="Genre" value="Fiction">Fiction<br>
-			<input type="checkbox" name="Genre" value="Non-Fiction">Non-Fiction<br>
-			<input type="checkbox" name="Genre" value="Cookbooks">Cookbooks<br>
-			<input type="checkbox" name="Genre" value="Thrillers">Thillers<br>
-			<input type="checkbox" name="Genre" value="Mangas & Comics">Mangas & Comics<br>
-			
+
+			<input type="checkbox" name="Genre" value="Fiction" required>Fiction<br>
+			<input type="checkbox" name="Genre" value="Non-Fiction" required>Non-Fiction<br>
+			<input type="checkbox" name="Genre" value="Cookbooks" required>Cookbooks<br>
+			<input type="checkbox" name="Genre" value="Thrillers" required>Thillers<br>
+			<input type="checkbox" name="Genre" value="Mangas & Comics" required>Mangas & Comics<br>
+
 		</div>
 
 		<div class="question">
@@ -151,7 +153,7 @@ May 2020
 
 			<h2>Do you find the website's UI appealing?</h2>
 
-			<input type="radio" id="yes" name="appealing" value="yes">
+			<input type="radio" id="yes" name="appealing" value="yes" required>
 			<label for="yes">Yes</label><br>
 
 			<input type="radio" id="no" name="appealing" value="no">
@@ -159,17 +161,17 @@ May 2020
 
 
 			<h2>Do you like the shopping cart page's layout?</h2>
-			
-			<input type="radio" id="yes" name="likeShoppingCart" value="yes">
+
+			<input type="radio" id="yes" name="likeShoppingCart" value="yes" required>
 			<label for="yes">Yes</label><br>
 
 			<input type="radio" id="no" name="likeShoppingCart" value="no">
 			<label for="no">No</label><br><br>
 
-			
+
 
 			<h2> Which of the 4 showed page was best designed? </h2>
-			
+
 			<select id="favorite" name="bestDesignPage">
 				<option value="Main Page" selected="selected">Main page</option>
 				<option value="Fiction Books page">Fiction Books page</option>
@@ -179,10 +181,10 @@ May 2020
 
 			<br>
 			<br>
-			
+
 		</div>
-		
-		
+
+
 		<div class="question">
 
 			<h2 class="bigger"> Other Information </h2>
@@ -196,11 +198,11 @@ May 2020
 		<br>
 		<br>
 		<input type="submit" value="submit">
-				
+
 		<!-- <button id="submitButton" type="button" class="block" onclick="sub()">
 			SUBMIT your questionnaire
 		</button> -->
-			
+
 		<!-- <p id="signature">Site created by Samy Touabi</p>	 -->
 
 		<br>
@@ -215,7 +217,7 @@ May 2020
 
             <h2 style="text-align: center;">Lab 1 </h2>
 
-				<div class="social-icon"> 
+				<div class="social-icon">
 					<!-- <h2 style="text-align: center;">Lab 1 </h2> -->
 					<div class="social-item">
 						<a href="https://github.com/SEG3125-G27/SEG3125-G27.github.io" target="_blank">
@@ -223,7 +225,7 @@ May 2020
 						</a>
 					</div>
 				</div>
-			
+
 
 			<h3 style="text-align: center; color: white;">Samy Touabi, 300184721</h3>
 
@@ -231,7 +233,7 @@ May 2020
 
     </section>
 
-	
+
 
 	<script>
 		function myFunction(imgs) {
@@ -246,7 +248,26 @@ May 2020
 		alert("Thank you for answering our Questionnaire!");
 		}
 
+
+    //code inspired by https://stackoverflow.com/questions/27457581/html-5-make-checkbox-required
+
+    //make sure at lease one checkbox is checked
+    var requiredCheckboxes = $(':checkbox[required]');
+    requiredCheckboxes.change(
+    function(){
+      if(requiredCheckboxes.is(':checked')){
+        requiredCheckboxes.removeAttr('required');
+
+      }else{
+        requiredCheckboxes.attr('required','required');
+      }
+    }
+    );
+
+
+
+
 	</script>
 
   </body>
-</html> 
+</html>

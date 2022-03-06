@@ -22,14 +22,14 @@ html {
   z-index: 1;
   color: white;
 }
- 
+
 body {
   background-color: powderblue;
   /*width: 600px;*/
   border: 2px solid black;
   /*padding: 0px 20px 20px 20px;*/
-  
-  
+
+
 }
 
 h1 {
@@ -75,7 +75,7 @@ table {
   display: block;
   width: 20%;
   border: none;
-  background-color: #6600cc;  
+  background-color: #6600cc;
   padding: 14px 18px;
   font-size: 16px;
   cursor: pointer;
@@ -146,7 +146,7 @@ table {
 #footer .social-icon {
   display: flex;
   margin-bottom: 30px;
- 
+
 }
 
 #footer .social-item{
@@ -171,7 +171,7 @@ table {
   margin-right: auto; */
   display: flex;
   justify-content: center;
-  
+
 }
 
 
@@ -208,8 +208,8 @@ table {
 
 /* Style the images inside the grid */
 .column img {
-  opacity: 0.8; 
-  cursor: pointer; 
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .column img:hover {
