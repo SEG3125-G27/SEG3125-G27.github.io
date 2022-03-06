@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{background: skyblue; font-family: verdana; color: #fff; padding: 30px;}
+        h1{font-size: 48px; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
+        p{font-size: 16px; text-align: center;}
+        form{width: 400px; max-width: 100%; padding: 20px; margin: 20px auto;}
+        input, label{display: block; margin: 10px 0; padding: 5px; width: 100%;}
+        input[type='submit']{width: auto;}
+    </style>
+</head>
+<body>
+    <!-- <%- include ('partials/nav') %> -->
+
+    <h1>Thanks for getting in answering our survey!</h1>
+    <h2>We will add the following valuable information to our database for review:</h2>
+
+    <p> Your name is <strong> <%=data.firstname %> <%=data.lastname %></strong>. </p>
+
+    <p> You've read a book in the past <strong> <%=data.lastRead %> </strong>months
+        and have you puchased any books recently? <strong><%=data.recentPurchase %></strong>. 
+    </p>
+
+    <p>Your primary language is <strong> <%=data.primaryLanguage %> </strong>and your favourite genres are:</p>
+
+    <ul>
+        <% data.Genre.forEach(function(item){ %>
+            <li><strong><%= item %></strong></li>
+        <% }); %>
+    </ul>
+
+    <p> Did you find the website appealing? <strong> <%=data.appealing %></strong>.
+        and did you like the shopping cart page? <strong><%=data.likeShoppingCart %></strong>. 
+    </p>
+
+    <p>You found the <strong> <%= data.bestDesignPage %> </strong>to be the best designed page.</p>
+
+    <p>We will also take into account the following comments: </p>
+    <p> <u><%= data.comments %></u> </p>
+
+</body>
+</html>

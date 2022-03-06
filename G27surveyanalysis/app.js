@@ -1,21 +1,38 @@
-// Entry point for the application
-
-// express application
 var express = require('express');
-// require the controller we make
-var surveyController = require('./surveyController');
-
+var bodyParser = require('body-parser');
 var app = express();
 
-// set up template engine
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
+
 app.set('view engine', 'ejs');
+app.use('/assets', express.static('assets'));
 
-// static file serving
-app.use(express.static('./public'));
+app.get('/', function(req, res){
+    res.render('index');
+});
 
-// fire function from surveyController
-surveyController(app);
+app.get('/contact', function(req, res){
+    res.render('contact', {qs: req.query});
+});
 
-// listen to port
+app.post('/contact', urlencodedParser, function(req, res){
+    console.log(req.body);
+    res.render('contact-success', {data: req.body});
+});
+
+app.get('/questionnaire', function(req, res){
+    res.render('questionnaire', {qs: req.query});
+});
+
+app.post('/questionnaire', urlencodedParser, function(req, res){
+    console.log(req.body);
+    res.render('questionnaire-success', {data: req.body});
+});
+
+app.get('/profile/:name', function(req, res){
+    var data = {age: 29, job: 'ninja', hobbies: ['eating', 'fighting', 'fishing']};
+    res.render('profile', {person: req.params.name, data: data});
+});
+
 app.listen(3000);
-console.log('listening port 3000');
