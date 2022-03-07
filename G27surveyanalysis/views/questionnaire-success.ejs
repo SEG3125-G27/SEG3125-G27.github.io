@@ -25,9 +25,13 @@
     <p>Your primary language is <strong> <%=data.primaryLanguage %> </strong>and your favourite genres are:</p>
 
     <ul>
-        <% data.Genre.forEach(function(item){ %>
-            <li><strong><%= item %></strong></li>
-        <% }); %>
+        <% if (Object.prototype.toString.call(data.Genre) != '[object Array]') { %>
+            <li> <%= data.Genre %> </li>
+        <% } else { %>
+            <% for (var i = 0; i < data.Genre.length ; i++) { %>
+                <li> <%= data.Genre[i] %> </li>
+            <% } %>
+        <% } %>
     </ul>
 
     <p> Did you find the website appealing? <strong> <%=data.appealing %></strong>.
