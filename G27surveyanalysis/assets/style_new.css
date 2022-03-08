@@ -20,6 +20,15 @@ nav {
     color: red
 }
 
+.bg-brightRed {
+    font-size: x-large;
+    background-color: red
+}
+
+.bg-brightRed:hover {
+    background-color: rgb(202, 20, 20);
+}
+
 .headingBackground {
     background-color: rgb(202, 20, 20);
 }
