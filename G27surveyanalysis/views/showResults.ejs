@@ -1,0 +1,80 @@
+<html lang="en-US">
+<head>
+    <title>Survey Analysis</title>
+</head>
+
+<body>
+    <h1>Survey analysis</h1>
+    <h2>Appealing</h2>
+    <ul>
+    <% for (var i=0; i<results[0].length; i++){ %>
+        <li><%= results[0][i].appealing %> :  <%= results[0][i].count %></li>
+    <% } %>    
+    </ul>
+
+    <h2>bestDesignPage</h2>
+    <ul>
+    <% for (var i=0; i<results[1].length; i++){ %>
+        <li><%= results[1][i].bestDesignPage %> :  <%= results[1][i].count %></li>
+    <% } %>    
+    </ul>
+
+    <h2>comments</h2>
+    <ul>
+    <% for (var i=0; i<results[2].length; i++){ %>
+        <li><%= results[2][i].comments %> :  <%= results[2][i].count %></li>
+    <% } %>    
+    </ul>
+
+    <h2>firstname</h2>
+    <ul>
+    <% for (var i=0; i<results[3].length; i++){ %>
+        <li><%= results[3][i].firstname %> :  <%= results[3][i].count %></li>
+    <% } %>    
+    </ul>
+
+    <h2>Genre</h2>
+    <ul>
+    <% for (var i=0; i<results[4].length; i++){ %>
+        <li><%= results[4][i].Genre %> :  <%= results[4][i].count %></li>
+    <% } %>    
+    </ul>
+
+    <h2>lastname</h2>
+    <ul>
+    <% for (var i=0; i<results[5].length; i++){ %>
+        <li><%= results[5][i].lastname %> :  <%= results[5][i].count %></li>
+    <% } %>    
+    </ul>
+
+    <h2>lastread</h2>
+    <ul>
+    <% for (var i=0; i<results[6].length; i++){ %>
+        <li><%= results[6][i].lastRead %> :  <%= results[6][i].count %></li>
+    <% } %>    
+    </ul>
+
+    <h2>likeShoppingCart</h2>
+    <ul>
+    <% for (var i=0; i<results[7].length; i++){ %>
+        <li><%= results[7][i].likeShoppingCart %> :  <%= results[7][i].count %></li>
+    <% } %>    
+    </ul>
+
+    <h2>primaryLanguage</h2>
+    <ul>
+    <% for (var i=0; i<results[8].length; i++){ %>
+        <li><%= results[8][i].primaryLanguage %> :  <%= results[8][i].count %></li>
+    <% } %>    
+    </ul>
+
+    <h2>recentPurchase</h2>
+    <ul>
+    <% for (var i=0; i<results[9].length; i++){ %>
+        <li><%= results[9][i].recentPurchase %> :  <%= results[9][i].count %></li>
+    <% } %>    
+    </ul>
+   
+
+</body>
+</html>
