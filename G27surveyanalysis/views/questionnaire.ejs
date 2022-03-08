@@ -7,267 +7,296 @@ May 2020
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+
+<head>
+	<meta charset="utf-8">
 
 	<!-- IMPORTANT to use a CSS file - external -->
 
 	<!-- <link href="styles/style.css" rel="stylesheet" type="text/css"> -->
-	<link rel="stylesheet" href="/assets/style2.css" type="text/css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/assets/style_new.css" type="text/css">
 
-    <title>Questionnaire</title>
-	<link rel="shortcut icon" type="image/png" href="assets/images/questionnaire.png"/>
+	<title>Questionnaire</title>
+	<link rel="shortcut icon" type="image/png" href="assets/images/questionnaire.png" />
 
-  <!-- jquery script -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- jquery script -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-	<div class="test">
-	<div class="gallery">
+	<div class="container-xxl p-2 my-3 border bg-light">
 
-		<div style="text-align:center">
-			<h2><a href="https://www.chapters.indigo.ca/en-ca/books/" target="_blank" style="color: white;">Chapters Website</a> UI Image Gallery</h2>
-			<p style="color: white;">Click on the images below:</p>
-		  </div>
+		<div class="text-center headingBackground p-3 mx-auto">
+			<h1><a href="https://www.chapters.indigo.ca/en-ca/books/" class="heading text-white" target="_blank">
+					Chapters Survey
+				</a></h1>
+		</div>
 
-		  <!-- The four columns -->
-		  <div class="row">
-			<div class="column">
-			  <img src="assets/images/Chapters.jpg" alt="Main Page" style="width:100%" onclick="myFunction(this);">
+		<nav class="navbar sticky navbar-expand-md bg-maroon">
+			<div class="container-fluid">
+				<ul class="navbar-nav col-2 text-center">
+					<li class="nav-item col-12">
+						<a href="#gallery" class="nav-link nav-style">Gallery</a>
+					</li>
+					<li class="nav-item col-12">
+						<a href="#personal" class="nav-link nav-style">Personal Information</a>
+					</li>
+					<li class="nav-item col-12">
+						<a href="#history" class="nav-link nav-style">Reading History</a>
+					</li>
+					<li class="nav-item col-12">
+						<a href="#pref" class="nav-link nav-style">Reading Preferences</a>
+					</li>
+					<li class="nav-item col-12">
+						<a href="#ui" class="nav-link nav-style">Website UI</a>
+					</li>
+
+				</ul>
 			</div>
-			<div class="column">
-			  <img src="assets/images/fiction.jpg" alt="Fiction Books" style="width:100%" onclick="myFunction(this);">
-			</div>
-			<div class="column">
-			  <img src="assets/images/kids.jpg" alt="Kids Books" style="width:100%" onclick="myFunction(this);">
-			</div>
-			<div class="column">
-			  <img src="assets/images/kart.jpg" alt="Shopping Cart Page" style="width:100%" onclick="myFunction(this);">
-			</div>
-		  </div>
-
-		  <a href="https://www.chapters.indigo.ca/en-ca/books/" target="_blank">
-		  <div class="container" title="Open a new tab to Chapters home page">
-
-			<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-
-
-				<img id="expandedImg" style="width:50%; height: 10%;">
-
-			<div id="imgtext"></div>
-		  </div>
-		  </a>
-
+		</nav>
 	</div>
-	</div>
-
-
-	<div class="test">
-
-
-
-	<!-- <br>
-	<br> -->
-
-	</div>
-
-
-	<br>
-	<br>
-
-	<form id="questions" method="POST" action="/questionnaire"> <!--FORM BEGINS******-->
-		<div class="question">
-
-		<h2 class="bigger"> Personal Information </h2>
-
-		<h2>First Name and Last Name</h2>
-		<p>First name: <input type="text" name="firstname" placeholder="<%= qs.person %>" required></p>
-		<p>Last name: <input type="text" name="lastname" placeholder="<%= qs.dept %>" required></p>
+	<div class="container-xxl p-3 my-3 border bg-light">
 		<br>
-		<br>
-
-		</div>
-
-		<div class="question">
-
-			<h2 class="bigger"> Reading History </h2>
-
-			<h2>When was the last time you read a book?</h2>
-
-			<input type="radio" id="months1" name="lastRead" value="1" required>
-			<label for="months1">Less than a month ago</label><br>
-
-			<input type="radio" id="months3" name="lastRead" value="3">
-			<label for="months3">Less than 3 months ago</label><br>
-
-			<input type="radio" id="months6" name="lastRead" value="6">
-			<label for="months6">Less than a year ago</label><br>
-
-			<input type="radio" id="months12" name="lastRead" value="12">
-			<label for="months12">More than a year ago</label><br><br>
-
-
+		<div id="gallery" class="container text-red">
+			<h1>Gallery: View some of our website photos here</h1>
 			<br>
 
-			<h2> Have you bought books from Chapters in the recent past? </h2>
+			<div id="direction" class="carousel slide" data-bs-ride="carousel">
 
-			<input type="radio" id="yes" name="recentPurchase" value="yes" required>
-			<label for="yes">Yes</label><br>
+				<!-- Indicators/dots -->
+				<div class="carousel-indicators">
+					<button type="button" data-bs-target="#direction" data-bs-slide-to="0" class="active"></button>
+					<button type="button" data-bs-target="#direction" data-bs-slide-to="1"></button>
+					<button type="button" data-bs-target="#direction" data-bs-slide-to="2"></button>
+					<button type="button" data-bs-target="#direction" data-bs-slide-to="3"></button>
+				</div>
 
-			<input type="radio" id="no" name="recentPurchase" value="no">
-			<label for="no">No</label><br><br>
-
-		</div>
-
-		<div class="question">
-
-			<h2 class="bigger"> Reading Preferences </h2>
-
-			<h2>What is your primary language of choice when reading?</h2>
-			<select id="favorite" name="primaryLanguage">
-				<option value="English" selected="selected">English</option>
-				<option value="French">French</option>
-				<option value="Spanish">Spanish</option>
-				<option value="Other">Other</option>
-			</select>
-
-			<br>
-			<br>
-
-			<h2> What kind of books do you like? </h2>
-
-			<input type="checkbox" name="Genre" value="Fiction" required>Fiction<br>
-			<input type="checkbox" name="Genre" value="Non-Fiction" required>Non-Fiction<br>
-			<input type="checkbox" name="Genre" value="Cookbooks" required>Cookbooks<br>
-			<input type="checkbox" name="Genre" value="Thrillers" required>Thillers<br>
-			<input type="checkbox" name="Genre" value="Mangas & Comics" required>Mangas & Comics<br>
-
-		</div>
-
-		<div class="question">
-
-			<h2 class="bigger"> Website UI Questions </h2>
-
-			<h2>Do you find the website's UI appealing?</h2>
-
-			<input type="radio" id="yes" name="appealing" value="yes" required>
-			<label for="yes">Yes</label><br>
-
-			<input type="radio" id="no" name="appealing" value="no">
-			<label for="no">No</label><br><br>
-
-
-			<h2>Do you like the shopping cart page's layout?</h2>
-
-			<input type="radio" id="yes" name="likeShoppingCart" value="yes" required>
-			<label for="yes">Yes</label><br>
-
-			<input type="radio" id="no" name="likeShoppingCart" value="no">
-			<label for="no">No</label><br><br>
-
-
-
-			<h2> Which of the 4 showed page was best designed? </h2>
-
-			<select id="favorite" name="bestDesignPage">
-				<option value="Main Page" selected="selected">Main page</option>
-				<option value="Fiction Books page">Fiction Books page</option>
-				<option value="Kids Books page">Kids Books page</option>
-				<option value="Shopping Cart page">Shopping Cart page</option>
-			</select>
-
-			<br>
-			<br>
-
-		</div>
-
-
-		<div class="question">
-
-			<h2 class="bigger"> Other Information </h2>
-
-			<h2>Comments:</h2>
-
-			<textarea rows="10" cols="100" name="comments"></textarea>
-
-		</div>
-
-		<br>
-		<br>
-		<input type="submit" value="submit">
-
-		<!-- <button id="submitButton" type="button" class="block" onclick="sub()">
-			SUBMIT your questionnaire
-		</button> -->
-
-		<!-- <p id="signature">Site created by Samy Touabi</p>	 -->
-
-		<br>
-		<br>
-
-	</form>
-
-	<section id="footer">
-
-        <div class="footerc">
-            <div class="brand">  <h1> <span>S</span>EG <span>3</span>125 </h1>  </div>
-
-            <h2 style="text-align: center;">Lab 1 </h2>
-
-				<div class="social-icon">
-					<!-- <h2 style="text-align: center;">Lab 1 </h2> -->
-					<div class="social-item">
-						<a href="https://github.com/SEG3125-G27/SEG3125-G27.github.io" target="_blank">
-							<img id="git" src="assets/images/github.png" alt="GitHub Icon" title="Link to GitHub repository" width="50px" height="50px">
-						</a>
+				<!-- The slideshow/carousel -->
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<a href="https://www.chapters.indigo.ca/en-ca/books/" target="_blank">
+							<img src="assets/images/Chapters.jpg" alt="Main Page" style="width:100%"
+								onclick="myFunction(this);"></a>
+					</div>
+					<div class="carousel-item">
+						<a href="https://www.chapters.indigo.ca/en-ca/books/" target="_blank">
+							<img src="assets/images/fiction.jpg" alt="Fiction Books" style="width:100%"
+								onclick="myFunction(this);"></a>
+					</div>
+					<div class="carousel-item">
+						<a href="https://www.chapters.indigo.ca/en-ca/books/" target="_blank">
+							<img src="assets/images/kids.jpg" alt="Kids Books" style="width:100%"
+								onclick="myFunction(this);"></a>
+					</div>
+					<div class="carousel-item">
+						<a href="https://www.chapters.indigo.ca/en-ca/books/" target="_blank">
+							<img src="assets/images/kart.jpg" alt="Shopping Cart Page" style="width:100%"
+								onclick="myFunction(this);"></a>
 					</div>
 				</div>
 
-
-			<h3 style="text-align: center; color: white;">Samy Touabi, 300184721</h3>
-
+				<!-- Left and right controls/icons -->
+				<button class="carousel-control-prev" type="button" data-bs-target="#direction" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#direction" data-bs-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</button>
+			</div>
 		</div>
 
-    </section>
+	</div>
+	<span id="allQuestions">
+		<form id="questions" method="POST" action="/questionnaire" class="form-control" style="border: 0em;">
+			<!--FORM BEGINS******-->
+			<div id="personal" class="container-xxl p-3 my-3 border bg-light">
+				<div class="question">
+
+					<h1 class="brightRed"> Personal Information </h1>
+
+					<h6 class="text-red">First name: <input type="text" name="firstname" placeholder="<%= qs.person %>"
+							required></h6>
+					<h6 class="text-red">Last name: <input type="text" name="lastname" placeholder="<%= qs.dept %>"
+							required></h6>
+
+
+				</div>
+			</div>
+			<div id="history" class="container-xxl p-3 my-3 border bg-light">
+				<div class="question">
+					<h1 class="brightRed"> Reading History </h1>
+					<br>
+					<h4 class="text-red">When was the last time you read a book?</h4>
+
+					<input type="radio" id="months1" name="lastRead" value="1" required>
+					<label class="text-red" for="months1">Less than a month ago</label><br>
+
+					<input type="radio" id="months3" name="lastRead" value="3">
+					<label class="text-red" for="months3">Less than 3 months ago</label><br>
+
+					<input type="radio" id="months6" name="lastRead" value="6">
+					<label class="text-red" for="months6">Less than a year ago</label><br>
+
+					<input type="radio" id="months12" name="lastRead" value="12">
+					<label class="text-red" for="months12">More than a year ago</label><br><br>
+
+
+					<h4 class="text-red"> Have you bought books from Chapters in the recent past? </h4>
+
+					<input type="radio" id="yes" name="recentPurchase" value="yes" required>
+					<label class="text-red" for="yes">Yes</label><br>
+
+					<input type="radio" id="no" name="recentPurchase" value="no">
+					<label class="text-red" for="no">No</label><br><br>
+
+				</div>
+			</div>
+			<div id="pref" class="container-xxl p-3 my-3 border bg-light">
+				<div class="question">
+
+					<h1 class="brightRed"> Reading Preferences </h1>
+					<br>
+					<h4 class="text-red">What is your primary language of choice when reading?</h4>
+					<select class="text-red" id="favorite" name="primaryLanguage">
+						<option value="English" selected="selected">English</option>
+						<option value="French">French</option>
+						<option value="Spanish">Spanish</option>
+						<option value="Other">Other</option>
+					</select>
+					<br>
+					<br>
+					<h4 class="text-red"> What kind of books do you like? </h4>
+
+					<div class="text-red">
+						<input type="checkbox" name="Genre" value="Fiction" required> Fiction<br>
+						<input type="checkbox" name="Genre" value="Non-Fiction" required> Non-Fiction<br>
+						<input type="checkbox" name="Genre" value="Cookbooks" required> Cookbooks<br>
+						<input type="checkbox" name="Genre" value="Thrillers" required> Thillers<br>
+						<input type="checkbox" name="Genre" value="Mangas & Comics" required> Mangas & Comics<br>
+					</div>
+				</div>
+			</div>
+			<div id="ui" class="container-xxl p-3 my-3 border bg-light">
+				<div class="question">
+
+					<h1 class="brightRed"> Website UI Questions </h1>
+
+					<h4 class="text-red">Do you find the website's UI appealing?</h4>
+
+					<input type="radio" id="yes" name="appealing" value="yes" required>
+					<label class="text-red" for="yes">Yes</label><br>
+
+					<input type="radio" id="no" name="appealing" value="no">
+					<label class="text-red" for="no">No</label><br><br>
+
+
+					<h4 class="text-red">Do you like the shopping cart page's layout?</h4>
+
+					<input type="radio" id="yes" name="likeShoppingCart" value="yes" required>
+					<label class="text-red" for="yes">Yes</label><br>
+
+					<input type="radio" id="no" name="likeShoppingCart" value="no">
+					<label class="text-red" for="no">No</label><br><br>
+
+
+
+					<h4 class="text-red"> Which of the 4 showed page was best designed? </h4>
+
+					<select class="text-red" id="favorite" name="bestDesignPage">
+						<option value="Main Page" selected="selected">Main page</option>
+						<option value="Fiction Books page">Fiction Books page</option>
+						<option value="Kids Books page">Kids Books page</option>
+						<option value="Shopping Cart page">Shopping Cart page</option>
+					</select>
+
+					<br>
+					<br>
+
+				</div>
+			</div>
+			<div class="container-xxl p-3 my-3 border bg-light">
+				<div class="question">
+
+					<h1 class="brightRed"> Other Information </h1>
+
+					<h4 class="text-red">Comments:</h4>
+
+					<textarea rows="10" cols="100" name="comments"></textarea>
+
+				</div>
+			</div>
+		</form>
+	</span>
+
+
+	<div class="footer">
+		<section id="footer">
+			<div class="brand text-center">
+				<h1> <span>S</span>EG <span>3</span>125 </h1>
+			</div>
+
+			<h2 style="text-align: center;">Lab 6 </h2>
+
+			<div class="social-icon">
+				<!-- <h2 style="text-align: center;">Lab 1 </h2> -->
+				<div class="social-item">
+					<a href="https://github.com/SEG3125-G27/SEG3125-G27.github.io" target="_blank">
+						<img id="git" src="assets/images/github.png" alt="GitHub Icon" title="Link to GitHub repository"
+							width="50px" height="50px">
+					</a>
+				</div>
+			</div>
+
+
+			<h3 style="text-align: center; color: white;">Samy Touabi, Kishan Mrug, Rida Dzhaafar, Yanbing Ren</h3>
+
+			<!-- </div> -->
+
+		</section>
+	</div>
+
+
 
 
 
 	<script>
 		function myFunction(imgs) {
-		var expandImg = document.getElementById("expandedImg");
-		var imgText = document.getElementById("imgtext");
-		expandImg.src = imgs.src;
-		imgText.innerHTML = imgs.alt;
-		expandImg.parentElement.style.display = "block";
+			var expandImg = document.getElementById("expandedImg");
+			var imgText = document.getElementById("imgtext");
+			expandImg.src = imgs.src;
+			imgText.innerHTML = imgs.alt;
+			expandImg.parentElement.style.display = "block";
 		}
 
 		function sub() {
-		alert("Thank you for answering our Questionnaire!");
+			alert("Thank you for answering our Questionnaire!");
 		}
 
 
-    //code inspired by https://stackoverflow.com/questions/27457581/html-5-make-checkbox-required
+		//code inspired by https://stackoverflow.com/questions/27457581/html-5-make-checkbox-required
 
-    //make sure at lease one checkbox is checked
-    var requiredCheckboxes = $(':checkbox[required]');
-    requiredCheckboxes.change(
-    function(){
-      if(requiredCheckboxes.is(':checked')){
-        requiredCheckboxes.removeAttr('required');
+		//make sure at lease one checkbox is checked
+		var requiredCheckboxes = $(':checkbox[required]');
+		requiredCheckboxes.change(
+			function () {
+				if (requiredCheckboxes.is(':checked')) {
+					requiredCheckboxes.removeAttr('required');
 
-      }else{
-        requiredCheckboxes.attr('required','required');
-      }
-    }
-    );
+				} else {
+					requiredCheckboxes.attr('required', 'required');
+				}
+			}
+		);
 
 
 
 
 	</script>
+	</div>
+</body>
 
-  </body>
 </html>
