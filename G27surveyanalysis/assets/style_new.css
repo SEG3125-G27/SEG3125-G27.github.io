@@ -1,0 +1,161 @@
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.heading {
+    text-decoration: none;
+}
+
+.heading:hover {
+    text-decoration: underline;
+}
+
+.brightRed {
+    color: red
+}
+
+.headingBackground {
+    background-color: rgb(202, 20, 20);
+}
+
+.bg-maroon {
+    background-color: rgb(184, 36, 36);
+}
+
+.nav-style, .nav-style:visited {
+    color: white;
+    font-size: larger;
+}
+
+.nav-style:hover {
+    color: white;
+    background-color: red;
+}
+
+.text-red {
+    color: rgb(202, 20, 20);
+}
+
+/* Below Code obatained from https://stackoverflow.com/questions/46249541/change-arrow-colors-in-bootstraps-carousel */
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23CA1414' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23CA1414' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-indicators {
+    width: 10vw !important;
+    margin-left: 30vw !important;
+    background-color: rgb(202, 20, 20, 0.4) !important;
+}
+
+/*Footer*/
+
+.footer {
+    margin-left: 15.3vw;
+}
+
+#footer {
+    /* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); */
+    /* margin-right: 10vw; */
+    margin-left: 3.4vw;
+    width: 61.8vw;
+    background-image: linear-gradient(60deg, #29323c 0%, #248f24 100%);
+    padding-bottom: 3%;
+}
+
+#footer .footerc {
+    min-height: 200px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+#footer h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#footer .social-icon {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#footer .social-item {
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+}
+
+#footer .social-item img {
+    filter: grayscale(1);
+    transition: .3s ease filter;
+}
+
+#footer .social-item:hover img {
+    filter: grayscale(0);
+}
+
+#footer p {
+    color: white;
+    font-size: 1.3rem;
+    ;
+}
+
+
+
+#footer .social-icon {
+    display: flex;
+    margin-bottom: 30px;
+
+}
+
+#footer .social-item {
+    height: 50px;
+    width: 50px;
+    /* margin: 0 5px; */
+    margin: auto;
+}
+
+#footer .social-item img {
+    filter: grayscale(1);
+    transition: .3s ease filter;
+}
+
+#footer .social-item:hover img {
+    filter: grayscale(0);
+}
+
+#git {
+    display: block;
+    /* margin-left: auto;
+    margin-right: auto; */
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+/* End Footer */
+
+.brand h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.brand h1 span {
+    color: crimson;
+}
