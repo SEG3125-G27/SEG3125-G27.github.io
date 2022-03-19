@@ -5,7 +5,7 @@ const Create = () => {
 
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
-    const [author, setAuthor] = useState('mario');
+    const [author, setAuthor] = useState('Samy');
     const [isPending, setIsPending] = useState(false);
     const history = useHistory();
 
@@ -32,11 +32,11 @@ const Create = () => {
     return ( 
 
         <div className="create">
-            <h2>Add a New Blog</h2>
+            <h2>Add a New Item</h2>
 
             <form onSubmit={handleSubmit} >
 
-                <label> Blog title: </label>
+                <label> Item title: </label>
                 <input 
                     type="text"
                     required 
@@ -44,23 +44,25 @@ const Create = () => {
                     onChange={(e) => setTitle(e.target.value)}
                 />
 
-                <label> Blog body: </label>
+                <label> Item details: </label>
                <textarea
                     required
                     value={body}
                     onChange={(e) => setBody(e.target.value)}
                ></textarea>
 
-               <label> Blog author: </label>
+               <label> Item author: </label>
                <select
                     value = { author }
                     onChange={(e) => setAuthor(e.target.value)}
                >
-                   <option value="mario">mario</option>
-                   <option value="yoshi">yoshi</option>
+                   <option value="Samy">Samy</option>
+                   <option value="Kishan">Kishan</option>
+                   <option value="Rida">Rida</option>
+                   <option value="Kori">Kori</option>
                </select>
 
-               <button>Add Blog</button> <br />
+               <button>Add Item</button> <br />
                {/* { !isPending && <button>Add Blog</button> } <br /> this is ugly and seems unnecessary */}
                {/* { isPending && <button disabled>Adding blog...</button> } <br /> this is ugly and seems unnecessary */}
 

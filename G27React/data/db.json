@@ -1,22 +1,28 @@
 {
   "blogs": [
     {
-      "title": "My First Blog",
-      "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\n\n\nWhere does it come from?\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\n\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.\n\nWhere can I get some?\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+      "title": "CSI Assigment",
+      "body": "do the required work before the jan 27 deadline",
       "author": "mario",
-      "id": 1
+      "id": 6
     },
     {
-      "title": "Opening Party!",
-      "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\n\n\nWhere does it come from?\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\n\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.\n\nWhere can I get some?\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
-      "author": "yoshi",
-      "id": 2
+      "title": "Do lab7",
+      "body": "This lab is on heuristics. no submissions needed",
+      "author": "mario",
+      "id": 7
     },
     {
-      "title": "Thought",
-      "body": "bodyy",
-      "author": "yoshi",
-      "id": 5
+      "title": "Kishan task",
+      "body": "Do stuff",
+      "author": "Kishan",
+      "id": 8
+    },
+    {
+      "title": "Finish this website for deliverable 8",
+      "body": "Incorporate the following heuristics: \n\nVisibility - Show system status, tell what’s happening:\n\nAdd a “Loading…” notifier when the website is fetching data. Add an “item added”, “item deleted” or “item deleted” alert when the user makes these things happen.\n\nFreedom - Provide good defaults & undo\n\nGive the user the chance to confirm insertion/deletion/edition or to cancel them. Perhaps have an “Archives” tab in the website to view deleted items. Perhaps give users to sort the list in the way they want, and/or add a search bar.\n\nError Prevention - Help users avoid making mistakes\n\nAlert box to confirm changes. \n\nFlexibility - Make advanced tasks fluid and efficient\n\nAutomatically redirect users to the menu page after entering an item, allow them to cancel and undo changes by simply clicking a button.\n\nError Recovery - Help users recognize, diagnose and recover from errors\n\nAdd the option to recover deleted items from “Archives”.\n\nMapping - Use familiar metaphors & language\n\nAdd icons to buttons (ex: a “+” sign next to add button and a trash can icon to delete).\n\nConsistency - Use the same interface and language throughout\n\nUsing an external CSS stylesheet as the primary way to design the website will make the interface have a uniform look.\n\nRecognition - Make information easy to discover\n\nSimilar to mapping, add universally recognizable icons\n\nMinimalism - Provide only necessary information in an elegant way\n\nOnly have basic buttons for each option. If we add a sorting options list, only add a few options in a dropdown or radio button list.\n\n Help - Use proactive and in-place hints to guide users\n\nAdd tooltips to let users know what they should and shouldn't write for text boxes. Perhaps incorporate JQuery to let them know when they are inputting too much information or when a field is missing information.\n",
+      "author": "samy",
+      "id": 9
     }
   ]
 }
