@@ -13,9 +13,11 @@ const BlogDetails = () => {
         }).then(() => {
             history.push('/');
         })
+
+        alert("Item successfully deleted!");
     }
 
-    return ( 
+    return (
         <div className="blog-details">
             {/* <h2>Blog details - { id } </h2> */}
 
@@ -33,5 +35,5 @@ const BlogDetails = () => {
         </div>
      );
 }
- 
+
 export default BlogDetails;
