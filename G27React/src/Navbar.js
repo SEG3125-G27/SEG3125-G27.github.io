@@ -5,12 +5,12 @@ const Navbar = () => {
         <nav className="navbar">
             <h1>TODO List</h1>
             <div className="links">
-                <Link to="/">Home</Link>
+                <Link to="/"><img src='../home.svg' style={{marginBottom: '-0.5vh'}} /> Home</Link>
                 <Link to="/create" style={{
                     color: "white",
                     backgroundColor: '#f1356d',
                     borderRadius: '8px'
-                }} >new Item</Link>
+                }} >New Item <b style={{color: 'white'}} className='links'>+</b></Link>
             </div>
         </nav>
      );

@@ -28,8 +28,10 @@ const BlogDetails = () => {
                     <h2> {blog.title} </h2>
                     <p>Written by { blog.author } </p>
                     <div> { blog.body } </div>
-                    <button onClick={handleClick} >delete</button>
+                    <button onClick={handleClick} ><img src='../trash.svg' style={{marginBottom: '-1.5vh', paddingBottom: "7px"}} /> Delete</button>
                     <Link to="/" className="btn">&lt; Back</Link>
+                    <br></br>
+                    <br></br>
                 </article>
             ) }
 
