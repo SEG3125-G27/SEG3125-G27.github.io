@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { Link } from 'react-router-dom';
+
+
 
 const Create = () => {
+
+
 
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
@@ -9,6 +14,7 @@ const Create = () => {
     const [isPending, setIsPending] = useState(false);
     const history = useHistory();
 
+    // const handleCancel=()=>{};
     const handleSubmit = (e) => {
         e.preventDefault();
         const blog = { title, body, author };
@@ -28,18 +34,25 @@ const Create = () => {
         })
 
     }
+    //this function will be called when the user clicked on add/
+    //it displays a popup message and adds the item to json Database
 
-    return ( 
+    const wrapperFunction = (e) => {
+      handleSubmit(e);
+      alert("New item added!");
+    }
+
+    return (
 
         <div className="create">
             <h2>Add a New Item</h2>
 
-            <form onSubmit={handleSubmit} >
+            <form  >
 
                 <label> Item title: </label>
-                <input 
+                <input
                     type="text"
-                    required 
+                    required
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                 />
@@ -62,7 +75,10 @@ const Create = () => {
                    <option value="Kori">Kori</option>
                </select>
 
-               <button>Add Item</button> <br />
+
+               <button className="btn" onClick={wrapperFunction}>Add</button>
+               <Link to="/" className="btn">Cancel</Link>
+                <br />
                {/* { !isPending && <button>Add Blog</button> } <br /> this is ugly and seems unnecessary */}
                {/* { isPending && <button disabled>Adding blog...</button> } <br /> this is ugly and seems unnecessary */}
 
@@ -75,5 +91,5 @@ const Create = () => {
 
     );
 }
- 
+
 export default Create;

@@ -1,6 +1,6 @@
 import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import useFetch from './useFetch';
-
+import { Link } from 'react-router-dom';
 const BlogDetails = () => {
 
     const { id } =  useParams();
@@ -13,9 +13,11 @@ const BlogDetails = () => {
         }).then(() => {
             history.push('/');
         })
+
+        alert("Item successfully deleted!");
     }
 
-    return ( 
+    return (
         <div className="blog-details">
             {/* <h2>Blog details - { id } </h2> */}
 
@@ -27,11 +29,12 @@ const BlogDetails = () => {
                     <p>Written by { blog.author } </p>
                     <div> { blog.body } </div>
                     <button onClick={handleClick} >delete</button>
+                    <Link to="/" className="btn">&lt; Back</Link>
                 </article>
             ) }
 
         </div>
      );
 }
- 
+
 export default BlogDetails;

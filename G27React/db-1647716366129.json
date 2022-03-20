@@ -23,12 +23,6 @@
       "body": "Incorporate the following heuristics: \n\nVisibility - Show system status, tell what’s happening:\n\nAdd a “Loading…” notifier when the website is fetching data. Add an “item added”, “item deleted” or “item deleted” alert when the user makes these things happen.\n\nFreedom - Provide good defaults & undo\n\nGive the user the chance to confirm insertion/deletion/edition or to cancel them. Perhaps have an “Archives” tab in the website to view deleted items. Perhaps give users to sort the list in the way they want, and/or add a search bar.\n\nError Prevention - Help users avoid making mistakes\n\nAlert box to confirm changes. \n\nFlexibility - Make advanced tasks fluid and efficient\n\nAutomatically redirect users to the menu page after entering an item, allow them to cancel and undo changes by simply clicking a button.\n\nError Recovery - Help users recognize, diagnose and recover from errors\n\nAdd the option to recover deleted items from “Archives”.\n\nMapping - Use familiar metaphors & language\n\nAdd icons to buttons (ex: a “+” sign next to add button and a trash can icon to delete).\n\nConsistency - Use the same interface and language throughout\n\nUsing an external CSS stylesheet as the primary way to design the website will make the interface have a uniform look.\n\nRecognition - Make information easy to discover\n\nSimilar to mapping, add universally recognizable icons\n\nMinimalism - Provide only necessary information in an elegant way\n\nOnly have basic buttons for each option. If we add a sorting options list, only add a few options in a dropdown or radio button list.\n\n Help - Use proactive and in-place hints to guide users\n\nAdd tooltips to let users know what they should and shouldn't write for text boxes. Perhaps incorporate JQuery to let them know when they are inputting too much information or when a field is missing information.\n",
       "author": "samy",
       "id": 9
-    },
-    {
-      "title": "alert window",
-      "body": "alert the users when they try to delete stuff from the list ",
-      "author": "Kori",
-      "id": 10
     }
   ]
 }
