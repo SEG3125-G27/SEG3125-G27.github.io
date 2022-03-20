@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Link } from 'react-router-dom';
-
-
+import { useAlert } from 'react-alert';
+import React from 'react';
 
 const Create = () => {
 
 
+    const alert = useAlert();
 
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
@@ -39,7 +40,7 @@ const Create = () => {
 
     const wrapperFunction = (e) => {
       handleSubmit(e);
-      alert("New item added!");
+      alert.success("New item added!");
     }
 
     return (

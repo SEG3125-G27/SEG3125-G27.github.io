@@ -1,8 +1,11 @@
 import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import useFetch from './useFetch';
 import { Link } from 'react-router-dom';
+import { useAlert } from 'react-alert';
+
 const BlogDetails = () => {
 
+    const alert = useAlert();
     const { id } =  useParams();
     const { data: blog, error, isPending } = useFetch('http://localhost:8000/blogs/' + id);
     const history = useHistory();
@@ -14,7 +17,7 @@ const BlogDetails = () => {
             history.push('/');
         })
 
-        alert("Item successfully deleted!");
+        alert.success("Item successfully deleted!");
     }
 
     return (
@@ -28,8 +31,9 @@ const BlogDetails = () => {
                     <h2> {blog.title} </h2>
                     <p>Written by { blog.author } </p>
                     <div> { blog.body } </div>
-                    <button onClick={handleClick} ><img src='../trash.svg' style={{marginBottom: '-1.5vh', paddingBottom: "7px"}} /> Delete</button>
                     <Link to="/" className="btn">&lt; Back</Link>
+                    <button className = 'btn' onClick={handleClick} ><img src='../trash.svg' style={{marginBottom: '-1.5vh', paddingBottom: "8px"}} /> Delete</button>
+
                     <br></br>
                     <br></br>
                 </article>
