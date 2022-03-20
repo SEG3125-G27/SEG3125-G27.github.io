@@ -1,4 +1,5 @@
 import Navbar from './Navbar';
+import Footer from './footer'
 import Home from './Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Create from './Create';
@@ -31,6 +32,9 @@ function App() {
             </Route>
 
           </Switch>
+          <Footer>
+            <Create />
+          </Footer>
         </div>
       </div>
     </Router>
