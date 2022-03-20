@@ -93,9 +93,14 @@
   box-sizing: border-box;
   display: block;
 }
-.create button {
+.create .btn {
   background: #f1356d;
+  display: inline-block;
+  margin-right: 30px;
+  float:left;
   color: #fff;
+  text-decoration: none;
+  font-size:12px;
   border: 0;
   padding: 8px;
   border-radius: 8px;
