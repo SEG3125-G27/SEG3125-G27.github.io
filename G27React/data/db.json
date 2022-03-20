@@ -1,18 +1,6 @@
 {
   "blogs": [
     {
-      "title": "CSI Assigment",
-      "body": "do the required work before the jan 27 deadline",
-      "author": "mario",
-      "id": 6
-    },
-    {
-      "title": "Do lab7",
-      "body": "This lab is on heuristics. no submissions needed",
-      "author": "mario",
-      "id": 7
-    },
-    {
       "title": "Kishan task",
       "body": "Do stuff",
       "author": "Kishan",
@@ -29,6 +17,12 @@
       "body": "alert the users when they try to delete stuff from the list ",
       "author": "Kori",
       "id": 10
+    },
+    {
+      "title": "Rida item",
+      "body": "Something Rida needs to do",
+      "author": "Rida",
+      "id": 11
     }
   ]
 }

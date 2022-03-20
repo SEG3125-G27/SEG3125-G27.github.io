@@ -12,6 +12,7 @@ const NotFound = () => {
                     textDecoration: "none",
                     padding: "10px"
                 }} >Back to the homepage...</Link>
+                <br /> <br /><br />
         </div>
      );
 }

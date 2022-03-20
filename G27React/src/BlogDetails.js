@@ -17,7 +17,7 @@ const BlogDetails = () => {
             history.push('/');
         })
 
-        alert.success("Item successfully deleted!");
+        alert.success("Item successfully deleted");
     }
 
     return (

@@ -77,15 +77,13 @@ const Create = () => {
                </select>
 
 
-               <button className="btn" onClick={wrapperFunction}>Add</button>
-               <Link to="/" className="btn">Cancel</Link>
+               <button className="btn" onClick={wrapperFunction}>Add <b style={{color: 'white'}} className='links'>+</b> </button>
+               <Link to="/" className="btn">Cancel <b style={{color: 'white'}} className='links'>X</b> </Link>
+                <br />
                 <br />
                {/* { !isPending && <button>Add Blog</button> } <br /> this is ugly and seems unnecessary */}
                {/* { isPending && <button disabled>Adding blog...</button> } <br /> this is ugly and seems unnecessary */}
 
-                <p> {title} </p> <br />
-                <p> {body} </p> <br />
-                <p> { author } </p>
             </form>
 
         </div>
