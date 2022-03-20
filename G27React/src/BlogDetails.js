@@ -1,6 +1,6 @@
 import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import useFetch from './useFetch';
-
+import { Link } from 'react-router-dom';
 const BlogDetails = () => {
 
     const { id } =  useParams();
@@ -29,6 +29,7 @@ const BlogDetails = () => {
                     <p>Written by { blog.author } </p>
                     <div> { blog.body } </div>
                     <button onClick={handleClick} >delete</button>
+                    <Link to="/" className="btn">&lt; Back</Link>
                 </article>
             ) }
 
