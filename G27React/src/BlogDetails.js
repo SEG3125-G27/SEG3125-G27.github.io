@@ -11,13 +11,14 @@ const BlogDetails = () => {
     const history = useHistory();
 
     const handleClick = () => {
-        fetch('http://localhost:8000/blogs/' + blog.id, {
-            method: 'DELETE'
-        }).then(() => {
-            history.push('/');
-        })
-
-        alert.success("Item successfully deleted");
+        if (window.confirm('Are you sure you want to delete this item?')) {
+            fetch('http://localhost:8000/blogs/' + blog.id, {
+                method: 'DELETE'
+            }).then(() => {
+                history.push('/');
+            })
+            alert.success("Item successfully deleted");
+        }
     }
 
     return (
@@ -33,7 +34,6 @@ const BlogDetails = () => {
                     <div> { blog.body } </div>
                     <Link to="/" className="btn">&lt; Back</Link>
                     <button className = 'btn' onClick={handleClick} ><img src='../trash.svg' style={{marginBottom: '-1.5vh', paddingBottom: "8px"}} /> Delete</button>
-
                     <br></br>
                     <br></br>
                 </article>
