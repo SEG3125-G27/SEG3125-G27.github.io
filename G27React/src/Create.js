@@ -3,9 +3,11 @@ import { useHistory } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { useAlert } from 'react-alert';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Create = () => {
 
+    const { t } = useTranslation();
 
     const alert = useAlert();
 
@@ -46,11 +48,11 @@ const Create = () => {
     return (
 
         <div className="create">
-            <h2>Add a New Item</h2>
+            <h2>{t("add")}</h2>
 
             <form  >
 
-                <label> Item title: </label>
+                <label> {t("item_title")} </label>
                 <input
                     type="text"
                     required
@@ -58,14 +60,14 @@ const Create = () => {
                     onChange={(e) => setTitle(e.target.value)}
                 />
 
-                <label> Item details: </label>
+                <label> {t("item_details")} </label>
                <textarea
                     required
                     value={body}
                     onChange={(e) => setBody(e.target.value)}
                ></textarea>
 
-               <label> Item author: </label>
+               <label> {t("item_author")} </label>
                <select
                     value = { author }
                     onChange={(e) => setAuthor(e.target.value)}
@@ -77,8 +79,8 @@ const Create = () => {
                </select>
 
 
-               <button className="btn" onClick={wrapperFunction}>Add <b style={{color: 'white'}} className='links'>+</b> </button>
-               <Link to="/" className="btn">Cancel <b style={{color: 'white'}} className='links'>X</b> </Link>
+               <button className="btn" onClick={wrapperFunction}>{t("add_item")} <b style={{color: 'white'}} className='links'>+</b> </button>
+               <Link to="/" className="btn">{t("cancel_item")} <b style={{color: 'white'}} className='links'>X</b> </Link>
                 <br />
                 <br />
                {/* { !isPending && <button>Add Blog</button> } <br /> this is ugly and seems unnecessary */}

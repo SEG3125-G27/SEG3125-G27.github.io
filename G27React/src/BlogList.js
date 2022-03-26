@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 const BlogList = ( {blogs, title} ) => {
     // const blogs = props.blogs; 
     // const title = props.title;
+
+    const { t } = useTranslation();
     
     return ( 
         <div className="blog-list">
@@ -12,7 +15,7 @@ const BlogList = ( {blogs, title} ) => {
 
                     <Link to= {`/blogs/${blog.id}`} >
                         <h2>{blog.title}</h2>
-                        <p> Written by {blog.author} </p>
+                        <p> {t("written_by")} {blog.author} </p>
                     </Link>
 
                 </div>

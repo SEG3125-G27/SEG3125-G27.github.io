@@ -2,6 +2,7 @@ import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min
 import useFetch from './useFetch';
 import { Link } from 'react-router-dom';
 import { useAlert } from 'react-alert';
+import { t } from "i18next";
 
 const BlogDetails = () => {
 
@@ -30,10 +31,10 @@ const BlogDetails = () => {
             { blog && (
                 <article>
                     <h2> {blog.title} </h2>
-                    <p>Written by { blog.author } </p>
+                    <p>{t("written_by")} { blog.author } </p>
                     <div> { blog.body } </div>
-                    <Link to="/" className="btn">&lt; Back</Link>
-                    <button className = 'btn' onClick={handleClick} ><img src='../trash.svg' style={{marginBottom: '-1.5vh', paddingBottom: "8px"}} /> Delete</button>
+                    <Link to="/" className="btn">&lt; {t("back")}</Link>
+                    <button className = 'btn' onClick={handleClick} ><img src='../trash.svg' style={{marginBottom: '-1.5vh', paddingBottom: "8px"}} /> {t("delete")}</button>
                     <br></br>
                     <br></br>
                 </article>

@@ -1,4 +1,9 @@
+import { useTranslation } from 'react-i18next';
+
 const Footer = () => {
+
+    const { t } = useTranslation();
+
     return (
         <div className="footer">
 
@@ -9,7 +14,7 @@ const Footer = () => {
                 fontFamily: 'Times New Roman',
                 fontSize: 'large'
             }} >
-                React Website Made by G27
+                {t("footer")}
             </p>
         </div>
     );

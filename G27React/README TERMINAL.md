@@ -4,6 +4,7 @@ npm install react-transition-group
 npm install react-alert
 npm install react-alert-template-basic
 npm install prop-types
+npm install --save i18next react-i18next i18next-http-backend i18next-browser-languagedetector
 ```
 
 

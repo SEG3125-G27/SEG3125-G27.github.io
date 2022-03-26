@@ -1,17 +1,28 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+
+    const { t } = useTranslation();
     return ( 
         <nav className="navbar">
-            <h1>TODO List</h1>
+            <h1>{t("title_bar")}</h1>
             <div className="links">
-                <Link to="/"><img src='../home.svg' style={{marginBottom: '-0.5vh'}} /> Home</Link>
-                <Link to="/archives"><img src='../archives.png' style={{marginBottom: '-0.5vh', width:'25px'}} /> Archives</Link>
+                <Link to="/"><img src='../home.svg' style={{marginBottom: '-0.5vh'}} /> {t("home")}</Link>
+                <Link to="/archives"><img src='../archives.png' style={{marginBottom: '-0.5vh', width:'25px'}} /> {t("archives")}</Link>
                 <Link to="/create" style={{
                     color: "white",
                     backgroundColor: '#f1356d',
                     borderRadius: '8px'
-                }} >New Item <b style={{color: 'white'}} className='links'>+</b></Link>
+                }} >{t("new_item")} <b style={{color: 'white'}} className='links'>+</b></Link>
+
+                {/* <div className="container"> */}
+                <Link to="/?lng=es"> <img src='../spain.png' style={{marginBottom: '-0.5vh', width:'25px'}} /></Link>
+                <Link to="/?lng=en"> <img src='../britain.png' style={{marginBottom: '-0.5vh', width:'25px'}} /></Link>
+
+                {/* </div> */}
+
+                
             </div>
         </nav>
      );

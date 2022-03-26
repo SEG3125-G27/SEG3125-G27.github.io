@@ -8,7 +8,13 @@ import BlogDetails from './BlogDetails';
 import NotFound from './NotFound';
 import React from 'react';
 import { useAlert } from 'react-alert';
+import { useTranslation } from 'react-i18next';
+
+// https://www.youtube.com/watch?app=desktop&v=QmKnaHNW9ps For translation
+
 function App() {
+
+  const { t } = useTranslation();
 
   return (
     <Router>
@@ -18,6 +24,14 @@ function App() {
           <Switch>
 
             <Route exact path="/">
+              <Home />
+            </Route>
+
+            <Route exact path="/?lng=es">
+              <Home />
+            </Route>
+
+            <Route exact path="/?lng=en">
               <Home />
             </Route>
 

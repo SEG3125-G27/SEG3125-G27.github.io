@@ -34,6 +34,12 @@
   padding: 20px;
 }
 
+.container {
+  min-height: 10em;
+  display: table-cell;
+  vertical-align: middle;
+}
+
 /* blog previews / list */
 .blog-preview {
   padding: 10px 16px;

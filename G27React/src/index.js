@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { Provider as AlertProvider } from 'react-alert';
+import './i18n.js';
 // (Deleted an import as well as reportWebVitals();  Tutorial 2)
 
 // import AlertTemplate from 'react-alert-template-basic';
@@ -17,10 +18,18 @@ const options = {
 }
 
 ReactDOM.render(
+
   <React.StrictMode>
-    <AlertProvider template={AlertTemplate} {...options}>
+
+  <Suspense fallback="Loading...">
+
+  <AlertProvider template={AlertTemplate} {...options}>
       <App />
     </AlertProvider>
+
+  </Suspense>
+
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
