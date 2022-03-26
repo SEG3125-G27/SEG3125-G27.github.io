@@ -3,6 +3,7 @@ import Footer from './footer'
 import Home from './Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Create from './Create';
+import Archives from './Archives';
 import BlogDetails from './BlogDetails';
 import NotFound from './NotFound';
 import React from 'react';
@@ -18,6 +19,10 @@ function App() {
 
             <Route exact path="/">
               <Home />
+            </Route>
+
+            <Route path="/archives">
+              <Archives />
             </Route>
 
             <Route path="/create">

@@ -6,6 +6,7 @@ const Navbar = () => {
             <h1>TODO List</h1>
             <div className="links">
                 <Link to="/"><img src='../home.svg' style={{marginBottom: '-0.5vh'}} /> Home</Link>
+                <Link to="/archives"><img src='../archives.png' style={{marginBottom: '-0.5vh', width:'25px'}} /> Archives</Link>
                 <Link to="/create" style={{
                     color: "white",
                     backgroundColor: '#f1356d',

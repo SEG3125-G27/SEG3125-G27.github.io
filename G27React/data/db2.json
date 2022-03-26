@@ -1,0 +1,16 @@
+{
+    "blogs": [
+      {
+        "title": "Kishan task",
+        "body": "Do stuff",
+        "author": "Kishan",
+        "id": 8
+      },
+      {
+        "title": "Rida item",
+        "body": "Something Rida needs to do",
+        "author": "Rida",
+        "id": 11
+      }
+    ]
+  }
