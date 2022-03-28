@@ -4,6 +4,10 @@ import './index.css';
 import App from './App';
 import { Provider as AlertProvider } from 'react-alert';
 import './i18n.js';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import './myModal.css';
 // (Deleted an import as well as reportWebVitals();  Tutorial 2)
 
 // import AlertTemplate from 'react-alert-template-basic';
@@ -29,7 +33,7 @@ ReactDOM.render(
 
   </Suspense>
 
-    
+
   </React.StrictMode>,
   document.getElementById('root')
 );

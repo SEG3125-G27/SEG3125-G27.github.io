@@ -7,8 +7,9 @@ import Archives from './Archives';
 import BlogDetails from './BlogDetails';
 import NotFound from './NotFound';
 import React from 'react';
-import { useAlert } from 'react-alert';
+import { use } from 'react-alert';
 import { useTranslation } from 'react-i18next';
+import Modal from 'react-bootstrap/Modal';
 
 // https://www.youtube.com/watch?app=desktop&v=QmKnaHNW9ps For translation
 
