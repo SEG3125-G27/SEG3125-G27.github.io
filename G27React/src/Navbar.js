@@ -17,8 +17,12 @@ const Navbar = () => {
                 }} >{t("new_item")} <b style={{color: 'white'}} className='links'>+</b></Link>
 
                 {/* <div className="container"> */}
-                <Link to="/?lng=es"> <img src='../spain.png' style={{marginBottom: '-0.5vh', width:'25px'}} /></Link>
-                <Link to="/?lng=en"> <img src='../britain.png' style={{marginBottom: '-0.5vh', width:'25px'}} /></Link>
+                <a href="/?lng=es">
+                    <img src='../spain.png' style={{marginBottom: '-0.5vh', width:'25px'}} />
+                </a>
+                <a href="/?lng=en">
+                    <img src='../britain.png' style={{marginBottom: '-0.5vh', width:'25px'}} />
+                </a>
 
                 {/* </div> */}
 
