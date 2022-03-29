@@ -114,7 +114,7 @@
   cursor: pointer;
 }
 
-/* Fix the language links so that they get displayed one over the other */
+/* Language selectors: Navbar */
 .navbar .links .english {
   position: absolute;
   top: 0;
@@ -125,4 +125,12 @@
   position: absolute;
   bottom: 0;
   right: 0 auto;
+}
+
+/* Language selectors: Footer */
+.footer .languages {
+  text-align: center;
+  position: relative;
+  margin: auto;
+  width: 50%;
 }

@@ -16,6 +16,16 @@ const Footer = () => {
             }} >
                 {t("footer")}
             </p>
+
+            {/* Comment out the div below to remove language selectors from the footer */}
+            <div className="languages">
+                <a href="/?lng=es" className="spanish" >
+                    <img src="../spain.png" style={{width: '25px'}} alt="spanish" />
+                </a>
+                <a href="/?lng=en" className="english">
+                    <img src="../britain.png" style={{width: '25px'}} alt="english" />
+                </a>
+            </div>
         </div>
     );
 }

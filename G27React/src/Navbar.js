@@ -15,12 +15,16 @@ const Navbar = () => {
                     backgroundColor: '#f1356d',
                     borderRadius: '8px'
                 }} >{t("new_item")} <b style={{color: 'white'}} className='links'>+</b></Link>
+
+                {/* Uncomment this block so that language selectors show up in the navbar instead of
+                the footer.
                 <a href="/?lng=es" className="spanish" >
                     <img src="../spain.png" style={{marginBotton: '-0.5vh', width: '25px'}} alt="spanish" />
                 </a>
                 <a href="/?lng=en" className="english">
                     <img src="../britain.png" style={{marginBotton: '-0.5vh', width: '25px'}} alt="english" />
-                </a>
+                </a> 
+                */}
 
             </div>
         </nav>
