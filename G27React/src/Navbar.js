@@ -15,18 +15,13 @@ const Navbar = () => {
                     backgroundColor: '#f1356d',
                     borderRadius: '8px'
                 }} >{t("new_item")} <b style={{color: 'white'}} className='links'>+</b></Link>
-
-                {/* <div className="container"> */}
-                <a href="/?lng=es">
-                    <img src='../spain.png' style={{marginBottom: '-0.5vh', width:'25px'}} />
+                <a href="/?lng=es" className="spanish" >
+                    <img src="../spain.png" style={{marginBotton: '-0.5vh', width: '25px'}} alt="spanish" />
                 </a>
-                <a href="/?lng=en">
-                    <img src='../britain.png' style={{marginBottom: '-0.5vh', width:'25px'}} />
+                <a href="/?lng=en" className="english">
+                    <img src="../britain.png" style={{marginBotton: '-0.5vh', width: '25px'}} alt="english" />
                 </a>
 
-                {/* </div> */}
-
-                
             </div>
         </nav>
      );

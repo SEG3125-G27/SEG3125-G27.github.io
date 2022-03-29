@@ -7,6 +7,7 @@
   color: #333;
 }
 .navbar {
+  position: relative;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -111,4 +112,17 @@
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+/* Fix the language links so that they get displayed one over the other */
+.navbar .links .english {
+  position: absolute;
+  top: 0;
+  right: 0 auto;
+}
+
+.navbar .links .spanish {
+  position: absolute;
+  bottom: 0;
+  right: 0 auto;
 }
