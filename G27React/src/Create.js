@@ -58,7 +58,7 @@ const Create = () => {
 
             <form  >
 
-                <label> {t("Item title (Max Character Limit: 100)")} </label>
+                <label> {t("item_title")} </label>
                 <input
                     type="text"
                     required
@@ -68,7 +68,7 @@ const Create = () => {
                     onChange={(e) => setTitle(e.target.value)}
                 />
 
-                <label> {t("Item details (Max Character Limit: 10,000)")} </label>
+                <label> {t("item_details")} </label>
                 <textarea
                     required
                     value={body}
